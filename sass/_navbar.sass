@@ -1,0 +1,27 @@
+.navbar
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    position: fixed
+    left: 0
+    top: 0
+    background: #fff
+    &-logo
+        margin: 10px auto 15px auto
+        height: 60px
+    &-nav
+        display: flex
+        justify-content: center
+        width: 150%
+        +mt-bold
+        background: $purple
+        &-container
+            display: flex
+            align-content: center         
+        &-link
+            font-size: 18px
+            color: #fff
+            padding: 10px 10px 5px 10px
+            &:hover
+                background: $purple-darker

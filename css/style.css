@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "BPG Nino Mtavruli Book";
+  src: url("../fonts/bpg_nino_mtavruli_book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mtavruli";
+  src: url("../fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mtavruli Bold";
+  src: url("../fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
+}
+
+body {
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+body .container {
+  max-width: 1110px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+.navbar-logo {
+  margin: 10px auto 15px auto;
+  height: 60px;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150%;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
+  background: #7371dc;
+}
+
+.navbar-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.navbar-nav-link {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.navbar-nav-link:hover {
+  background: #4a48c0;
+}
+/*# sourceMappingURL=style.css.map */
