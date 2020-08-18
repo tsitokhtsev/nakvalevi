@@ -8,19 +8,71 @@
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </head>
 
 <body>
     <div class="navbar">
         <img class="navbar-logo" src="../img/logo.png" alt="">
         <nav class="navbar-nav">
-            <div class="container navbar-nav-container">
-                <a href="https://nakvalevi.github.io/home" class="navbar-nav-link navbar-nav-link-home">მთავარი</a>
-                <a href="https://nakvalevi.github.io/about" class="navbar-nav-link navbar-nav-link-about">ჩვენ შესახებ</a>
+            <div class="navbar-nav-container">
+                <a href="/home" class="navbar-nav-link navbar-nav-link-home">მთავარი</a>
+                <a href="/about" class="navbar-nav-link navbar-nav-link-about">ჩვენ შესახებ</a>
             </div>
         </nav>
     </div>
+    <div class="body">
+        <div class="home-hero">
+            <div class="container home-hero-container">
+                <h1 class="home-hero-title">
+                    <span class="home-hero-title-word wow slideInLeft" data-wow-delay="200ms">გავკვალოთ</span><br>
+                    <span class="home-hero-title-word wow slideInLeft" data-wow-delay="400ms">ცოდნის</span><br>
+                    <span class="home-hero-title-word wow slideInLeft" data-wow-delay="700ms">გზა</span>
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="home-target">
+                <h1 class="title">
+                    <img class="title-icon" src="img/target.svg">
+                    <span class="title-text">ჩვენი მიზანია:</span>
+                </h1>
+                <div class="home-target-section">
+                    <div class="home-target-item">
+                        <div class="home-target-item-top">
+                            <img class="home-target-item-icon" src="img/lit.svg">
+                        </div>
+                        <p class="home-target-item-text">გაგიადვილოთ ქართული ლიტერატურის შესწავლა და გააზრება</p>
+                    </div>
+                    <div class="home-target-item">
+                        <div class="home-target-item-top">
+                            <img class="home-target-item-icon" src="img/vision.svg">
+                        </div>
+                        <p class="home-target-item-text">მოგაწოდოთ სხვადასხვა ხედვა კონკრეტულ საკითხზე</p>
+                    </div>
+                    <div class="home-target-item">
+                        <div class="home-target-item-top">
+                            <img class="home-target-item-icon" src="img/save.svg">
+                        </div>
+                        <p class="home-target-item-text">ნაშრომთა შენახვა და გავრცელება</p>
+                    </div>
+                    <div class="home-target-item">
+                        <div class="home-target-item-top">
+                            <img class="home-target-item-icon" src="img/logo.svg">
+                        </div>
+                        <p class="home-target-item-text">წარუშლელი ნაკვალევის დატოვება</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <span>ნაკვალევი 2020</span>
+    </footer>
 </body>
 
 </html>

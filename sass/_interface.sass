@@ -1,7 +1,42 @@
-body
-    +mt-regular
-    & .container
-        max-width: 1110px
+.body
+    display: flex
+    flex-direction: column
+    margin: 110px auto 0 auto
+    color: $black
+    background: url("../img/background.png") center
+
+.container
+    margin: auto
+    padding: 0 50px
+    max-width: 1050px
+    width: 100%
+    background-color: #fff
+    +mkh-regular
+
+h1
+    margin: 70px 0 40px 0
+    font-size: 60px
+    font-weight: 100
+    color: $purple
+    text-shadow: 2px 1px 0 $yellow
+    +mt-light
+
+.title
+    &-icon
+        margin-right: 10px
+        height: 60px
+        vertical-align: -2px
+    &-text
+        position: relative
+        padding: 5px 15px 0 25px
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            height: 86%
+            border-left: 2px solid $purple
 
 a
     text-decoration: none
+

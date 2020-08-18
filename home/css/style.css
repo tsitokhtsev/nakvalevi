@@ -1,6 +1,150 @@
+@font-face {
+  font-family: "BPG Nino Mtavruli Book";
+  src: url("../fonts/bpg_nino_mtavruli_book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mtavruli";
+  src: url("../fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mtavruli Bold";
+  src: url("../fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mkhedruli Book";
+  src: url("../fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mkhedruli";
+  src: url("../fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mkhedruli Bold";
+  src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
+}
+
 .navbar-nav-link-home {
   padding: 10px 10px 3px 10px;
   border-bottom: 2px solid #ffd15c;
   background: #5553ce;
+}
+
+.home-hero {
+  height: 85vh;
+  background-image: url("../img/books.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.home-hero-container {
+  max-width: 1150px;
+  background: none;
+}
+
+.home-hero-title {
+  position: relative;
+  margin-top: 40px;
+  text-align: left;
+  height: 50%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.home-hero-title:before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 0;
+  height: 86%;
+  border-left: 3px solid #7371dc;
+}
+
+.home-hero-title-word {
+  display: inline-block;
+  padding: 15px 15px 0 30px;
+  font-size: 70px;
+  text-shadow: 3px 1px 0 #7371dc;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
+}
+
+.home-target-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 70px 0;
+}
+
+.home-target-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  max-width: 180px;
+  border: 2px solid #7371dc;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 20px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.home-target-item:hover {
+  -webkit-box-shadow: 0 1px #7371dc, 0 2px #7371dc;
+          box-shadow: 0 1px #7371dc, 0 2px #7371dc;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.home-target-item:hover .home-target-item-icon {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.home-target-item-top {
+  z-index: 1;
+  position: absolute;
+  top: -60px;
+  padding: 5px 20px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #7371dc;
+  border-left: 2px solid #7371dc;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.home-target-item-icon {
+  height: 100px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.home-target-item-text {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */

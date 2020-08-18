@@ -1,4 +1,5 @@
 .navbar
+    z-index: 99
     display: flex
     flex-direction: column
     align-items: center
@@ -9,19 +10,19 @@
     background: #fff
     &-logo
         margin: 10px auto 15px auto
-        height: 60px
+        height: 50px
     &-nav
         display: flex
         justify-content: center
         width: 150%
-        +mt-bold
         background: $purple
         &-container
             display: flex
             align-content: center         
         &-link
+            padding: 10px 10px 5px 10px
             font-size: 18px
             color: #fff
-            padding: 10px 10px 5px 10px
+            +mt-bold
             &:hover
                 background: $purple-darker

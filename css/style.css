@@ -13,12 +13,70 @@
   src: url("../fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
 }
 
-body {
-  font-family: BPG Nino Mtavruli, sans-serif;
+@font-face {
+  font-family: "BPG Nino Mkhedruli Book";
+  src: url("../fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
 }
 
-body .container {
-  max-width: 1110px;
+@font-face {
+  font-family: "BPG Nino Mkhedruli";
+  src: url("../fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BPG Nino Mkhedruli Bold";
+  src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 110px auto 0 auto;
+  color: #313131;
+  background: url("../img/background.png") center;
+}
+
+.container {
+  margin: auto;
+  padding: 0 50px;
+  max-width: 1050px;
+  width: 100%;
+  background-color: #fff;
+  font-family: "BPG Nino Mkhedruli", sans-serif;
+}
+
+h1 {
+  margin: 70px 0 40px 0;
+  font-size: 60px;
+  font-weight: 100;
+  color: #7371dc;
+  text-shadow: 2px 1px 0 #ffd15c;
+  font-family: BPG Nino Mtavruli Book, sans-serif;
+}
+
+.title-icon {
+  margin-right: 10px;
+  height: 60px;
+  vertical-align: -2px;
+}
+
+.title-text {
+  position: relative;
+  padding: 5px 15px 0 25px;
+}
+
+.title-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 86%;
+  border-left: 2px solid #7371dc;
 }
 
 a {
@@ -26,6 +84,7 @@ a {
 }
 
 .navbar {
+  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +104,7 @@ a {
 
 .navbar-logo {
   margin: 10px auto 15px auto;
-  height: 60px;
+  height: 50px;
 }
 
 .navbar-nav {
@@ -56,7 +115,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 150%;
-  font-family: BPG Nino Mtavruli Bold, sans-serif;
   background: #7371dc;
 }
 
@@ -69,12 +127,22 @@ a {
 }
 
 .navbar-nav-link {
+  padding: 10px 10px 5px 10px;
   font-size: 18px;
   color: #fff;
-  padding: 10px 10px 5px 10px;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
 .navbar-nav-link:hover {
   background: #4a48c0;
+}
+
+.footer {
+  padding: 15px 10px 10px 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background: #7371dc;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
