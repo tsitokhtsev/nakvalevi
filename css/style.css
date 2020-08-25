@@ -46,6 +46,8 @@
   padding: 0 50px;
   max-width: 1050px;
   width: 100%;
+  -webkit-box-shadow: -20px 0px 60px rgba(255, 209, 92, 0.4), 20px 0px 60px rgba(255, 209, 92, 0.4);
+          box-shadow: -20px 0px 60px rgba(255, 209, 92, 0.4), 20px 0px 60px rgba(255, 209, 92, 0.4);
   background-color: #fff;
   font-family: "BPG Nino Mkhedruli", sans-serif;
 }
@@ -62,7 +64,7 @@ h1 {
 .title-icon {
   margin-right: 10px;
   height: 60px;
-  vertical-align: -2px;
+  vertical-align: -4px;
 }
 
 .title-text {
@@ -77,6 +79,15 @@ h1 {
   left: 0;
   height: 86%;
   border-left: 2px solid #7371dc;
+}
+
+.section {
+  padding: 0 0 70px 0;
+}
+
+p {
+  text-align: justify;
+  font-size: 24px;
 }
 
 a {
@@ -138,6 +149,7 @@ a {
 }
 
 .footer {
+  z-index: 1;
   padding: 15px 10px 10px 10px;
   text-align: center;
   font-size: 18px;
