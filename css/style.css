@@ -29,60 +29,93 @@
 }
 
 .body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 110px auto 0 auto;
+  margin: 0 auto;
   color: #313131;
   background: url("../img/background.png") center;
 }
 
 .container {
   margin: auto;
-  padding: 0 50px;
-  max-width: 1050px;
-  width: 100%;
+  padding: 20px 60px 70px 60px;
+  max-width: 1080px;
   -webkit-box-shadow: -20px 0px 60px rgba(255, 209, 92, 0.4), 20px 0px 60px rgba(255, 209, 92, 0.4);
           box-shadow: -20px 0px 60px rgba(255, 209, 92, 0.4), 20px 0px 60px rgba(255, 209, 92, 0.4);
   background-color: #fff;
   font-family: "BPG Nino Mkhedruli", sans-serif;
 }
 
-h1 {
-  margin: 70px 0 40px 0;
-  font-size: 60px;
-  font-weight: 100;
-  color: #7371dc;
-  text-shadow: 2px 1px 0 #ffd15c;
-  font-family: BPG Nino Mtavruli Book, sans-serif;
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 5px 30px 60px 30px;
+  }
 }
 
-.title-icon {
-  margin-right: 10px;
-  height: 60px;
-  vertical-align: -4px;
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1px 20px 50px 20px;
+  }
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
 }
 
 .title-text {
   position: relative;
-  padding: 5px 15px 0 25px;
+  padding-top: 10px;
+  color: #7371dc;
+  font-size: 60px;
+  font-weight: 100;
+  white-space: pre;
+  font-family: BPG Nino Mtavruli Book, sans-serif;
 }
 
-.title-text:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 86%;
-  border-left: 2px solid #7371dc;
+.title-hr {
+  margin: 0 30px;
+  width: 50%;
+  height: 1px;
+  vertical-align: -20 px;
+  border: none;
+  background-color: #ffd15c;
 }
 
-.section {
-  padding: 0 0 70px 0;
+.title-icon {
+  height: 60px;
+  text-align: right;
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .title-text {
+    font-size: 40px;
+  }
+  .title-hr {
+    margin: 0 20px;
+  }
+  .title-icon {
+    height: 40px;
+  }
+}
+
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+  .title-text {
+    font-size: 30px;
+  }
+  .title-icon {
+    height: 30px;
+  }
 }
 
 p {
@@ -94,42 +127,45 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
+.logo {
+  text-align: center;
   background: #fff;
 }
 
-.navbar-logo {
-  margin: 10px auto 15px auto;
-  height: 50px;
+.logo-img {
+  margin: 10px auto;
+  height: 45px;
 }
 
-.navbar-nav {
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .logo-img {
+    height: 40px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .logo-img {
+    height: 35px;
+  }
+}
+
+.navbar {
+  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 150%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   background: #7371dc;
 }
 
-.navbar-nav-container {
+.navbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,14 +173,14 @@ a {
       align-content: center;
 }
 
-.navbar-nav-link {
+.navbar-link {
   padding: 10px 10px 5px 10px;
   font-size: 18px;
   color: #fff;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.navbar-nav-link:hover {
+.navbar-link:hover {
   background: #4a48c0;
 }
 

@@ -1,28 +1,32 @@
+.logo
+    text-align: center
+    background: #fff
+    &-img
+        margin: 10px auto
+        height: 45px
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px)
+    .logo-img
+        height: 40px
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px)
+    .logo-img
+        height: 35px
+
 .navbar
     z-index: 99
     display: flex
-    flex-direction: column
-    align-items: center
-    width: 100%
-    position: fixed
-    left: 0
+    justify-content: center
+    position: sticky
     top: 0
-    background: #fff
-    &-logo
-        margin: 10px auto 15px auto
-        height: 50px
-    &-nav
+    background: $purple
+    &-container
         display: flex
-        justify-content: center
-        width: 150%
-        background: $purple
-        &-container
-            display: flex
-            align-content: center         
-        &-link
-            padding: 10px 10px 5px 10px
-            font-size: 18px
-            color: #fff
-            +mt-bold
-            &:hover
-                background: $purple-darker
+        align-content: center
+    &-link
+        padding: 10px 10px 5px 10px
+        font-size: 18px
+        color: #fff
+        +mt-bold
+        &:hover
+            background: $purple-darker

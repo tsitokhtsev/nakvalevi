@@ -1,45 +1,67 @@
 .body
-    display: flex
-    flex-direction: column
-    margin: 110px auto 0 auto
+    margin: 0 auto
     color: $black
     background: url("../img/background.png") center
 
+.article
+    
+.section
+
 .container
     margin: auto
-    padding: 0 50px
-    max-width: 1050px
-    width: 100%
+    padding: 20px 60px 70px 60px
+    max-width: 1080px
     box-shadow: -20px 0px 60px rgba($yellow, 0.4), 20px 0px 60px rgba($yellow, 0.4)
     background-color: #fff
     +mkh-regular
-
-h1
-    margin: 70px 0 40px 0
-    font-size: 60px
-    font-weight: 100
-    color: $purple
-    text-shadow: 2px 1px 0 $yellow
-    +mt-light
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px)
+    .container
+        padding: 5px 30px 60px 30px
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px)
+    .container
+        padding: 1px 20px 50px 20px
 
 .title
-    &-icon
-        margin-right: 10px
-        height: 60px
-        vertical-align: -4px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
     &-text
         position: relative
-        padding: 5px 15px 0 25px
-        &:before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            height: 86%
-            border-left: 2px solid $purple
-
-.section
-    padding: 0 0 70px 0
+        padding-top: 10px
+        color: $purple
+        font-size: 60px
+        font-weight: 100
+        white-space: pre
+        +mt-light
+    &-hr
+        margin: 0 30px
+        width: 50%
+        height: 1px
+        vertical-align: -20 px
+        border: none
+        background-color: $yellow
+    &-icon
+        height: 60px
+        text-align: right
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px)
+    .title
+        &-text
+            font-size: 40px
+        &-hr
+            margin: 0 20px
+        &-icon
+            height: 40px
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px)
+    .title
+        &-text
+            font-size: 30px
+        &-icon
+            height: 30px
 
 p
     text-align: justify
