@@ -8,12 +8,15 @@
 .section
 
 .container
-    margin: auto
+    margin: 60px auto 0 auto
     padding: 20px 60px 70px 60px
     max-width: 1080px
-    box-shadow: -20px 0px 60px rgba($yellow, 0.4), 20px 0px 60px rgba($yellow, 0.4)
+    box-shadow: -10px 0px 60px rgba($purple-light, 0.4), 10px 0px 60px rgba($purple-light, 0.4)
     background-color: #fff
     +mkh-regular
+    &:first-of-type
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px)
     .container
@@ -46,11 +49,17 @@
     &-icon
         height: 60px
         text-align: right
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px)
+    .title
+        &-text
+            white-space: normal
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px)
     .title
         &-text
             font-size: 40px
+            white-space: normal
         &-hr
             margin: 0 20px
         &-icon
@@ -60,6 +69,7 @@
     .title
         &-text
             font-size: 30px
+            white-space: normal
         &-icon
             height: 30px
 
