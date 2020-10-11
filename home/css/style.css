@@ -35,6 +35,7 @@
 }
 
 .home-hero {
+  margin-top: -100px;
   height: 700px;
   background-image: url("../img/books.jpg");
   background-size: cover;
@@ -135,8 +136,6 @@
 
 .home-target-container {
   margin-top: -100px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .home-target-section {
