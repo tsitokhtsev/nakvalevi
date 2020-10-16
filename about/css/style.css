@@ -28,10 +28,8 @@
   src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
 
-.navbar-link-about {
-  padding: 10px 10px 3px 10px;
-  border-bottom: 2px solid #ffd15c;
-  background: #5553ce;
+.navbar-link-title-about {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .about-span {
