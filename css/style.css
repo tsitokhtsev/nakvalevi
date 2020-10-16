@@ -148,6 +148,7 @@ a {
 
 .logo-img {
   margin: 10px auto;
+  padding-left: 20px;
   height: 45px;
 }
 
@@ -188,14 +189,17 @@ a {
 }
 
 .navbar-link {
-  padding: 10px 10px 5px 10px;
+  position: relative;
+  width: 150px;
+  padding: 15px 0 10px 0;
+  text-align: center;
   font-size: 18px;
   color: #fff;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
 .navbar-link:hover {
-  background: #4a48c0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer {
