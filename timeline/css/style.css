@@ -31,4 +31,175 @@
 .navbar-link-title-timeline {
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
+
+.timeline-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.timeline-period {
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 3px;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-family: BPG Nino Mtavruli Book, sans-serif;
+}
+
+.timeline-period-between {
+  margin-right: 27px;
+  padding: 30px;
+}
+
+.timeline-main {
+  position: relative;
+  border-left: 1px solid #7371dc;
+}
+
+.timeline-main:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7371dc;
+}
+
+.timeline-main:after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  left: -6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7371dc;
+}
+
+.timeline-main-between {
+  border-left: 1px dashed #ffd15c;
+}
+
+.timeline-line {
+  position: relative;
+  margin: 0;
+  width: 30px;
+  height: 1px;
+  border: none;
+  background-color: #ffd15c;
+}
+
+.timeline-line:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -4px;
+  left: -5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7371dc;
+}
+
+.timeline-line:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -4px;
+  right: -5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #7371dc;
+}
+
+.timeline-author {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline-author-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+  padding: 30px;
+  max-height: 110px;
+  border: 1px solid #7371dc;
+  border-radius: 20px;
+}
+
+.timeline-author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+}
+
+.timeline-author-info-name {
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.timeline-author-info-years {
+  font-family: "BPG Nino Mkhedruli", sans-serif;
+}
+
+.timeline-author-img {
+  margin-left: 30px;
+  width: 110px;
+  height: 110px;
+  border-radius: 99px;
+}
+
+.timeline-author-writings {
+  margin: 30px 0;
+  padding: 30px;
+  border: 1px solid #7371dc;
+  border-radius: 20px;
+}
+
+.timeline-author-writing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  font-size: 20px;
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.timeline-author-writing-date {
+  margin-left: 30px;
+  text-align: right;
+}
 /*# sourceMappingURL=style.css.map */

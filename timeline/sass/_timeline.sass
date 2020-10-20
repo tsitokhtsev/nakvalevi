@@ -1,0 +1,110 @@
+.timeline
+    &-section
+        display: flex
+    &-period
+        padding: 30px
+        text-align: center
+        font-size: 24px
+        letter-spacing: 3px
+        writing-mode: tb-rl
+        transform: rotate(180deg)
+        +mt-light
+        &-between
+            margin-right: 27px
+            padding: 30px
+    &-main
+        position: relative
+        border-left: 1px solid $purple
+        &:before
+            position: absolute
+            content: ""
+            display: block
+            top: 0
+            left: -6px
+            width: 9px
+            height: 9px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $purple
+        &:after
+            position: absolute
+            content: ""
+            display: block
+            bottom: 0
+            left: -6px
+            width: 9px
+            height: 9px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $purple
+        &-between
+            border-left: 1px dashed $yellow
+    &-line
+        position: relative
+        margin: 0
+        width: 30px
+        height: 1px
+        border: none
+        background-color: $yellow
+        &:before
+            position: absolute
+            content: ""
+            display: block
+            top: -4px
+            left: -5px
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $purple
+        &:after
+            position: absolute
+            content: ""
+            display: block
+            top: -4px
+            right: -5px
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $purple
+    &-author
+        position: relative
+        display: flex
+        align-items: center
+        &-bio
+            display: flex
+            justify-content: space-between
+            margin: 30px 0
+            padding: 30px
+            max-height: 110px
+            border: 1px solid $purple
+            border-radius: 20px
+        &-info
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            font-size: 24px
+            &-name
+                +mt-regular
+            &-years
+                +mkh-regular
+        &-img
+            margin-left: 30px
+            width: 110px
+            height: 110px
+            border-radius: 99px
+        &-writings
+            margin: 30px 0
+            padding: 30px
+            border: 1px solid $purple
+            border-radius: 20px
+        &-writing
+            display: flex
+            justify-content: space-between
+            padding: 10px 0
+            font-size: 20px
+            +mt-regular
+            &-date
+                margin-left: 30px
+                text-align: right
