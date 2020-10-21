@@ -87,12 +87,39 @@
 }
 
 .title-hr {
+  position: relative;
   margin: 0 30px;
   width: 50%;
   height: 1px;
   vertical-align: -20 px;
   border: none;
   background-color: #ffd15c;
+}
+
+.title-hr:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ffd15c;
+}
+
+.title-hr:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ffd15c;
 }
 
 .title-icon {

@@ -40,12 +40,35 @@
         white-space: pre
         +mt-light
     &-hr
+        position: relative
         margin: 0 30px
         width: 50%
         height: 1px
         vertical-align: -20 px
         border: none
         background-color: $yellow
+        &:before
+            position: absolute
+            content: ""
+            display: block
+            top: -5px
+            left: 0
+            width: 9px
+            height: 9px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $yellow
+        &:after
+            position: absolute
+            content: ""
+            display: block
+            top: -5px
+            right: 0
+            width: 9px
+            height: 9px
+            border-radius: 50%
+            background: #fff
+            border: 1px solid $yellow
     &-icon
         height: 60px
         text-align: right

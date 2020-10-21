@@ -14,6 +14,7 @@
             padding: 30px
     &-main
         position: relative
+        padding: 15px 0
         border-left: 1px solid $purple
         &:before
             position: absolute
@@ -38,11 +39,12 @@
             background: #fff
             border: 1px solid $purple
         &-between
+            height: 80px
             border-left: 1px dashed $yellow
     &-line
         position: relative
         margin: 0
-        width: 30px
+        width: 40px
         height: 1px
         border: none
         background-color: $yellow
@@ -77,6 +79,7 @@
             justify-content: space-between
             margin: 15px 0
             padding: 25px
+            min-width: 290px
             max-height: 110px
             border: 1px solid $purple
             border-radius: 20px
@@ -95,14 +98,15 @@
             height: 100px
             border-radius: 99px
         &-writings
+            min-width: 450px
             margin: 15px 0
-            padding: 25px
+            padding: 15px
             border: 1px solid $purple
             border-radius: 20px
         &-writing
             display: flex
             justify-content: space-between
-            padding: 10px 0
+            padding: 10px 5px 5px 5px
             font-size: 20px
             +mt-regular
             &-date
