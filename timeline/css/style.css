@@ -185,7 +185,7 @@
 .timeline-author-writings {
   min-width: 450px;
   margin: 15px 0;
-  padding: 15px;
+  padding: 5px 20px 20px 20px;
   border: 1px solid #7371dc;
   border-radius: 20px;
 }
@@ -197,7 +197,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 5px 5px 5px;
+  margin-top: 20px;
+  border-bottom: 2px dotted #ffd15c;
   font-size: 20px;
   font-family: BPG Nino Mtavruli, sans-serif;
 }
