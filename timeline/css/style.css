@@ -32,10 +32,30 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+.navbar-anchors {
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: #5553ce;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
 .timeline-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.timeline .anchor {
+  margin-top: -120px;
 }
 
 .timeline-period {
@@ -52,7 +72,7 @@
 }
 
 .timeline-period-between {
-  margin-right: 27px;
+  margin-right: 28px;
   padding: 30px;
 }
 
@@ -206,5 +226,12 @@
 .timeline-author-writing-date {
   margin-left: 30px;
   text-align: right;
+}
+
+.navbar:hover .navbar-anchors {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

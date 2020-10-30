@@ -16,11 +16,17 @@
 
 .navbar
     z-index: 99
-    display: flex
-    justify-content: center
+    position: relative
     position: sticky
     top: 0
-    background: $purple
+    &-links
+        z-index: 99
+        position: absolute
+        top: 0
+        display: flex
+        justify-content: center
+        width: 100%
+        background: $purple
     &-container
         display: flex
         align-content: center

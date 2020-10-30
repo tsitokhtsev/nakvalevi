@@ -8,7 +8,12 @@
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 
 <body class="body">
@@ -16,16 +21,31 @@
         <img class="logo-img" src="../img/logo.png" alt="">
     </div>
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="/home" class="navbar-link">
-                <span class="navbar-link-title-home">მთავარი</span>
-            </a>
-            <a href="/timeline" class="navbar-link">
-                <span class="navbar-link-title-timeline">თაიმლაინი</span>
-            </a>
-            <a href="/about" class="navbar-link">
-                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-            </a>
+        <div class="navbar-links">
+            <div class="navbar-container">
+                <a href="/home" class="navbar-link">
+                    <span class="navbar-link-title-home">მთავარი</span>
+                </a>
+                <a href="/timeline" class="navbar-link">
+                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
+                </a>
+                <a href="/about" class="navbar-link">
+                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-anchors wow animate__animated animate__slideInUp" data-wow-delay="1s">
+            <div class="navbar-container">
+                <a href="#old" class="navbar-link">
+                    <span>ძველი</span>
+                </a>
+                <a href="#new" class="navbar-link">
+                    <span>ახალი</span>
+                </a>
+                <a href="#newest" class="navbar-link">
+                    <span>უახლესი</span>
+                </a>
+            </div>
         </div>
     </nav>
     <div class="timeline article">
@@ -36,6 +56,7 @@
                 <img class="title-icon" src="img/timeline.svg">
             </h1>
             <div class="timeline-section">
+                <a class="anchor" name="old"></a>
                 <div class="timeline-period">ძველი ლიტერატურა</div>
                 <div class="timeline-main">
                     <div class="timeline-author">
@@ -147,6 +168,7 @@
                 <div class="timeline-main-between"></div>
             </div>
             <div class="timeline-section">
+                <a class="anchor" name="new"></a>
                 <div class="timeline-period">ახალი ლიტერატურა</div>
                 <div class="timeline-main">
                     <div class="timeline-author">
@@ -416,6 +438,7 @@
                 <div class="timeline-main-between"></div>
             </div>
             <div class="timeline-section">
+                <a class="anchor" name="newest"></a>
                 <div class="timeline-period">უახლესი ლიტერატურა</div>
                 <div class="timeline-main">
                     <div class="timeline-author">

@@ -28,6 +28,10 @@
   src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   margin: 0 auto;
   color: #313131;
@@ -35,7 +39,7 @@
 }
 
 .container {
-  margin: 60px auto 0 auto;
+  margin: 100px auto 0 auto;
   padding: 20px 60px 70px 60px;
   max-width: 1080px;
   -webkit-box-shadow: -10px 0px 60px rgba(151, 149, 255, 0.4), 10px 0px 60px rgba(151, 149, 255, 0.4);
@@ -195,15 +199,23 @@ a {
 
 .navbar {
   z-index: 99;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-links {
+  z-index: 99;
+  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  width: 100%;
   background: #7371dc;
 }
 
