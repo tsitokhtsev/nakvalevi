@@ -137,9 +137,6 @@
 }
 
 .home-target-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -183,8 +180,10 @@
 }
 
 .home-target-item-text p {
+  margin: 0;
   text-align: center;
   font-size: 20px;
+  line-height: normal;
 }
 
 /* Portrait tablets and medium desktops */

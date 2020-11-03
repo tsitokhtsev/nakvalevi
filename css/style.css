@@ -38,9 +38,16 @@ html {
   background: url("../img/background.png") center;
 }
 
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
 .container {
   margin: 100px auto 0 auto;
-  padding: 20px 60px 70px 60px;
+  padding: 50px 60px 70px 60px;
   max-width: 1080px;
   -webkit-box-shadow: -10px 0px 60px rgba(151, 149, 255, 0.4), 10px 0px 60px rgba(151, 149, 255, 0.4);
           box-shadow: -10px 0px 60px rgba(151, 149, 255, 0.4), 10px 0px 60px rgba(151, 149, 255, 0.4);
@@ -74,15 +81,14 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
 }
 
 .title-text {
   position: relative;
-  padding-top: 10px;
   color: #7371dc;
   font-size: 60px;
   font-weight: 100;
@@ -90,10 +96,18 @@ html {
   font-family: BPG Nino Mtavruli Book, sans-serif;
 }
 
+.title-icon {
+  height: 55px;
+}
+
+.title-img {
+  padding-top: 3px;
+  height: 120px;
+  border-radius: 99px;
+}
+
 .title-hr {
   position: relative;
-  margin: 0 30px;
-  width: 50%;
   height: 1px;
   vertical-align: -20 px;
   border: none;
@@ -124,11 +138,6 @@ html {
   border-radius: 50%;
   background: #fff;
   border: 1px solid #ffd15c;
-}
-
-.title-icon {
-  height: 60px;
-  text-align: right;
 }
 
 /* Portrait tablets and small desktops */
@@ -164,12 +173,15 @@ html {
 }
 
 p {
+  margin-top: 0;
   text-align: justify;
   font-size: 24px;
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
+  color: #313131;
 }
 
 .logo {

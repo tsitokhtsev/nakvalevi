@@ -2,7 +2,6 @@
     &-container
         margin-top: -60px
     &-section
-        display: flex
         justify-content: space-between
         flex-wrap: wrap
     &-item
@@ -22,15 +21,16 @@
             background-color: $purple
         &-text
             display: flex
-            flex-direction: column  
+            flex-direction: column
             justify-content: space-around
             height: 50%
             +mt-regular
             & p
+                margin: 0
                 text-align: center
                 font-size: 20px
+                line-height: normal
 
-    
 /* Portrait tablets and medium desktops */    
 @media screen and (min-width: 992px) and (max-width: 1199px)
     .home-target
@@ -50,7 +50,6 @@
         &-item
             margin-bottom: 30px
             width: 250px
-
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px)

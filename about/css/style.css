@@ -32,8 +32,15 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+.about-section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about-span {
-  color: #4a48c0;
+  color: #7371dc;
 }
 
 .about-ps {
@@ -42,7 +49,7 @@
 
 .about-heart {
   margin-left: 5px;
-  vertical-align: -3px;
-  height: 20px;
+  vertical-align: -8px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
