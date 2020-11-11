@@ -47,6 +47,7 @@ html {
   padding: 50px 60px;
   max-width: 1080px;
   min-height: 80vh;
+  font-size: 24px;
   -webkit-box-shadow: -10px 0px 60px rgba(151, 149, 255, 0.4), 10px 0px 60px rgba(151, 149, 255, 0.4);
           box-shadow: -10px 0px 60px rgba(151, 149, 255, 0.4), 10px 0px 60px rgba(151, 149, 255, 0.4);
   background-color: #fff;
@@ -226,7 +227,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: #7371dc;
+  background: -webkit-gradient(linear, left top, right top, from(#cc03cc), to(#7371dc));
+  background: linear-gradient(90deg, #cc03cc 0%, #7371dc 100%);
 }
 
 .navbar-container {
@@ -257,7 +259,8 @@ a {
   text-align: center;
   font-size: 18px;
   color: #fff;
-  background: #7371dc;
+  background: -webkit-gradient(linear, left top, right top, from(#cc03cc), to(#7371dc));
+  background: linear-gradient(90deg, #cc03cc 0%, #7371dc 100%);
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
@@ -278,11 +281,37 @@ a {
   margin-top: 20px;
   border-bottom: 2px dotted #ffd15c;
   font-size: 24px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
   font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.author-writing:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .author-writing-date {
   margin-left: 30px;
   text-align: right;
+}
+
+.writing-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.writing-info-block {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+}
+
+.writing-info-title {
+  color: #7371dc;
+  font-family: BPG Nino Mtavruli, sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

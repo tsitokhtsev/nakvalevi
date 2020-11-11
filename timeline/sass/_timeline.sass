@@ -51,6 +51,7 @@
         border: none
         background-color: $yellow
         &:before
+            z-index: 1
             position: absolute
             content: ""
             display: block
@@ -62,6 +63,7 @@
             background: #fff
             border: 1px solid $purple
         &:after
+            z-index: 1
             position: absolute
             content: ""
             display: block
@@ -85,6 +87,10 @@
             max-height: 110px
             border: 1px solid $purple
             border-radius: 20px
+            transition: 300ms ease
+            &:hover
+                box-shadow: 0 5px 15px rgba($purple, 0.4)
+                transition: 300ms ease
         &-info
             display: flex
             flex-direction: column
@@ -105,13 +111,21 @@
             padding: 5px 20px 20px 20px
             border: 1px solid $purple
             border-radius: 20px
+            transition: 300ms ease
+            &:hover
+                box-shadow: 0 5px 15px rgba($purple, 0.4)
+                transition: 300ms ease
         &-writing
             display: flex
             justify-content: space-between
             margin-top: 20px
             border-bottom: 2px dotted $yellow
             font-size: 20px
+            transition: 300ms ease
             +mt-regular
+            &:hover
+                transform: scale(1.01)
+                transition: 300ms ease
             &-date
                 margin-left: 30px
                 text-align: right

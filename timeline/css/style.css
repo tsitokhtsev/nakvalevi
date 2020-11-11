@@ -43,7 +43,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: #5553ce;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(115, 113, 220, 0.8)), to(rgba(204, 3, 204, 0.8)));
+  background: linear-gradient(90deg, rgba(115, 113, 220, 0.8) 0%, rgba(204, 3, 204, 0.8) 100%);
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -123,6 +124,7 @@
 }
 
 .timeline-line:before {
+  z-index: 1;
   position: absolute;
   content: "";
   display: block;
@@ -136,6 +138,7 @@
 }
 
 .timeline-line:after {
+  z-index: 1;
   position: absolute;
   content: "";
   display: block;
@@ -171,6 +174,15 @@
   max-height: 110px;
   border: 1px solid #7371dc;
   border-radius: 20px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.timeline-author-bio:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(115, 113, 220, 0.4);
+          box-shadow: 0 5px 15px rgba(115, 113, 220, 0.4);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .timeline-author-info {
@@ -208,6 +220,15 @@
   padding: 5px 20px 20px 20px;
   border: 1px solid #7371dc;
   border-radius: 20px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.timeline-author-writings:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(115, 113, 220, 0.4);
+          box-shadow: 0 5px 15px rgba(115, 113, 220, 0.4);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .timeline-author-writing {
@@ -220,7 +241,16 @@
   margin-top: 20px;
   border-bottom: 2px dotted #ffd15c;
   font-size: 20px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
   font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.timeline-author-writing:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .timeline-author-writing-date {
