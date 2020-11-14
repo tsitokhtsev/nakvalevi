@@ -183,6 +183,20 @@ a {
   color: #313131;
 }
 
+#top {
+  z-index: 99;
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 20px 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#c500c5), to(#8558d9));
+  background: linear-gradient(90deg, #c500c5 0%, #8558d9 100%);
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
+}
+
 .logo {
   text-align: center;
   background: #fff;
