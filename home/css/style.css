@@ -65,15 +65,15 @@
   margin: 18px 0;
   height: 87%;
   border-left: 1px solid #fff;
-  -webkit-box-shadow: 1px 0px 0 #7371dc, 2px 0px 0 #7371dc;
-          box-shadow: 1px 0px 0 #7371dc, 2px 0px 0 #7371dc;
+  -webkit-box-shadow: 1px 0px 0 #8558d9, 2px 0px 0 #8558d9;
+          box-shadow: 1px 0px 0 #8558d9, 2px 0px 0 #8558d9;
 }
 
 .home-hero-title-word {
   display: inline-block;
   padding: 15px 15px 0 30px;
   font-size: 70px;
-  text-shadow: 3px 1px 0 #7371dc;
+  text-shadow: 3px 1px 0 #8558d9;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
@@ -151,7 +151,7 @@
   padding: 20px;
   width: 180px;
   height: 300px;
-  border: 1px solid #7371dc;
+  border: 1px solid #8558d9;
   border-radius: 20px;
   text-align: center;
 }
@@ -165,7 +165,7 @@
   width: 30%;
   height: 1px;
   border: none;
-  background-color: #7371dc;
+  background-color: #8558d9;
 }
 
 .home-target-item-text {
