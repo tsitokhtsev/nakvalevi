@@ -1,11 +1,23 @@
 .writing
     &-info
         display: flex
-        margin: 0
+        margin: 20px 0
         &-block
             flex-basis: 50%
-            margin: 5px 0
+            margin: 0
             text-align: center
-        &-title
-            color: $purple
-            +mt-regular
+    &-dictionary
+        padding: 20px
+        border: 1px solid $purple
+        border-radius: 20px
+        &-blocks
+            display: flex
+            justify-content: space-between
+        &-block
+            flex-basis: 34%
+        &-word
+            margin: 0
+    &-characters
+        &-character
+            & span
+                color: $black

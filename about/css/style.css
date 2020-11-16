@@ -32,17 +32,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.about-section {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.about-span {
-  color: #8558d9;
-}
-
 .about-ps {
   text-align: right;
 }

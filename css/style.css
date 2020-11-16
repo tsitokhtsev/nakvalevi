@@ -183,6 +183,25 @@ a {
   color: #313131;
 }
 
+ul {
+  margin-top: 0;
+  list-style: circle outside;
+}
+
+li {
+  line-height: 1.5;
+  color: #8558d9;
+}
+
+.purple {
+  color: #8558d9;
+}
+
+.PURPLE {
+  color: #8558d9;
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
 #top {
   z-index: 99;
   position: fixed;
@@ -316,18 +335,41 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 20px 0;
 }
 
 .writing-info-block {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  margin: 5px 0;
+  margin: 0;
   text-align: center;
 }
 
-.writing-info-title {
-  color: #8558d9;
-  font-family: BPG Nino Mtavruli, sans-serif;
+.writing-dictionary {
+  padding: 20px;
+  border: 1px solid #8558d9;
+  border-radius: 20px;
+}
+
+.writing-dictionary-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.writing-dictionary-block {
+  -ms-flex-preferred-size: 34%;
+      flex-basis: 34%;
+}
+
+.writing-dictionary-word {
+  margin: 0;
+}
+
+.writing-characters-character span {
+  color: #313131;
 }
 /*# sourceMappingURL=style.css.map */
