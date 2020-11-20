@@ -1,7 +1,45 @@
 .writing
+    & .title
+        z-index: 1
+        position: relative
+        border-left: 1px solid $purple
+        border-right: 1px solid $orange
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+        background: #fff
+        &:before
+            z-index: -1
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            border-radius: 20px
+            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+            box-shadow: 0 5px 30px $purple-light
     &-info
+        z-index: 0
+        position: relative
         display: flex
-        margin: 20px 0
+        margin: 0
+        padding: 30px 0
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+        &:before
+            z-index: -2
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: 0 1px 1px 1px
+            border-radius: inherit
+            background: #fff
         &-block
             flex-basis: 50%
             margin: 0

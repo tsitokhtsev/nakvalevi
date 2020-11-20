@@ -150,15 +150,14 @@
 .home-target-item {
   padding: 20px;
   width: 180px;
-  height: 300px;
+  height: 270px;
   border: 1px solid #8558d9;
   border-radius: 20px;
   text-align: center;
 }
 
 .home-target-item-icon {
-  padding: 20px 0;
-  height: 90px;
+  height: 100px;
 }
 
 .home-target-item-hr {

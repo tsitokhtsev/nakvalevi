@@ -43,14 +43,14 @@ html {
 }
 
 .container {
-  margin: 100px auto 0 auto;
-  padding: 50px 60px;
-  max-width: 1080px;
+  margin: 80px auto 0 auto;
+  padding: 50px;
+  max-width: 1090px;
   min-height: 80vh;
   font-size: 24px;
-  -webkit-box-shadow: -10px 0px 60px #b191ec88, 10px 0px 60px #b191ec88;
-          box-shadow: -10px 0px 60px #b191ec88, 10px 0px 60px #b191ec88;
   background-color: #fff;
+  -webkit-box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
+          box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
   font-family: "BPG Nino Mkhedruli", sans-serif;
 }
 
@@ -59,14 +59,12 @@ html {
   border-top-right-radius: 20px;
 }
 
-/* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   .container {
     padding: 5px 30px 60px 30px;
   }
 }
 
-/* Landscape phones and smaller */
 @media screen and (max-width: 480px) {
   .container {
     padding: 1px 20px 50px 20px;
@@ -80,73 +78,56 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
+  padding: 15px 30px;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
 }
 
 .title-text {
   position: relative;
-  color: #8558d9;
+  margin-top: 15px;
   font-size: 60px;
-  font-weight: 100;
+  color: #fff;
   white-space: pre;
   font-family: BPG Nino Mtavruli Book, sans-serif;
 }
 
+.title-subtext {
+  font-size: 40px;
+  font-weight: 100;
+  color: #fff;
+  font-family: BPG Nino Mtavruli Book, sans-serif;
+}
+
 .title-icon {
-  height: 55px;
+  height: 75px;
 }
 
 .title-img {
-  padding-top: 3px;
-  height: 120px;
+  height: 110px;
+  border: 2px solid #fff;
   border-radius: 99px;
 }
 
 .title-hr {
   position: relative;
+  width: 10%;
   height: 1px;
-  vertical-align: -20 px;
   border: none;
   background-color: #ffd139;
 }
 
-.title-hr:before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: -5px;
-  left: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #ffd139;
-}
-
-.title-hr:after {
-  position: absolute;
-  content: "";
-  display: block;
-  top: -5px;
-  right: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #ffd139;
-}
-
-/* Portrait tablets and small desktops */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .title-text {
     white-space: normal;
   }
 }
 
-/* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   .title-text {
     font-size: 40px;
@@ -160,7 +141,6 @@ html {
   }
 }
 
-/* Landscape phones and smaller */
 @media screen and (max-width: 480px) {
   .title-text {
     font-size: 30px;
@@ -203,17 +183,34 @@ li {
 }
 
 #top {
+  display: none;
+}
+
+.back-to-top {
   z-index: 99;
   position: fixed;
-  display: none;
-  bottom: 20px;
   right: 20px;
-  padding: 15px 20px 10px 20px;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 0 20px;
   border-radius: 20px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#c500c5), to(#8558d9));
-  background: linear-gradient(90deg, #c500c5 0%, #8558d9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
   font-family: BPG Nino Mtavruli Bold, sans-serif;
+}
+
+.back-to-top span {
+  margin-top: 2px;
+}
+
+.arrow {
+  height: 40px;
 }
 
 .logo {
@@ -223,7 +220,6 @@ li {
 
 .logo-img {
   margin: 10px auto;
-  padding-left: 20px;
   height: 45px;
 }
 
@@ -260,8 +256,8 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#c500c5), to(#8558d9));
-  background: linear-gradient(90deg, #c500c5 0%, #8558d9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
 }
 
 .navbar-container {
@@ -292,16 +288,64 @@ li {
   text-align: center;
   font-size: 18px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#c500c5), to(#8558d9));
-  background: linear-gradient(90deg, #c500c5 0%, #8558d9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.author-writings {
-  margin-bottom: 15px;
-  padding: 15px 30px 30px 30px;
-  border: 1px solid #8558d9;
+.author .title {
+  z-index: 1;
+  position: relative;
+  border-left: 1px solid #8558d9;
+  border-right: 1px solid #dc7b14;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #fff;
+}
+
+.author .title:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  -webkit-box-shadow: 0 5px 30px #b191ecad;
+          box-shadow: 0 5px 30px #b191ecad;
+}
+
+.author .title div {
+  margin-top: 15px;
+}
+
+.author-writings {
+  z-index: 0;
+  position: relative;
+  margin: 0;
+  padding: 15px 30px 30px 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+}
+
+.author-writings:before {
+  z-index: -2;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 1px 1px 1px;
+  border-radius: inherit;
+  background: #fff;
 }
 
 .author-writing {
@@ -312,6 +356,7 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
+  width: 100%;
   border-bottom: 2px dotted #ffd139;
   font-size: 24px;
   -webkit-transition: 300ms ease;
@@ -331,11 +376,58 @@ li {
   text-align: right;
 }
 
+.writing .title {
+  z-index: 1;
+  position: relative;
+  border-left: 1px solid #8558d9;
+  border-right: 1px solid #dc7b14;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #fff;
+}
+
+.writing .title:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  -webkit-box-shadow: 0 5px 30px #b191ecad;
+          box-shadow: 0 5px 30px #b191ecad;
+}
+
 .writing-info {
+  z-index: 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px 0;
+  margin: 0;
+  padding: 30px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
+  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+}
+
+.writing-info:before {
+  z-index: -2;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 1px 1px 1px;
+  border-radius: inherit;
+  background: #fff;
 }
 
 .writing-info-block {

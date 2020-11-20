@@ -27,17 +27,4 @@
   font-family: "BPG Nino Mkhedruli Bold";
   src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
-
-.navbar-link-title-about {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.about-ps {
-  text-align: right;
-}
-
-.about-heart {
-  vertical-align: -8px;
-  height: 30px;
-}
 /*# sourceMappingURL=style.css.map */

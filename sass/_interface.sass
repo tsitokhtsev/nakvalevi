@@ -11,79 +11,94 @@ html
 .section
     margin: 50px 0
 
+//////////////////////////////////////////////////
+// container
 .container
-    margin: 100px auto 0 auto
-    padding: 50px 60px
-    max-width: 1080px
+    margin: 80px auto 0 auto
+    padding: 50px
+    max-width: 1090px
     min-height: 80vh
     font-size: 24px
-    box-shadow: -10px 0px 60px $purple-light, 10px 0px 60px $purple-light
     background-color: #fff
+    box-shadow: -10px 0px 60px $purple-light, 10px 0px 60px $purple-light
     +mkh-regular
     &:first-of-type
         border-top-left-radius: 20px
         border-top-right-radius: 20px
-/* Landscape phones and portrait tablets */
+// Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .container
         padding: 5px 30px 60px 30px
-/* Landscape phones and smaller */
+// Landscape phones and smaller
 @media screen and (max-width: 480px)
     .container
         padding: 1px 20px 50px 20px
+//////////////////////////////////////////////////
 
+//////////////////////////////////////////////////
+// article titles
 .title
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
     margin: 0
+    padding: 15px 30px
+    border-radius: 20px
+    background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+    // border-bottom: 1px solid $yellow
+    // &:before
+    //     position: absolute
+    //     content: ""
+    //     display: block
+    //     top: -6px
+    //     left: -6px
+    //     width: 9px
+    //     height: 9px
+    //     border: 1px solid $yellow
+    //     border-radius: 50%
+    //     background: #fff
+    // &:after
+    //     position: absolute
+    //     content: ""
+    //     display: block
+    //     bottom: -6px
+    //     left: -6px
+    //     width: 9px
+    //     height: 9px
+    //     border: 1px solid $yellow
+    //     border-radius: 50%
+    //     background: #fff
     &-text
         position: relative
-        color: $purple
+        margin-top: 15px
         font-size: 60px
-        font-weight: 100
+        // font-weight: 100
+        color: #fff
         white-space: pre
         +mt-light
+    &-subtext
+        font-size: 40px
+        font-weight: 100
+        color: #fff
+        +mt-light
     &-icon
-        height: 55px
+        height: 75px
     &-img
-        padding-top: 3px
-        height: 120px
+        height: 110px
+        border: 2px solid #fff
         border-radius: 99px
     &-hr
         position: relative
+        width: 10%
         height: 1px
-        vertical-align: -20 px
         border: none
         background-color: $yellow
-        &:before
-            position: absolute
-            content: ""
-            display: block
-            top: -5px
-            left: 0
-            width: 9px
-            height: 9px
-            border-radius: 50%
-            background: #fff
-            border: 1px solid $yellow
-        &:after
-            position: absolute
-            content: ""
-            display: block
-            top: -5px
-            right: 0
-            width: 9px
-            height: 9px
-            border-radius: 50%
-            background: #fff
-            border: 1px solid $yellow
-/* Portrait tablets and small desktops */
+// Portrait tablets and small desktops
 @media screen and (min-width: 768px) and (max-width: 991px)
     .title
         &-text
             white-space: normal
-/* Landscape phones and portrait tablets */
+// Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .title
         &-text
@@ -93,7 +108,7 @@ html
             margin: 0 20px
         &-icon
             height: 40px
-/* Landscape phones and smaller */
+// Landscape phones and smaller
 @media screen and (max-width: 480px)
     .title
         &-text
@@ -101,6 +116,7 @@ html
             white-space: normal
         &-icon
             height: 30px
+//////////////////////////////////////////////////
 
 p
     margin-top: 0
@@ -118,7 +134,7 @@ ul
 
 li
     line-height: 1.5
-    color:  $purple
+    color: $purple
 
 .purple
     color: $purple
@@ -126,14 +142,22 @@ li
     color: $purple
     +mt-regular
 
+// back-to-top button
 #top
+    display: none
+.back-to-top
     z-index: 99
     position: fixed
-    display: none
-    bottom: 20px
     right: 20px
-    padding: 15px 20px 10px 20px
+    bottom: 20px
+    display: flex
+    align-items: center
+    padding: 0 10px 0 20px
     border-radius: 20px
     color: #fff
-    background: linear-gradient(90deg, rgba($magenta, 1) 0%, rgba($purple, 1) 100%)
+    background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
     +mt-bold
+    & span
+        margin-top: 2px
+.arrow
+    height: 40px
