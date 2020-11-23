@@ -44,10 +44,69 @@
             flex-basis: 50%
             margin: 0
             text-align: center
+    &-tabs
+        &-header
+            z-index: 1
+            position: relative
+            display: flex
+            border-left: 1px solid $purple
+            border-right: 1px solid $orange
+            border-top-left-radius: 20px
+            border-top-right-radius: 20px
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+            background: #fff
+            &:before
+                z-index: -1
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                border-radius: 20px
+                background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+                box-shadow: 0 5px 30px $purple-light
+        &-links
+            flex-basis: 50%
+            background: none
+            // float: left
+            border: none
+            outline: none
+            cursor: pointer
+            position: relative
+            width: 140px
+            padding: 15px 0 10px 0
+            text-align: center
+            font-size: 18px
+            color: #fff
+            +mt-bold
+            &:hover
+                color: rgba(#fff, 0.8)
+            // &:active
+            //     border-bottom: 1px solid rgba(#fff, 0.8)
+    &-theory,
+    &-characters,
     &-dictionary
-        padding: 20px
-        border: 1px solid $purple
-        border-radius: 20px
+        z-index: 0
+        position: relative
+        margin: 0
+        padding: 30px
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+        &:before
+            z-index: -2
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: 0 1px 1px 1px
+            border-radius: inherit
+            background: #fff
+    &-dictionary
         &-blocks
             display: flex
             justify-content: space-between
