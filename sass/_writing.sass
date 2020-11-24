@@ -14,9 +14,9 @@
             content: ''
             position: absolute
             top: 0
-            right: 0
+            right: -1px
             bottom: 0
-            left: 0
+            left: -1px
             border-radius: 20px
             background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
             box-shadow: 0 5px 30px $purple-light
@@ -61,16 +61,15 @@
                 content: ''
                 position: absolute
                 top: 0
-                right: 0
+                right: -1px
                 bottom: 0
-                left: 0
+                left: -1px
                 border-radius: 20px
                 background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
                 box-shadow: 0 5px 30px $purple-light
-        &-links
+        &-button
             flex-basis: 50%
             background: none
-            // float: left
             border: none
             outline: none
             cursor: pointer
@@ -83,8 +82,8 @@
             +mt-bold
             &:hover
                 color: rgba(#fff, 0.8)
-            // &:active
-            //     border-bottom: 1px solid rgba(#fff, 0.8)
+            &.active .writing-tabs-button-link
+                border-bottom: 1px solid rgba(#fff, 0.8)
     &-theory,
     &-characters,
     &-dictionary

@@ -35,7 +35,9 @@ html {
 .body {
   margin: 0 auto;
   color: #313131;
-  background: url("../img/background.png") center;
+  background-image: url("../img/background.png");
+  background-attachment: fixed;
+  background-position: top 170px right 20px;
 }
 
 .section {
@@ -393,9 +395,9 @@ li {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   bottom: 0;
-  left: 0;
+  left: -1px;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
@@ -457,9 +459,9 @@ li {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   bottom: 0;
-  left: 0;
+  left: -1px;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
@@ -467,7 +469,7 @@ li {
           box-shadow: 0 5px 30px #b191ecad;
 }
 
-.writing-tabs-links {
+.writing-tabs-button {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   background: none;
@@ -483,8 +485,12 @@ li {
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.writing-tabs-links:hover {
+.writing-tabs-button:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.writing-tabs-button.active .writing-tabs-button-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .writing-theory, .writing-characters, .writing-dictionary {
