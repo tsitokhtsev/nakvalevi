@@ -36,7 +36,6 @@ html {
   margin: 0 auto;
   color: #313131;
   background-image: url("../img/background.png");
-  background-attachment: fixed;
   background-position: top 170px right 20px;
 }
 
@@ -181,7 +180,7 @@ li {
 
 .PURPLE {
   color: #8558d9;
-  font-family: BPG Nino Mtavruli, sans-serif;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
 #top {
@@ -221,7 +220,7 @@ li {
 }
 
 .logo-img {
-  margin: 10px auto;
+  margin: 10px auto 12px auto;
   height: 45px;
 }
 
