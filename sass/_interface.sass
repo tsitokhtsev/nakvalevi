@@ -11,6 +11,8 @@ html
 
 .section
     margin: 50px 0
+    &:last-child
+        margin-bottom: 0
 
 //////////////////////////////////////////////////
 // container
@@ -124,18 +126,26 @@ p
     text-align: justify
     font-size: 24px
     line-height: 1.5
+    &:last-child
+        margin-bottom: 0
 
 a
     text-decoration: none
     color: $black
 
+//////////////////////////////////////////////////
+// lists
 ul
     margin-top: 0
+    padding-left: 22px
     list-style: circle outside
+    &:last-child
+        margin-bottom: 0
 
 li
     line-height: 1.5
     color: $purple
+//////////////////////////////////////////////////
 
 .purple
     color: $purple
