@@ -192,19 +192,12 @@ li {
 }
 
 .PURPLE {
+  font-size: 20px;
   color: #8558d9;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-#top {
-  display: none;
-}
-
-.back-to-top {
-  z-index: 99;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+.scrollToTopBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,15 +205,33 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 10px 0 20px;
+  border: none;
   border-radius: 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  opacity: 0;
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  outline: none;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.back-to-top span {
+.scrollToTopBtn span {
   margin-top: 2px;
+}
+
+.showBtn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .arrow {

@@ -158,41 +158,41 @@
                     <div class="writing-dictionary writing-dictionary-blocks">
                         <div class="writing-dictionary-block">
                             <p class="writing-dictionary-word">
-                                <span class="purple">ალიზი</span> - აგური
+                                <span class="PURPLE">ალიზი</span> - აგური
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">ასტამი</span> - რკინის ჯოხი
+                                <span class="PURPLE">ასტამი</span> - რკინის ჯოხი
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">გალიაკი</span> - ტახტი
+                                <span class="PURPLE">გალიაკი</span> - ტახტი
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">გირჯაკი</span> - ტყავის ნაჭერი
+                                <span class="PURPLE">გირჯაკი</span> - ტყავის ნაჭერი
                             </p>
                         </div>
                         <div class="writing-dictionary-block">
                             <p class="writing-dictionary-word">
-                                <span class="purple">ეპისტოლე</span> - საეკლესიო წერილი
+                                <span class="PURPLE">ეპისტოლე</span> - საეკლესიო წერილი
                             </p>
                             <p class="writing-dictionary-word">
                                 <span class="purple">პალიკარტი</span> - ანტიოქიური<br>სადედოფლო მოსასხამი
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">სარეცელი</span> - ლოგინი
+                                <span class="PURPLE">სარეცელი</span> - ლოგინი
                             </p>
                         </div>
                         <div class="writing-dictionary-block">
                             <p class="writing-dictionary-word">
-                                <span class="purple">სასთუმალი</span> - ბალიში
+                                <span class="PURPLE">სასთუმალი</span> - ბალიში
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">ტარიგი</span> - კრავი, ბატკანი
+                                <span class="PURPLE">ტარიგი</span> - კრავი, ბატკანი
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">ტაძარი</span> - სასახლე
+                                <span class="PURPLE">ტაძარი</span> - სასახლე
                             </p>
                             <p class="writing-dictionary-word">
-                                <span class="purple">ქუეყანა</span> - მიწა
+                                <span class="PURPLE">ქუეყანა</span> - მიწა
                             </p>
                         </div>
                     </div>
@@ -203,23 +203,7 @@
     <div class="footer">
         <span>ნაკვალევი 2020</span>
     </div>
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("writing-tabs-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("writing-tabs-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        document.getElementById("defaultOpen").click();
-    </script>
+    <script src="../../../js/writing-tabs.js"></script>
 </body>
 
 </html>
