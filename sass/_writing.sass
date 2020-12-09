@@ -105,18 +105,22 @@
             margin: 0 1px 1px 1px
             border-radius: inherit
             background: #fff
+    &-theory
+        display: flex
+        flex-direction: column
+    &-characters
+        display: flex
+        flex-direction: column
+        &-character
+            & span
+                color: $black
     &-dictionary
-        &-blocks
-            display: flex
-            justify-content: space-between
+        display: flex
+        justify-content: space-between
         &-block
             flex-basis: 34%
         &-word
             margin: 0
-    &-characters
-        &-character
-            & span
-                color: $black
 
 .na
     width: 100%

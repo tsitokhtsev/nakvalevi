@@ -540,7 +540,31 @@ li {
   background: #fff;
 }
 
-.writing-dictionary-blocks {
+.writing-theory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.writing-characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.writing-characters-character span {
+  color: #313131;
+}
+
+.writing-dictionary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,10 +580,6 @@ li {
 
 .writing-dictionary-word {
   margin: 0;
-}
-
-.writing-characters-character span {
-  color: #313131;
 }
 
 .na {
