@@ -516,7 +516,7 @@ li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.writing-theory, .writing-characters, .writing-dictionary {
+.writing-analysis, .writing-characters, .writing-dictionary {
   z-index: 0;
   position: relative;
   margin: 0;
@@ -527,7 +527,7 @@ li {
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
 }
 
-.writing-theory:before, .writing-characters:before, .writing-dictionary:before {
+.writing-analysis:before, .writing-characters:before, .writing-dictionary:before {
   z-index: -2;
   content: '';
   position: absolute;
@@ -540,7 +540,7 @@ li {
   background: #fff;
 }
 
-.writing-theory {
+.writing-analysis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
