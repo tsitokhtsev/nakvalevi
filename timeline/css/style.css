@@ -59,17 +59,22 @@
   margin-top: -120px;
 }
 
-.timeline-period {
+.timeline-period span {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 45px;
+  left: 45px;
   padding: 30px;
-  text-align: center;
+  text-align: right;
   font-size: 24px;
   letter-spacing: 3px;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
+  color: #8558d9;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  font-family: BPG Nino Mtavruli Book, sans-serif;
+  font-family: BPG Nino Mtavruli, sans-serif;
 }
 
 .timeline-period-between {
