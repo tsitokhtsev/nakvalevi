@@ -2,8 +2,10 @@
     text-align: center
     background: #fff
     &-img
-        margin: 10px auto 12px auto
+        margin: 10px auto 15px auto
         height: 45px
+    &-hr
+        visibility: hidden
 /* Portrait tablets and small desktops */
 @media screen and (min-width: 768px) and (max-width: 991px)
     .logo-img
@@ -12,6 +14,33 @@
 @media screen and (max-width: 767px)
     .logo-img
         height: 35px
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .logo
+        z-index: 99
+        position: relative
+        position: sticky
+        top: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 20px
+        height: 60px
+        &-img
+            margin: 10px auto 10px auto
+            height: 30px
+        &-menu, &-search
+            height: 40px
+        &-hr
+            position: absolute
+            width: 100%
+            bottom: -5px
+            left: 0
+            visibility: visible
+            margin: 0
+            height: 5px
+            border: none
+            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 40%, rgba($orange, 1) 100%)
 
 .navbar
     z-index: 99
@@ -39,3 +68,7 @@
         +mt-bold
         &:hover
             color: rgba(#fff, 0.8)
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .navbar
+        display: none
