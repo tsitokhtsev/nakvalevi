@@ -40,7 +40,7 @@ html {
 }
 
 .container {
-  margin: 80px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 50px;
   max-width: 1090px;
   min-height: 80vh;
@@ -169,7 +169,7 @@ html {
 
 p {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -179,6 +179,7 @@ p:last-child {
 
 @media screen and (max-width: 480px) {
   p {
+    font-size: 22px;
     padding: 0 10px;
   }
 }
@@ -208,7 +209,7 @@ li {
 }
 
 .PURPLE {
-  font-size: 20px;
+  font-size: 22px;
   color: #8558d9;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
@@ -276,11 +277,15 @@ li {
   display: none;
 }
 
+#logo-menu-chbox {
+  display: none;
+}
+
 .navbar {
   z-index: 99;
   position: -webkit-sticky;
   position: sticky;
-  top: 60px;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +336,6 @@ li {
 @media screen and (max-width: 480px) {
   .logo {
     z-index: 99;
-    position: relative;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -351,30 +355,40 @@ li {
     margin: 10px auto 10px auto;
     height: 30px;
   }
-  .logo-menu {
+  .logo-search-img {
     display: block;
-    padding: 0;
-    height: 40px;
-    border: none;
-  }
-  .logo-menu-img, .logo-search-img {
-    display: block;
+    width: 40px;
     height: 40px;
   }
   .logo-hr {
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: 0;
     display: block;
     margin: 0;
     width: 100%;
-    height: 5px;
+    height: 2px;
     border: none;
     background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
     background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
   }
+  #logo-menu {
+    display: block;
+    height: 40px;
+  }
+  #logo-menu-img {
+    width: 40px;
+    height: 40px;
+  }
+  #logo-menu-chbox {
+    display: none;
+  }
+  #logo-menu-chbox:checked + .navbar {
+    display: block;
+  }
   .navbar {
-    position: absolute;
+    position: fixed;
+    top: 60px;
     left: 0;
     display: none;
   }
@@ -383,11 +397,8 @@ li {
   }
   .navbar-link {
     display: block;
-    padding: 20px 0 15px 25px;
+    padding: 15px 0 10px 20px;
     text-align: left;
-  }
-  #logo-menu:checked + .navbar {
-    display: block;
   }
 }
 
