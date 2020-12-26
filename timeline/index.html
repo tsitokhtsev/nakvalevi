@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="/js/main.js"></script>
     <script src="../js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -19,38 +20,42 @@
 <body class="body">
     <a name="top"></a>
     <div class="logo">
+        <label for="logo-menu-chbox" id="logo-menu">
+            <img id="logo-menu-img" src="/img/menu.svg">
+        </label>
         <a href="/home">
             <img class="logo-img" src="../img/logo.png" alt="">
         </a>
+        <img class="logo-search-img" src="/img/search.svg">
+        <hr class="logo-hr">
     </div>
+    <input type="checkbox" id="logo-menu-chbox" onchange="logoMenuImgChange()" />
     <nav class="navbar">
-        <div class="navbar-links">
-            <div class="navbar-container">
-                <a href="/home" class="navbar-link">
-                    <span class="navbar-link-title-home">მთავარი</span>
-                </a>
-                <a href="/timeline" class="navbar-link">
-                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
-                </a>
-                <a href="/about" class="navbar-link">
-                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-                </a>
-            </div>
-        </div>
-        <div class="navbar-anchors wow animate__animated animate__slideInUp" data-wow-delay="600ms">
-            <div class="navbar-container">
-                <a href="#old" class="navbar-link">
-                    <span>ძველი</span>
-                </a>
-                <a href="#new" class="navbar-link">
-                    <span>ახალი</span>
-                </a>
-                <a href="#newest" class="navbar-link">
-                    <span>უახლესი</span>
-                </a>
-            </div>
+        <div class="navbar-container">
+            <a href="/home" class="navbar-link">
+                <span class="navbar-link-title-home">მთავარი</span>
+            </a>
+            <a href="/timeline" class="navbar-link">
+                <span class="navbar-link-title-timeline">თაიმლაინი</span>
+            </a>
+            <a href="/about" class="navbar-link">
+                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+            </a>
         </div>
     </nav>
+    <!-- <div class="navbar-anchors wow animate__animated animate__slideInUp" data-wow-delay="600ms">
+        <div class="navbar-container">
+            <a href="#old" class="navbar-link">
+                <span>ძველი</span>
+            </a>
+            <a href="#new" class="navbar-link">
+                <span>ახალი</span>
+            </a>
+            <a href="#newest" class="navbar-link">
+                <span>უახლესი</span>
+            </a>
+        </div>
+    </div> -->
     <div class="timeline article">
         <div class="container">
             <h1 class="title">
