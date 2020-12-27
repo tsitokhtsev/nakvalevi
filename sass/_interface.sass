@@ -19,7 +19,7 @@ html
     font-size: 24px
     background-color: #fff
     box-shadow: -10px 0px 60px $purple-light, 10px 0px 60px $purple-light
-    overflow: hidden
+    // overflow: hidden
     +mkh-regular
     &:first-of-type
         border-top-left-radius: 20px
@@ -128,7 +128,7 @@ html
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .section
-        margin: 20px 0
+        margin: 30px 0
 //////////////////////////////////////////////////
 
 //////////////////////////////////////////////////
@@ -175,6 +175,10 @@ li
     font-size: 22px
     color: $purple
     +mt-bold
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .PURPLE
+        +mt-regular
 //////////////////////////////////////////////////
 
 //////////////////////////////////////////////////
@@ -204,4 +208,10 @@ li
     transform: translateY(0)
 .arrow
     height: 40px
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .scrollToTopBtn
+        padding: 0 5px
+        & span
+            display: none
 //////////////////////////////////////////////////

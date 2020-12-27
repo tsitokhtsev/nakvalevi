@@ -48,7 +48,6 @@ html {
   background-color: #fff;
   -webkit-box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
           box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
-  overflow: hidden;
   font-family: "BPG Nino Mkhedruli", sans-serif;
 }
 
@@ -163,7 +162,7 @@ html {
 
 @media screen and (max-width: 480px) {
   .section {
-    margin: 20px 0;
+    margin: 30px 0;
   }
 }
 
@@ -214,6 +213,12 @@ li {
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
+@media screen and (max-width: 480px) {
+  .PURPLE {
+    font-family: BPG Nino Mtavruli, sans-serif;
+  }
+}
+
 .scrollToTopBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,6 +258,15 @@ li {
 
 .arrow {
   height: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .scrollToTopBtn {
+    padding: 0 5px;
+  }
+  .scrollToTopBtn span {
+    display: none;
+  }
 }
 
 .logo {

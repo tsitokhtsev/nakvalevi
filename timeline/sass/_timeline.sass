@@ -2,8 +2,10 @@
     &-block
         display: flex
     & .anchor
-        margin-top: -120px
+        margin-top: 0
     &-period
+        &-mobile
+            display: none
         & span
             position: sticky
             top: 45px
@@ -21,7 +23,6 @@
             padding: 30px
     &-main
         position: relative
-        padding: 15px 0
         border-left: 1px solid $purple
         &:before
             position: absolute
@@ -134,8 +135,94 @@
             &-date
                 margin-left: 30px
                 text-align: right
-
 .navbar:hover
     .navbar-anchors
         transform: translateY(100%)
         transition: all 300ms ease-in-out
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .timeline
+        &-block
+            &:first-of-type
+                margin-top: 50px
+        &-period
+            display: none
+            &-mobile
+                z-index: 90
+                position: sticky
+                top: 60px
+                display: block
+                margin: 0 -1px 0 -1px
+                padding-top: 30px
+                width: 100%
+                height: 30px
+                border-left: 1px solid $purple
+                background-color: #fff
+                &-space
+                    position: relative
+                    margin: 0 -1px
+                    width: 100%
+                    height: 20px
+                    border-top: 1px solid $purple
+                    border-left: 1px solid $purple
+                    border-top-left-radius: 20px
+                    background-color: #fff
+                & span
+                    z-index: 2
+                    position: absolute
+                    top: 20px
+                    left: 50px
+                    width: 80%
+                &:before
+                    z-index: 1
+                    content: ""
+                    position: absolute
+                    top: 5px
+                    left: 30px
+                    right: 0
+                    display: block
+                    height: inherit
+                    background: #fff
+                &:after
+                    z-index: 2
+                    position: absolute
+                    content: ""
+                    display: block
+                    top: 25px
+                    left: 25px
+                    width: 9px
+                    height: 9px
+                    border-radius: 50%
+                    background: #fff
+                    border: 1px solid $purple
+            &-between
+                margin: 0
+                padding: 0
+        &-main
+            margin-top: -20px
+            flex-grow: 1
+            width: 100%
+            &:before
+                z-index: 92
+            &:after
+                z-index: 92
+            &-between
+        &-line
+            &:before
+                z-index: 92
+        &-author
+            & > .timeline-line
+                width: 30px
+                &:last-of-type
+                    display: none
+            & a
+                flex-grow: 1
+            &-bio
+                flex-grow: 1
+                padding: 15px
+                min-width: 0
+            &-img
+                margin: 0
+            &-writings
+                display: none
