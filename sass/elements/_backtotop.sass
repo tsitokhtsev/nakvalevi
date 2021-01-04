@@ -1,0 +1,31 @@
+// back-to-top button
+.back-to-top
+    z-index: 99
+    display: flex
+    align-items: center
+    padding: 0 10px 0 20px
+    border: none
+    border-radius: 20px
+    position: fixed
+    bottom: 20px
+    right: 20px
+    color: #fff
+    background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+    transform: translateY(100px)
+    transition: .5s
+    outline: none
+    cursor: pointer
+    +mt-bold
+    &-text
+        margin-top: 2px
+    &-arrow
+        height: 40px
+.show-btn
+    transform: translateY(0)
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .back-to-top
+        padding: 0 5px
+        &-text
+            display: none

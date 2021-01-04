@@ -180,38 +180,3 @@ li
     .PURPLE
         +mt-regular
 //////////////////////////////////////////////////
-
-//////////////////////////////////////////////////
-// scroll-to-top button
-.scrollToTopBtn
-    display: flex
-    align-items: center
-    padding: 0 10px 0 20px
-    border: none
-    border-radius: 20px
-    cursor: pointer
-    position: fixed
-    bottom: 20px
-    right: 20px
-    z-index: 99
-    opacity: 0
-    color: #fff
-    background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-    transform: translateY(100px)
-    transition: all .5s ease
-    outline: none
-    +mt-bold
-    & span
-        margin-top: 2px
-.showBtn
-    opacity: 1
-    transform: translateY(0)
-.arrow
-    height: 40px
-// Landscape phones and smaller
-@media screen and (max-width: 480px)
-    .scrollToTopBtn
-        padding: 0 5px
-        & span
-            display: none
-//////////////////////////////////////////////////

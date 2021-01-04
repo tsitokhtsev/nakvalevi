@@ -1,11 +1,52 @@
-function logoMenuImgChange() {
-    var chbox;
-    var logoMenuImg;
-    chbox = document.getElementById('logo-menu-chbox');
-    logoMenuImg = document.getElementById('logo-menu-img');
-    if (chbox.checked) {
-        logoMenuImg.setAttribute('src', '/img/close.svg');
+// menu
+const menuBtn = document.querySelector('.logo-menu')
+const navbar = document.querySelector('.navbar')
+
+menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('logo-menu-close')
+    navbar.classList.toggle('navbar-show')
+})
+
+// back-to-top button
+const backToTopBtn = document.querySelector('.back-to-top')
+
+document.addEventListener('scroll', function () {
+    const clientHeight = document.documentElement.clientHeight
+    const scrollTop = window.pageYOffset
+    if (scrollTop > clientHeight) {
+        backToTopBtn.classList.add("show-btn")
     } else {
-        logoMenuImg.setAttribute('src', '/img/menu.svg');
+        backToTopBtn.classList.remove("show-btn")
     }
-}
+})
+
+backToTopBtn.addEventListener('click', function () {
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
+// timeline anchors
+const anchors = document.querySelector('.navbar-anchors')
+
+setTimeout(function() {
+    anchors.classList.add('navbar-anchors-show')
+}, 500);
+setTimeout(function() {
+    anchors.classList.remove('navbar-anchors-show')
+}, 1500);
+
+navbar.addEventListener('mouseover', function () {
+    anchors.classList.add('navbar-anchors-show')
+})
+navbar.addEventListener('mouseout', function () {
+    anchors.classList.remove('navbar-anchors-show')
+})
+
+anchors.addEventListener('mouseover', function () {
+    anchors.classList.add('navbar-anchors-show')
+})
+anchors.addEventListener('mouseout', function () {
+    anchors.classList.remove('navbar-anchors-show')
+})
