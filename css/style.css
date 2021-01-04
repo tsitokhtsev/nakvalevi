@@ -203,6 +203,14 @@ li {
   color: #8558d9;
 }
 
+button {
+  border: none;
+}
+
+button:visited, button:focus, button:active, button:hover {
+  outline: none;
+}
+
 .purple {
   color: #8558d9;
 }
@@ -343,11 +351,8 @@ li {
   }
   .logo-menu {
     display: block;
-    margin: 0;
-    padding: 0;
     width: 40px;
     height: 40px;
-    border: none;
     background: url("/img/menu.svg");
     background-size: cover;
   }
