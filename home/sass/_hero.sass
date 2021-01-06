@@ -1,72 +1,72 @@
 .home-hero
-    margin-top: -60px
     height: 700px
     background-image: url("../img/books.jpg")
     background-size: cover
     background-position: top
     &-container
+        margin-top: 0
         box-shadow: none
         background: none
     &-title
-        display: inline-block
         position: relative
+        display: flex
+        flex-direction: column
         margin: 0 0 0 -50px
-        text-align: left
-        height: 50%
+        padding: 15px 0
         color: #fff
         overflow: hidden
         &:before
             z-index: 1
             content: ""
             position: absolute
-            top: 0
+            top: 15px
+            bottom: 15px
             left: 0
-            margin: 18px 0
-            height: 87%
             border-left: 1px solid #fff
-            box-shadow: 1px 0px 0 $purple, 2px 0px 0 $purple
         &-word
-            display: inline-block
             padding: 15px 15px 0 30px
             font-size: 70px
-            text-shadow: 3px 1px 0 $purple
+            line-height: 100%
+            text-shadow: 0 1px 15px $purple
+            transform: translateX(-100%)
+            transition: 1s
             +mt-bold
+            &:first-of-type
+                margin-top: -15px
+            &:last-of-type
+                margin-bottom: -16px
+            &-show
+                transform: translateY(0)
 
-/* Portrait tablets and medium desktops */    
+// Portrait tablets and medium desktops    
 @media screen and (min-width: 992px) and (max-width: 1199px)
     .home-hero-title
-        margin-left: 0px
-        &:before
-            height: 86%
+        margin: -25px 0 0 0
         &-word
             font-size: 60px
 
-/* Portrait tablets and small desktops */
+// Portrait tablets and small desktops
 @media screen and (min-width: 768px) and (max-width: 991px)
     .home-hero-title
-        margin-left: 0px
-        &:before
-            height: 84%
+        margin: -25px 0 0 0
         &-word
             font-size: 45px
+            &:last-of-type
+                margin-bottom: -12px
 
-/* Landscape phones and portrait tablets */
+// Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .home-hero-title
-        margin: 30px 0 0 0
-        line-height: 1
-        &:before
-            height: 82%
+        margin: -25px 0 0 0
         &-word
-            padding: 18px 15px 0 30px
-            font-size: 40px
+            font-size: 45px
+            &:last-of-type
+                margin-bottom: -12px
 
-/* Landscape phones and smaller */
+// Landscape phones and smaller
 @media screen and (max-width: 480px)
     .home-hero-title
-        margin: 25px 0 0 0
-        line-height: 1
-        &:before
-            height: 84%
+        margin: 0
         &-word
+            padding-left: 15px
             font-size: 45px

@@ -56,12 +56,6 @@ html {
   border-top-right-radius: 20px;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    padding: 5px 30px 60px 30px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .container {
     padding: 15px;

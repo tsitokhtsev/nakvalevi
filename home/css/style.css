@@ -33,7 +33,6 @@
 }
 
 .home-hero {
-  margin-top: -60px;
   height: 700px;
   background-image: url("../img/books.jpg");
   background-size: cover;
@@ -41,17 +40,23 @@
 }
 
 .home-hero-container {
+  margin-top: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
   background: none;
 }
 
 .home-hero-title {
-  display: inline-block;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 0 0 -50px;
-  text-align: left;
-  height: 50%;
+  padding: 15px 0;
   color: #fff;
   overflow: hidden;
 }
@@ -60,74 +65,76 @@
   z-index: 1;
   content: "";
   position: absolute;
-  top: 0;
+  top: 15px;
+  bottom: 15px;
   left: 0;
-  margin: 18px 0;
-  height: 87%;
   border-left: 1px solid #fff;
-  -webkit-box-shadow: 1px 0px 0 #8558d9, 2px 0px 0 #8558d9;
-          box-shadow: 1px 0px 0 #8558d9, 2px 0px 0 #8558d9;
 }
 
 .home-hero-title-word {
-  display: inline-block;
   padding: 15px 15px 0 30px;
   font-size: 70px;
-  text-shadow: 3px 1px 0 #8558d9;
+  line-height: 100%;
+  text-shadow: 0 1px 15px #8558d9;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1s;
+  transition: 1s;
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-/* Portrait tablets and medium desktops */
+.home-hero-title-word:first-of-type {
+  margin-top: -15px;
+}
+
+.home-hero-title-word:last-of-type {
+  margin-bottom: -16px;
+}
+
+.home-hero-title-word-show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .home-hero-title {
-    margin-left: 0px;
-  }
-  .home-hero-title:before {
-    height: 86%;
+    margin: -25px 0 0 0;
   }
   .home-hero-title-word {
     font-size: 60px;
   }
 }
 
-/* Portrait tablets and small desktops */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .home-hero-title {
-    margin-left: 0px;
-  }
-  .home-hero-title:before {
-    height: 84%;
+    margin: -25px 0 0 0;
   }
   .home-hero-title-word {
     font-size: 45px;
   }
+  .home-hero-title-word:last-of-type {
+    margin-bottom: -12px;
+  }
 }
 
-/* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   .home-hero-title {
-    margin: 30px 0 0 0;
-    line-height: 1;
-  }
-  .home-hero-title:before {
-    height: 82%;
+    margin: -25px 0 0 0;
   }
   .home-hero-title-word {
-    padding: 18px 15px 0 30px;
-    font-size: 40px;
+    font-size: 45px;
+  }
+  .home-hero-title-word:last-of-type {
+    margin-bottom: -12px;
   }
 }
 
-/* Landscape phones and smaller */
 @media screen and (max-width: 480px) {
   .home-hero-title {
-    margin: 25px 0 0 0;
-    line-height: 1;
-  }
-  .home-hero-title:before {
-    height: 84%;
+    margin: 0;
   }
   .home-hero-title-word {
+    padding-left: 15px;
     font-size: 45px;
   }
 }
