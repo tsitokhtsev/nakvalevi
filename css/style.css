@@ -503,23 +503,6 @@ button:visited, button:focus, button:active, button:hover {
 .writing .title {
   z-index: 1;
   position: relative;
-  border-left: 1px solid #8558d9;
-  border-right: 1px solid #dc7b14;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background: #fff;
-}
-
-.writing .title:before {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1px;
-  bottom: 0;
-  left: -1px;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
@@ -533,8 +516,8 @@ button:visited, button:focus, button:active, button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 30px 0;
+  margin: -20px 0 0 0;
+  padding: 50px 0 30px 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
@@ -561,29 +544,21 @@ button:visited, button:focus, button:active, button:hover {
   text-align: center;
 }
 
-.writing-tabs-header {
-  z-index: 1;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-left: 1px solid #8558d9;
-  border-right: 1px solid #dc7b14;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background: #fff;
+.writing-card {
+  overflow: hidden;
+  max-height: 45px;
+  border-radius: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.writing-tabs-header:before {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -1px;
-  bottom: 0;
-  left: -1px;
+.writing-card:not(:first-of-type) {
+  margin: 30px 0 0 0;
+}
+
+.writing-card-header {
+  z-index: 1;
+  position: relative;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
@@ -591,15 +566,8 @@ button:visited, button:focus, button:active, button:hover {
           box-shadow: 0 5px 30px #b191ecad;
 }
 
-.writing-tabs-button {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  width: 140px;
+.writing-card-title {
+  margin: 0 auto;
   padding: 15px 0 10px 0;
   text-align: center;
   font-size: 18px;
@@ -607,27 +575,53 @@ button:visited, button:focus, button:active, button:hover {
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.writing-tabs-button:hover {
-  color: rgba(255, 255, 255, 0.8);
+.writing-card-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 0 10px 0;
+  width: 45px;
+  height: 45px;
+  text-align: right;
+  font-size: 18px;
+  border: none;
+  background: url("/img/arrow.svg");
+  background-size: cover;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
-.writing-tabs-button.active .writing-tabs-button-link {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+.writing-card-button:hover {
+  opacity: 0.5;
 }
 
-.writing-analysis, .writing-characters, .writing-dictionary {
+.writing-card-button-show {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.writing-card-content {
   z-index: 0;
   position: relative;
-  margin: 0;
-  padding: 30px;
+  margin-top: -20px;
+  padding: 50px 30px 30px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.writing-analysis:before, .writing-characters:before, .writing-dictionary:before {
-  z-index: -2;
+.writing-card-content:before {
+  z-index: -1;
   content: '';
   position: absolute;
   top: 0;
@@ -639,24 +633,11 @@ button:visited, button:focus, button:active, button:hover {
   background: #fff;
 }
 
-.writing-analysis {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.writing-characters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.writing-card-content-show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .writing-characters-character span {
@@ -667,9 +648,6 @@ button:visited, button:focus, button:active, button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .writing-dictionary-block {
@@ -677,12 +655,11 @@ button:visited, button:focus, button:active, button:hover {
       flex-basis: 34%;
 }
 
-.writing-dictionary-word {
+.writing-dictionary-block-word {
   margin: 0;
 }
 
 .na {
-  width: 100%;
   text-align: center;
   color: rgba(133, 88, 217, 0.4);
   font-family: BPG Nino Mtavruli Bold, sans-serif;

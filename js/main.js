@@ -63,3 +63,4 @@ anchors.addEventListener('mouseover', function () {
 anchors.addEventListener('mouseout', function () {
     anchors.classList.remove('navbar-anchors-show')
 })
+

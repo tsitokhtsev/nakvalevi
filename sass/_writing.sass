@@ -2,30 +2,15 @@
     & .title
         z-index: 1
         position: relative
-        border-left: 1px solid $purple
-        border-right: 1px solid $orange
-        border-top-left-radius: 20px
-        border-top-right-radius: 20px
-        border-bottom-left-radius: 0
-        border-bottom-right-radius: 0
-        background: #fff
-        &:before
-            z-index: -1
-            content: ''
-            position: absolute
-            top: 0
-            right: -1px
-            bottom: 0
-            left: -1px
-            border-radius: 20px
-            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-            box-shadow: 0 5px 30px $purple-light
+        border-radius: 20px
+        background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+        box-shadow: 0 5px 30px $purple-light
     &-info
         z-index: 0
         position: relative
         display: flex
-        margin: 0
-        padding: 30px 0
+        margin: -20px 0 0 0
+        padding: 50px 0 30px 0
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
@@ -44,86 +29,82 @@
             flex-basis: 50%
             margin: 0
             text-align: center
-    &-tabs
+    &-card
+        overflow: hidden
+        max-height: 45px
+        border-radius: 20px
+        transition: .5s
+        &:not(:first-of-type)
+            margin: 30px 0 0 0
         &-header
             z-index: 1
             position: relative
-            display: flex
-            border-left: 1px solid $purple
-            border-right: 1px solid $orange
-            border-top-left-radius: 20px
-            border-top-right-radius: 20px
-            border-bottom-left-radius: 0
-            border-bottom-right-radius: 0
-            background: #fff
-            &:before
-                z-index: -1
-                content: ''
-                position: absolute
-                top: 0
-                right: -1px
-                bottom: 0
-                left: -1px
-                border-radius: 20px
-                background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-                box-shadow: 0 5px 30px $purple-light
-        &-button
-            flex-basis: 50%
-            background: none
-            border: none
-            outline: none
-            cursor: pointer
-            position: relative
-            width: 140px
+            border-radius: 20px
+            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+            box-shadow: 0 5px 30px $purple-light
+        &-title
+            margin: 0 auto
             padding: 15px 0 10px 0
             text-align: center
             font-size: 18px
             color: #fff
             +mt-bold
-            &:hover
-                color: rgba(#fff, 0.8)
-            &.active .writing-tabs-button-link
-                border-bottom: 1px solid rgba(#fff, 0.8)
-    &-analysis,
-    &-characters,
-    &-dictionary
-        z-index: 0
-        position: relative
-        margin: 0
-        padding: 30px
-        border-bottom-left-radius: 20px
-        border-bottom-right-radius: 20px
-        background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-        &:before
-            z-index: -2
-            content: ''
+        &-button
             position: absolute
             top: 0
             right: 0
-            bottom: 0
-            left: 0
-            margin: 0 1px 1px 1px
-            border-radius: inherit
-            background: #fff
-    &-analysis
-        display: flex
-        flex-direction: column
+            padding: 15px 0 10px 0
+            width: 45px
+            height: 45px
+            text-align: right
+            font-size: 18px
+            border: none
+            background: url('/img/arrow.svg')
+            background-size: cover
+            outline: none
+            cursor: pointer
+            transition: .5s
+            +mt-bold
+            &:hover
+                opacity: 0.5
+            &-show
+                transform: rotate(180deg)
+                transition: .5s
+        &-content
+            z-index: 0
+            position: relative
+            margin-top: -20px
+            padding: 50px 30px 30px 30px
+            border-bottom-left-radius: 20px
+            border-bottom-right-radius: 20px
+            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+            transform: translateY(-100%)
+            transition: .5s
+            &:before
+                z-index: -1
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                margin: 0 1px 1px 1px
+                border-radius: inherit
+                background: #fff
+            &-show
+                transform: translateY(0)
+                transition: .5s
     &-characters
-        display: flex
-        flex-direction: column
-        &-character
-            & span
-                color: $black
+        &-character span
+            color: $black
     &-dictionary
         display: flex
-        justify-content: space-between
         &-block
             flex-basis: 34%
-        &-word
-            margin: 0
+            &-word
+                margin: 0
 
 .na
-    width: 100%
     text-align: center
     color: rgba($purple, 0.4)
     +mt-bold

@@ -12,23 +12,24 @@
 
 <body class="body">
     <div class="logo">
+        <button class="logo-menu"></button>
         <a href="/home">
             <img class="logo-img" src="/img/logo.png" alt="">
         </a>
+        <button class="logo-search"></button>
+        <hr class="logo-hr">
     </div>
     <nav class="navbar">
-        <div class="navbar-links">
-            <div class="navbar-container">
-                <a href="/home" class="navbar-link">
-                    <span class="navbar-link-title-home">მთავარი</span>
-                </a>
-                <a href="/timeline" class="navbar-link">
-                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
-                </a>
-                <a href="/about" class="navbar-link">
-                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-                </a>
-            </div>
+        <div class="navbar-container">
+            <a href="/home" class="navbar-link">
+                <span class="navbar-link-title-home">მთავარი</span>
+            </a>
+            <a href="/timeline" class="navbar-link">
+                <span class="navbar-link-title-timeline">თაიმლაინი</span>
+            </a>
+            <a href="/about" class="navbar-link">
+                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+            </a>
         </div>
     </nav>
 
@@ -51,20 +52,16 @@
                     <span>1877 წ.</span>
                 </p>
             </div>
-            <div class="writing-tabs section">
-                <div class="writing-tabs-header">
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-analysis')" id="defaultOpen">
-                        <span class="writing-tabs-button-link">ანალიზი</span>
-                    </button>
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-characters')">
-                        <span class="writing-tabs-button-link">პერსონაჟები</span>
-                    </button>
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-dictionary')">
-                        <span class="writing-tabs-button-link">ლექსიკონი</span>
-                    </button>
-                </div>
-                <div id="writing-analysis" class="writing-tabs-content">
-                    <div class="writing-analysis">
+
+            <div class="section">
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">ანალიზი</span>
+                        </div>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
                         <p>
                             XIX საუკუნის რომანტიკოსმა მწერალმა, გრიგოლ ორბელიანმა, ლექსი „თამარ მეფის სახე ბეთანიის
                             ეკლესიაში“ 1877 წელს დაწერა. ნაწარმოები წარმოგვიდგება, როგორც ლირიკული გმირის მონოლოგი, ის
@@ -110,14 +107,32 @@
                         </p>
                     </div>
                 </div>
-                <div id="writing-characters" class="writing-tabs-content">
-                    <div class="writing-characters">
-                        <span class="na">არ არის ინფორმაცია</span>
+
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">პერსონაჟები</span>
+                        </div>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
+                        <div class="writing-characters">
+                            <span class="na">არ არის ინფორმაცია</span>
+                        </div>
                     </div>
                 </div>
-                <div id="writing-dictionary" class="writing-tabs-content">
-                    <div class="writing-dictionary">
-                        <span class="na">არ არის ინფორმაცია</span>
+
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">ლექსიკონი</span>
+                        </div>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
+                        <div class="writing-dictionary">
+                            <span class="na">არ არის ინფორმაცია</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,7 +142,9 @@
     <div class="footer">
         <span>ნაკვალევი 2020</span>
     </div>
-    <script src="../../../js/writing-tabs.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/writing.js"></script>
 </body>
 
 </html>

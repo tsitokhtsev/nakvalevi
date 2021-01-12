@@ -5,34 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>შუშანიკის წამება - იაკობ ცურტაველი</title>
-    <link rel="shortcut icon" href="../../../img/favicon.svg" type="image/png" />
-    <link rel="stylesheet" href="../../../css/normalize.css" />
-    <link rel="stylesheet" href="../../../css/style.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="../../../js/main.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.svg" type="image/png" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body class="body">
     <div class="logo">
+        <button class="logo-menu"></button>
         <a href="/home">
-            <img class="logo-img" src="../../../img/logo.png" alt="">
+            <img class="logo-img" src="/img/logo.png" alt="">
         </a>
+        <button class="logo-search"></button>
+        <hr class="logo-hr">
     </div>
     <nav class="navbar">
-        <div class="navbar-links">
-            <div class="navbar-container">
-                <a href="/home" class="navbar-link">
-                    <span class="navbar-link-title-home">მთავარი</span>
-                </a>
-                <a href="/timeline" class="navbar-link">
-                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
-                </a>
-                <a href="/about" class="navbar-link">
-                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-                </a>
-            </div>
+        <div class="navbar-container">
+            <a href="/home" class="navbar-link">
+                <span class="navbar-link-title-home">მთავარი</span>
+            </a>
+            <a href="/timeline" class="navbar-link">
+                <span class="navbar-link-title-timeline">თაიმლაინი</span>
+            </a>
+            <a href="/about" class="navbar-link">
+                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+            </a>
         </div>
     </nav>
+
     <div class="writing article">
         <div class="container">
             <h1 class="title">
@@ -52,20 +52,16 @@
                     <span>დაახ. 476-483 წ.წ.</span>
                 </p>
             </div>
-            <div class="writing-tabs section">
-                <div class="writing-tabs-header">
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-analysis')" id="defaultOpen">
-                        <span class="writing-tabs-button-link">ანალიზი</span>
-                    </button>
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-characters')">
-                        <span class="writing-tabs-button-link">პერსონაჟები</span>
-                    </button>
-                    <button class="writing-tabs-button" onclick="openTab(event, 'writing-dictionary')">
-                        <span class="writing-tabs-button-link">ლექსიკონი</span>
-                    </button>
-                </div>
-                <div id="writing-analysis" class="writing-tabs-content">
-                    <div class="writing-analysis">
+
+            <div class="section">
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">ანალიზი</span>
+                        </div>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
                         <p>
                             იაკობ ხუცესის „შუშანიკის წამება“ წამროადგენს ჩვენს დრომდე მოღწეულ პირველ მხატვრულ
                             ნაწარმოებს.
@@ -105,105 +101,126 @@
                         </p>
                     </div>
                 </div>
-                <div id="writing-characters" class="writing-tabs-content">
-                    <div class="writing-characters">
-                        <span class="PURPLE">ვარსქენ პიტიახში</span>
-                        <ul class="writing-characters-character">
-                            <li><span>პირადი კეთილდღეობის გამო იცვლის რელიგიას;</span></li>
-                            <li><span>მეუღლის მიმართ უპატივცემელი;</span></li>
-                            <li><span>თავდაჯერებული;</span></li>
-                            <li><span>არავის უწევს ანგარიშს;</span></li>
-                            <li><span>მიაჩნია, რომ მის ნებას უსიტყვოდ დაემორჩილებიან;</span></li>
-                            <li><span>ამბიციური და ამპარტავანი;</span></li>
-                            <li><span>თვალთმაქცი;</span></li>
-                            <li><span>თავხედი, რადგან ეპისკოპოსს აგინებს;</span></li>
-                            <li><span>სასტიკი, დამცინავი, ცინიკოსი, დაუნდობელი;</span></li>
-                            <li><span>„საწყალობელი“, „უბადრუკი“, „მხეცი“, „მგელი“, „ცოფი“, „უბადო“, „ყოვლად
-                                    განწირული“.</span>
-                            </li>
-                        </ul>
-                        <span class="PURPLE">ჯოჯიკი</span>
-                        <ul class="writing-characters-character">
-                            <li><span>გამბედავი;</span></li>
-                            <li><span>თავგანწირული;</span></li>
-                            <li><span>ადამიანური, სთხოვს ძმას შუშანიკს ბორკილები მოხსნას;</span></li>
-                            <li><span>კეთილი, სინდისის მქონე;</span></li>
-                            <li><span>აღიარებს შუშანიკის სიწმინდეს;</span></li>
-                            <li><span>დედოფლისადმი თანაგრძნობითა და პატივისცემით სავსე;</span></li>
-                            <li><span>სარწმუნოების ერთგული;</span></li>
-                            <li><span>ტრადიციათა არ დამრღვევი.</span></li>
-                        </ul>
-                        <span class="PURPLE">იაკობ ხუცესი</span>
-                        <ul class="writing-characters-character">
-                            <li><span>პირდაპირი;</span></li>
-                            <li><span>ჭეშმარიტი სულიერი რაინდი;</span></li>
-                            <li><span>დიაკვანთან ერთად „დიდითა ტირილით“ ტირის დედოფლის სასახლიდან წასვლის
-                                    გამო;</span>
-                            </li>
-                            <li><span>თავს იდანაშაულებს პიტიახშის სულიერი სიკვდილის გამო.</span></li>
-                        </ul>
-                        <span class="PURPLE">დიაკვანი</span>
-                        <ul class="writing-characters-character">
-                            <li><span>სიყვარულითა და თანაგრძნობით სავსე;</span></li>
-                            <li><span>მშიშარა;</span></li>
-                        </ul>
-                        <span class="PURPLE">სპარსი</span>
-                        <ul class="writing-characters-character">
-                            <li><span>ფარისეველი, ის ტირის, რათა დედოფლის გული მოიგოს;</span></li>
-                            <li><span>„დევთაგანი“</span></li>
-                        </ul>
+
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">პერსონაჟები</span>
+                        </div>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
+                        <div class="writing-characters">
+                            <span class="PURPLE">ვარსქენ პიტიახში</span>
+                            <ul class="writing-characters-character">
+                                <li><span>პირადი კეთილდღეობის გამო იცვლის რელიგიას;</span></li>
+                                <li><span>მეუღლის მიმართ უპატივცემელი;</span></li>
+                                <li><span>თავდაჯერებული;</span></li>
+                                <li><span>არავის უწევს ანგარიშს;</span></li>
+                                <li><span>მიაჩნია, რომ მის ნებას უსიტყვოდ დაემორჩილებიან;</span></li>
+                                <li><span>ამბიციური და ამპარტავანი;</span></li>
+                                <li><span>თვალთმაქცი;</span></li>
+                                <li><span>თავხედი, რადგან ეპისკოპოსს აგინებს;</span></li>
+                                <li><span>სასტიკი, დამცინავი, ცინიკოსი, დაუნდობელი;</span></li>
+                                <li><span>„საწყალობელი“, „უბადრუკი“, „მხეცი“, „მგელი“, „ცოფი“, „უბადო“, „ყოვლად
+                                        განწირული“.</span>
+                                </li>
+                            </ul>
+                            <span class="PURPLE">ჯოჯიკი</span>
+                            <ul class="writing-characters-character">
+                                <li><span>გამბედავი;</span></li>
+                                <li><span>თავგანწირული;</span></li>
+                                <li><span>ადამიანური, სთხოვს ძმას შუშანიკს ბორკილები მოხსნას;</span></li>
+                                <li><span>კეთილი, სინდისის მქონე;</span></li>
+                                <li><span>აღიარებს შუშანიკის სიწმინდეს;</span></li>
+                                <li><span>დედოფლისადმი თანაგრძნობითა და პატივისცემით სავსე;</span></li>
+                                <li><span>სარწმუნოების ერთგული;</span></li>
+                                <li><span>ტრადიციათა არ დამრღვევი.</span></li>
+                            </ul>
+                            <span class="PURPLE">იაკობ ხუცესი</span>
+                            <ul class="writing-characters-character">
+                                <li><span>პირდაპირი;</span></li>
+                                <li><span>ჭეშმარიტი სულიერი რაინდი;</span></li>
+                                <li><span>დიაკვანთან ერთად „დიდითა ტირილით“ ტირის დედოფლის სასახლიდან წასვლის
+                                        გამო;</span>
+                                </li>
+                                <li><span>თავს იდანაშაულებს პიტიახშის სულიერი სიკვდილის გამო.</span></li>
+                            </ul>
+                            <span class="PURPLE">დიაკვანი</span>
+                            <ul class="writing-characters-character">
+                                <li><span>სიყვარულითა და თანაგრძნობით სავსე;</span></li>
+                                <li><span>მშიშარა;</span></li>
+                            </ul>
+                            <span class="PURPLE">სპარსი</span>
+                            <ul class="writing-characters-character">
+                                <li><span>ფარისეველი, ის ტირის, რათა დედოფლის გული მოიგოს;</span></li>
+                                <li><span>„დევთაგანი“</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div id="writing-dictionary" class="writing-tabs-content">
-                    <div class="writing-dictionary">
-                        <div class="writing-dictionary-block">
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ალიზი</span> - აგური
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ასტამი</span> - რკინის ჯოხი
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">გალიაკი</span> - ტახტი
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">გირჯაკი</span> - ტყავის ნაჭერი
-                            </p>
+
+                <div class="writing-card">
+                    <div class="writing-card-header">
+                        <div class="writing-card-title">
+                            <span class="writing-card-title-text">ლექსიკონი</span>
                         </div>
-                        <div class="writing-dictionary-block">
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ეპისტოლე</span> - საეკლესიო წერილი
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">პალიკარტი</span> - ანტიოქიური<br>სადედოფლო მოსასხამი
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">სარეცელი</span> - ლოგინი
-                            </p>
-                        </div>
-                        <div class="writing-dictionary-block">
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">სასთუმალი</span> - ბალიში
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ტარიგი</span> - კრავი, ბატკანი
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ტაძარი</span> - სასახლე
-                            </p>
-                            <p class="writing-dictionary-word">
-                                <span class="PURPLE">ქუეყანა</span> - მიწა
-                            </p>
+                        <button class="writing-card-button"></button>
+                    </div>
+                    <div class="writing-card-content">
+                        <div class="writing-dictionary">
+                            <div class="writing-dictionary-block">
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ალიზი</span> - აგური
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ასტამი</span> - რკინის ჯოხი
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">გალიაკი</span> - ტახტი
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">გირჯაკი</span> - ტყავის ნაჭერი
+                                </p>
+                            </div>
+                            <div class="writing-dictionary-block">
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ეპისტოლე</span> - საეკლესიო წერილი
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">პალიკარტი</span> - ანტიოქიური<br>სადედოფლო მოსასხამი
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">სარეცელი</span> - ლოგინი
+                                </p>
+                            </div>
+                            <div class="writing-dictionary-block">
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">სასთუმალი</span> - ბალიში
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ტარიგი</span> - კრავი, ბატკანი
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ტაძარი</span> - სასახლე
+                                </p>
+                                <p class="writing-dictionary-block-word">
+                                    <span class="PURPLE">ქუეყანა</span> - მიწა
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="footer">
         <span>ნაკვალევი 2020</span>
     </div>
-    <script src="../../../js/writing-tabs.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/writing.js"></script>
 </body>
 
 </html>
