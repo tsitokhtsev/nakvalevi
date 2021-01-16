@@ -26,7 +26,7 @@
             border-radius: inherit
             background: #fff
         &-block
-            flex-basis: 50%
+            flex-basis: 100%
             margin: 0
             text-align: center
     &-card
@@ -95,16 +95,37 @@
                 transform: translateY(0)
                 transition: .5s
     &-characters
-        &-character span
-            color: $black
+        ul
+            margin-bottom: 15px
+            & span
+                color: $black
     &-dictionary
         display: flex
         &-block
-            flex-basis: 34%
+            flex-basis: 100%
             &-word
-                margin: 0
+                margin: 5px 0
 
 .na
     text-align: center
     color: rgba($purple, 0.4)
     +mt-bold
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .writing
+        &-info
+            display: block
+            padding: 30px 15px 15px 15px
+            &-block
+                display: flex
+                justify-content: space-between
+        &-card
+            &-content
+                padding: 30px 15px 15px 15px
+        &-characters
+            &-character
+                &-name
+                    text-align: center
+        &-dictionary
+            flex-direction: column

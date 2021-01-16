@@ -41,29 +41,6 @@ html
     padding: 15px 30px
     border-radius: 20px
     background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-    // border-bottom: 1px solid $yellow
-    // &:before
-    //     position: absolute
-    //     content: ""
-    //     display: block
-    //     top: -6px
-    //     left: -6px
-    //     width: 9px
-    //     height: 9px
-    //     border: 1px solid $yellow
-    //     border-radius: 50%
-    //     background: #fff
-    // &:after
-    //     position: absolute
-    //     content: ""
-    //     display: block
-    //     bottom: -6px
-    //     left: -6px
-    //     width: 9px
-    //     height: 9px
-    //     border: 1px solid $yellow
-    //     border-radius: 50%
-    //     background: #fff
     &-text
         position: relative
         margin-top: 15px
@@ -107,7 +84,7 @@ html
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .title
-        padding: 10px 20px
+        padding: 10px 15px
         &-text
             margin-top: 8px
             font-size: 30px
@@ -120,8 +97,6 @@ html
 // section
 .section
     margin: 50px 0
-    &:last-child
-        margin-bottom: 0
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .section
@@ -131,7 +106,7 @@ html
 //////////////////////////////////////////////////
 // paragraphs
 p
-    margin-top: 0
+    margin: 0 0 15px 0
     font-size: 24px
     line-height: 1.5
     &:last-child
@@ -140,7 +115,6 @@ p
 @media screen and (max-width: 480px)
     p
         font-size: 22px
-        padding: 0 10px
 //////////////////////////////////////////////////
 
 //////////////////////////////////////////////////
@@ -177,6 +151,7 @@ button
 .purple
     color: $purple
 .PURPLE
+    margin: 5px 0
     font-size: 22px
     color: $purple
     +mt-bold
