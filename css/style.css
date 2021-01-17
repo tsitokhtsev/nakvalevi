@@ -73,22 +73,36 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  padding: 15px 30px;
+  height: 100%;
+  padding: 30px 30px 15px 30px;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
 }
 
+.title-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
 .title-text {
-  position: relative;
-  margin-top: 15px;
   font-size: 60px;
   color: #fff;
-  white-space: pre;
   font-family: BPG Nino Mtavruli Book, sans-serif;
 }
 
 .title-subtext {
+  margin-top: 10px;
   font-size: 40px;
   font-weight: 100;
   color: #fff;
@@ -96,52 +110,23 @@ html {
 }
 
 .title-icon {
+  margin-top: -15px;
   height: 75px;
-}
-
-.title-img {
-  height: 110px;
-  border: 2px solid #fff;
-  border-radius: 99px;
-}
-
-.title-hr {
-  position: relative;
-  width: 10%;
-  height: 1px;
-  border: none;
-  background-color: #ffd139;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .title-text {
-    white-space: normal;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .title-text {
-    font-size: 40px;
-    white-space: normal;
-  }
-  .title-hr {
-    margin: 0 20px;
-  }
-  .title-icon {
-    height: 40px;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .title {
-    padding: 10px 15px;
+    padding: 18px 15px 10px 15px;
   }
   .title-text {
-    margin-top: 8px;
+    white-space: pre-line;
     font-size: 30px;
-    white-space: normal;
+  }
+  .title-subtext {
+    font-size: 20px;
   }
   .title-icon {
+    margin-top: -10px;
     height: 34px;
   }
 }
@@ -158,7 +143,6 @@ html {
 
 p {
   margin: 0 0 15px 0;
-  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -169,6 +153,32 @@ p:last-child {
 @media screen and (max-width: 480px) {
   p {
     font-size: 22px;
+  }
+}
+
+.purple {
+  color: #8558d9;
+}
+
+.PURPLE {
+  margin: 5px 0;
+  font-size: 22px;
+  color: #8558d9;
+  font-family: BPG Nino Mtavruli Bold, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .PURPLE {
+    font-family: BPG Nino Mtavruli, sans-serif;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  span {
+    font-size: 20px;
+  }
+  .PURPLE {
+    font-size: 20px;
   }
 }
 
@@ -198,23 +208,6 @@ button {
 
 button:visited, button:focus, button:active, button:hover {
   outline: none;
-}
-
-.purple {
-  color: #8558d9;
-}
-
-.PURPLE {
-  margin: 5px 0;
-  font-size: 22px;
-  color: #8558d9;
-  font-family: BPG Nino Mtavruli Bold, sans-serif;
-}
-
-@media screen and (max-width: 480px) {
-  .PURPLE {
-    font-family: BPG Nino Mtavruli, sans-serif;
-  }
 }
 
 .logo {
@@ -416,23 +409,6 @@ footer {
 .author .title {
   z-index: 1;
   position: relative;
-  border-left: 1px solid #8558d9;
-  border-right: 1px solid #dc7b14;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background: #fff;
-}
-
-.author .title:before {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
   background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
@@ -440,15 +416,20 @@ footer {
           box-shadow: 0 5px 30px #b191ecad;
 }
 
-.author .title div {
-  margin-top: 15px;
+.author-img {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  height: 110px;
+  border: 2px solid #fff;
+  border-radius: 99px;
 }
 
 .author-writings {
   z-index: 0;
   position: relative;
-  margin: 0;
-  padding: 15px 30px 30px 30px;
+  margin: -20px 0 0 0;
+  padding: 50px 30px 30px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
@@ -475,13 +456,17 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 20px;
+  margin: 5px 0;
   width: 100%;
   border-bottom: 2px dotted #ffd139;
   font-size: 24px;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
   font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.author-writing:last-of-type {
+  margin-bottom: 0;
 }
 
 .author-writing:hover {
@@ -494,6 +479,21 @@ footer {
 .author-writing-date {
   margin-left: 30px;
   text-align: right;
+}
+
+@media screen and (max-width: 480px) {
+  .author-img {
+    height: 90px;
+  }
+  .author-writings {
+    padding: 30px 15px 15px 15px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .author-img {
+    height: 55px;
+  }
 }
 
 .writing .title {

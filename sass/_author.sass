@@ -2,31 +2,19 @@
     & .title
         z-index: 1
         position: relative
-        border-left: 1px solid $purple
-        border-right: 1px solid $orange
-        border-top-left-radius: 20px
-        border-top-right-radius: 20px
-        border-bottom-left-radius: 0
-        border-bottom-right-radius: 0
-        background: #fff
-        &:before
-            z-index: -1
-            content: ''
-            position: absolute
-            top: 0
-            right: 0
-            bottom: 0
-            left: 0
-            border-radius: 20px
-            background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-            box-shadow: 0 5px 30px $purple-light
-        & div
-            margin-top: 15px
+        border-radius: 20px
+        background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+        box-shadow: 0 5px 30px $purple-light
+    &-img
+        align-self: start
+        height: 110px
+        border: 2px solid #fff
+        border-radius: 99px
     &-writings
         z-index: 0
         position: relative
-        margin: 0
-        padding: 15px 30px 30px 30px
+        margin: -20px 0 0 0
+        padding: 50px 30px 30px 30px
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
@@ -44,15 +32,31 @@
     &-writing
         display: flex
         justify-content: space-between
-        margin-top: 20px
+        margin: 5px 0
         width: 100%
         border-bottom: 2px dotted $yellow
         font-size: 24px
         transition: 300ms ease
         +mt-regular
+        &:last-of-type
+            margin-bottom: 0
         &:hover
             transform: scale(1.01)
             transition: 300ms ease
         &-date
             margin-left: 30px
             text-align: right
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .author
+        &-img
+            height: 90px
+        &-writings
+            padding: 30px 15px 15px 15px
+
+// Portrait phones and smaller
+@media screen and (max-width: 370px)
+    .author
+        &-img
+            height: 55px

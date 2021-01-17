@@ -5,41 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>იაკობ ცურტაველი</title>
-    <link rel="shortcut icon" href="../../img/favicon.svg" type="image/png" />
-    <link rel="stylesheet" href="../../css/normalize.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="/img/favicon.svg" type="image/png" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body class="body">
     <div class="logo">
+        <button class="logo-menu"></button>
         <a href="/home">
-            <img class="logo-img" src="../../img/logo.png" alt="">
+            <img class="logo-img" src="/img/logo.png" alt="">
         </a>
+        <button class="logo-search"></button>
+        <hr class="logo-hr">
     </div>
     <nav class="navbar">
-        <div class="navbar-links">
-            <div class="navbar-container">
-                <a href="/home" class="navbar-link">
-                    <span class="navbar-link-title-home">მთავარი</span>
-                </a>
-                <a href="/timeline" class="navbar-link">
-                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
-                </a>
-                <a href="/about" class="navbar-link">
-                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-                </a>
-            </div>
+        <div class="navbar-container">
+            <a href="/home" class="navbar-link">
+                <span class="navbar-link-title-home">მთავარი</span>
+            </a>
+            <a href="/timeline" class="navbar-link">
+                <span class="navbar-link-title-timeline">თაიმლაინი</span>
+            </a>
+            <a href="/about" class="navbar-link">
+                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+            </a>
         </div>
     </nav>
+
     <div class="author article">
-        <div class="author-container container">
+        <div class="container">
             <h1 class="title">
-                <div>
-                    <span class="title-text">იაკობ ცურტაველი<br></span>
+                <div class="title-left">
+                    <span class="title-text">იაკობ 
+                        ცურტაველი</span>
                     <span class="title-subtext">მე-5 საუკუნე</span>
                 </div>
-                <img class="title-img" src="../../timeline/img/ხუცესი.jpg">
+                <img class="author-img" src="/img/authors/ხუცესი.jpg">
             </h1>
             <div class="author-writings section">
                 <a href="/author/iakob-tsurtaveli/shushanikis-wameba/">
@@ -51,9 +53,12 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+
+    <footer>
         <span>ნაკვალევი 2020</span>
-    </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

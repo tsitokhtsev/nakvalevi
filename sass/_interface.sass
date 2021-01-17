@@ -19,7 +19,6 @@ html
     font-size: 24px
     background-color: #fff
     box-shadow: -10px 0px 60px $purple-light, 10px 0px 60px $purple-light
-    // overflow: hidden
     +mkh-regular
     &:first-of-type
         border-top-left-radius: 20px
@@ -38,58 +37,50 @@ html
     justify-content: space-between
     align-items: center
     margin: 0
-    padding: 15px 30px
+    height: 100%
+    padding: 30px 30px 15px 30px
     border-radius: 20px
     background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
+    &-left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-self: stretch
     &-text
-        position: relative
-        margin-top: 15px
         font-size: 60px
-        // font-weight: 100
         color: #fff
-        white-space: pre
         +mt-light
     &-subtext
+        margin-top: 10px
         font-size: 40px
         font-weight: 100
         color: #fff
         +mt-light
     &-icon
+        margin-top: -15px
         height: 75px
-    &-img
-        height: 110px
-        border: 2px solid #fff
-        border-radius: 99px
-    &-hr
-        position: relative
-        width: 10%
-        height: 1px
-        border: none
-        background-color: $yellow
+
 // Portrait tablets and small desktops
 @media screen and (min-width: 768px) and (max-width: 991px)
     .title
         &-text
-            white-space: normal
+
 // Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .title
         &-text
-            font-size: 40px
-            white-space: normal
-        &-hr
-            margin: 0 20px
-        &-icon
-            height: 40px
+
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .title
-        padding: 10px 15px
+        padding: 18px 15px 10px 15px
         &-text
-            margin-top: 8px
+            white-space: pre-line
             font-size: 30px
-            white-space: normal
+        &-subtext
+            font-size: 20px
         &-icon
+            margin-top: -10px
             height: 34px
 //////////////////////////////////////////////////
 
@@ -107,14 +98,37 @@ html
 // paragraphs
 p
     margin: 0 0 15px 0
-    font-size: 24px
     line-height: 1.5
     &:last-child
         margin-bottom: 0
+        
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     p
         font-size: 22px
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////
+// span
+.purple
+    color: $purple
+.PURPLE
+    margin: 5px 0
+    font-size: 22px
+    color: $purple
+    +mt-bold
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .PURPLE
+        +mt-regular
+
+// Portrait phones and smaller
+@media screen and (max-width: 370px)
+    span
+        font-size: 20px
+    .PURPLE
+        font-size: 20px
 //////////////////////////////////////////////////
 
 //////////////////////////////////////////////////
@@ -144,19 +158,4 @@ button
     border: none
     &:visited, &:focus, &:active, &:hover
         outline: none
-//////////////////////////////////////////////////
-
-//////////////////////////////////////////////////
-// span
-.purple
-    color: $purple
-.PURPLE
-    margin: 5px 0
-    font-size: 22px
-    color: $purple
-    +mt-bold
-// Landscape phones and smaller
-@media screen and (max-width: 480px)
-    .PURPLE
-        +mt-regular
 //////////////////////////////////////////////////
