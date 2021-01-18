@@ -1,30 +1,54 @@
 .home-hero
+    z-index: -1
+    position: relative
     height: 700px
     background-image: url("../img/books.jpg")
     background-size: cover
     background-position: top
     &-container
+        position: absolute
+        top: 20px
+        right: 0
+        bottom: 185px
+        left: 0
+        grid-template-columns: max-content auto
+        grid-template-rows: max-content auto
         margin-top: 0
-        box-shadow: none
+        min-height: 0
         background: none
+        box-shadow: none
+        display: grid
+        &:before,
+        &:after
+            content: ""
+            display: block
+            border: 1px solid white
+        &:before
+            grid-row: 2
+            border-right: none
+            border-top: none
+        &:after
+            grid-row: 1 / span 2
+            border-left: none
     &-title
         position: relative
-        display: flex
-        flex-direction: column
-        margin: 0 0 0 -50px
-        padding: 15px 0
+        display: inline-block
+        margin: -15px 0 0 -15px
+        padding: 15px 0 15px 15px
+        max-width: 100%
         color: #fff
         overflow: hidden
-        &:before
-            z-index: 1
-            content: ""
-            position: absolute
-            top: 15px
-            bottom: 15px
-            left: 0
-            border-left: 1px solid #fff
+        // &:before
+        //     z-index: 1
+        //     content: ""
+        //     position: absolute
+        //     top: 15px
+        //     bottom: 15px
+        //     left: 0
+        //     border-left: 1px solid #fff
         &-word
-            padding: 15px 15px 0 30px
+            margin-left: -15px
+            padding: 15px 15px 0 15px
             font-size: 70px
             line-height: 100%
             text-shadow: 0 1px 15px $purple
@@ -41,32 +65,35 @@
 // Portrait tablets and medium desktops    
 @media screen and (min-width: 992px) and (max-width: 1199px)
     .home-hero-title
-        margin: -25px 0 0 0
         &-word
             font-size: 60px
 
 // Portrait tablets and small desktops
 @media screen and (min-width: 768px) and (max-width: 991px)
     .home-hero-title
-        margin: -25px 0 0 0
         &-word
-            font-size: 45px
-            &:last-of-type
-                margin-bottom: -12px
+            font-size: 60px
 
 // Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .home-hero-title
-        margin: -25px 0 0 0
         &-word
-            font-size: 45px
-            &:last-of-type
-                margin-bottom: -12px
+            font-size: 60px
 
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
-    .home-hero-title
-        margin: 0
-        &-word
-            padding-left: 15px
-            font-size: 45px
+    .home-hero
+        &-container
+            padding: 15px 30px
+        &-title
+            &-word
+                font-size: 45px
+
+// Portrait phones and smaller
+@media screen and (max-width: 370px)
+    .home-hero
+        &-container
+            padding: 15px 30px;
+        &-title
+            &-word
+                font-size: 40px

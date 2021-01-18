@@ -395,6 +395,12 @@ button:visited, button:focus, button:active, button:hover {
   }
 }
 
+@media screen and (max-width: 370px) {
+  .logo-img {
+    height: 25px;
+  }
+}
+
 footer {
   z-index: 1;
   padding: 15px 10px 10px 10px;
