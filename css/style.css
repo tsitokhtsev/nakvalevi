@@ -156,21 +156,20 @@ p:last-child {
   }
 }
 
+.BLACK {
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
 .purple {
   color: #8558d9;
+  font-family: "BPG Nino Mkhedruli", sans-serif;
 }
 
 .PURPLE {
   margin: 5px 0;
   font-size: 22px;
   color: #8558d9;
-  font-family: BPG Nino Mtavruli Bold, sans-serif;
-}
-
-@media screen and (max-width: 480px) {
-  .PURPLE {
-    font-family: BPG Nino Mtavruli, sans-serif;
-  }
+  font-family: BPG Nino Mtavruli, sans-serif;
 }
 
 @media screen and (max-width: 370px) {

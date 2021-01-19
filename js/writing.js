@@ -1,29 +1,44 @@
 // writing page content
-const btn = document.getElementsByClassName('writing-card-button')
-const card = document.getElementsByClassName('writing-card')
-const content = document.getElementsByClassName('writing-card-content')
+const cards = document.querySelectorAll('.writing-card')
 
 window.addEventListener('load', function () {
-    console.log('hello')
-    const contentHeight = content[0].clientHeight
-    btn[0].classList.add('writing-card-button-show')
+    const firstCard = cards[0]
+    const btn = firstCard.querySelector('.writing-card-button')
+    const content = firstCard.querySelector('.writing-card-content')
 
-    card[0].style.maxHeight = `${contentHeight + 45}px`
-
-    content[0].classList.add('writing-card-content-show')
+    btn.classList.add('writing-card-button-show')
+    firstCard.style.maxHeight = `${content.clientHeight + 45}px`
+    content.classList.add('writing-card-content-show')
 })
 
-for (let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener('click', function () {
-        const contentHeight = content[i].clientHeight
-        btn[i].classList.toggle('writing-card-button-show')
+cards.forEach(function (card) {
+    const btn = card.querySelector('.writing-card-button')
+    const content = card.querySelector('.writing-card-content')
 
-        if (btn[i].classList.contains('writing-card-button-show')) {
-            card[i].style.maxHeight = `${contentHeight + 45}px`
+    btn.addEventListener('click', function () {
+        cards.forEach(function (item) {
+            if (item != card) {
+                const btn = item.querySelector('.writing-card-button')
+                const content = item.querySelector('.writing-card-content')
+                item.style.maxHeight = '45px'
+                btn.classList.remove('writing-card-button-show')
+                content.classList.remove('writing-card-content-show')
+            }
+        })
+
+        btn.classList.toggle('writing-card-button-show')
+        if (btn.classList.contains('writing-card-button-show')) {
+            card.style.maxHeight = `${content.clientHeight + 45}px`
         } else {
-            card[i].style.maxHeight = '45px'
+            card.style.maxHeight = '45px'
         }
-
-        content[i].classList.toggle('writing-card-content-show')
+        content.classList.toggle('writing-card-content-show')
+        setTimeout(function () {
+            const cardPosition = card.getBoundingClientRect()
+            window.scrollTo({
+                top: window.pageYOffset + cardPosition.top - 70
+            })
+            console.log(cardPosition);
+        }, 500)
     })
-}
+})
