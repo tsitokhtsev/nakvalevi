@@ -1,31 +1,31 @@
 @font-face {
   font-family: "BPG Nino Mtavruli Book";
-  src: url("../fonts/bpg_nino_mtavruli_book.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_book.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mtavruli";
-  src: url("../fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mtavruli Bold";
-  src: url("../fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli Book";
-  src: url("../fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli";
-  src: url("../fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli Bold";
-  src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
 
 html {
@@ -34,35 +34,41 @@ html {
 
 .body {
   margin: 0 auto;
+  font-size: 24px;
   color: #313131;
-  background-image: url("../img/background.png");
-  background-position: top 170px right 20px;
+  background-color: #ffa12625;
+}
+
+.section {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    margin-top: 30px;
+  }
 }
 
 .container {
-  margin: 40px auto 0 auto;
+  margin: 50px auto;
   padding: 50px;
-  max-width: 1090px;
+  max-width: 1100px;
   min-height: 80vh;
-  font-size: 24px;
+  border-radius: 20px;
   background-color: #fff;
-  -webkit-box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
-          box-shadow: -10px 0px 60px #b191ecad, 10px 0px 60px #b191ecad;
   font-family: "BPG Nino Mkhedruli", sans-serif;
-}
-
-.container:first-of-type {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 @media screen and (max-width: 480px) {
   .container {
+    margin: 30px auto;
     padding: 15px;
   }
 }
 
 .title {
+  z-index: 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,11 +79,11 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  padding: 20px 15px 5px 20px;
   height: 100%;
-  padding: 30px 30px 15px 30px;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
 }
 
 .title-left {
@@ -98,7 +104,7 @@ html {
 .title-text {
   font-size: 60px;
   color: #fff;
-  font-family: BPG Nino Mtavruli Book, sans-serif;
+  font-family: BPG Nino Mtavruli, sans-serif;
 }
 
 .title-subtext {
@@ -131,16 +137,6 @@ html {
   }
 }
 
-.section {
-  margin: 50px 0;
-}
-
-@media screen and (max-width: 480px) {
-  .section {
-    margin: 30px 0;
-  }
-}
-
 p {
   margin: 0 0 15px 0;
   line-height: 1.5;
@@ -161,14 +157,14 @@ p:last-child {
 }
 
 .purple {
-  color: #8558d9;
+  color: #9600C6;
   font-family: "BPG Nino Mkhedruli", sans-serif;
 }
 
 .PURPLE {
   margin: 5px 0;
   font-size: 22px;
-  color: #8558d9;
+  color: #9600C6;
   font-family: BPG Nino Mtavruli, sans-serif;
 }
 
@@ -198,7 +194,7 @@ ul:last-child {
 
 li {
   line-height: 1.5;
-  color: #8558d9;
+  color: #9600C6;
 }
 
 button {
@@ -243,8 +239,8 @@ button:visited, button:focus, button:active, button:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
 }
 
 .navbar-container {
@@ -282,8 +278,8 @@ button:visited, button:focus, button:active, button:hover {
           justify-content: center;
   margin-top: -45px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(133, 88, 217, 0.8)), color-stop(20%, rgba(181, 0, 197, 0.8)), to(rgba(220, 123, 20, 0.8)));
-  background: linear-gradient(90deg, rgba(133, 88, 217, 0.8) 0%, rgba(181, 0, 197, 0.8) 20%, rgba(220, 123, 20, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(150, 0, 198, 0.8)), color-stop(20%, rgba(181, 0, 197, 0.8)), to(rgba(255, 161, 38, 0.8)));
+  background: linear-gradient(90deg, rgba(150, 0, 198, 0.8) 0%, rgba(181, 0, 197, 0.8) 20%, rgba(255, 161, 38, 0.8) 100%);
   -webkit-transition: 1.5s;
   transition: 1.5s;
 }
@@ -361,8 +357,8 @@ button:visited, button:focus, button:active, button:hover {
     width: 100%;
     height: 2px;
     border: none;
-    background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
-    background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(40%, #b500c5), to(#ffa126));
+    background: linear-gradient(90deg, #9600c6 0%, #b500c5 40%, #ffa126 100%);
   }
   .navbar {
     z-index: 98;
@@ -406,8 +402,8 @@ footer {
   text-align: center;
   font-size: 18px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(40%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 40%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
@@ -415,10 +411,10 @@ footer {
   z-index: 1;
   position: relative;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
-  -webkit-box-shadow: 0 5px 30px #b191ecad;
-          box-shadow: 0 5px 30px #b191ecad;
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
+  -webkit-box-shadow: 0 5px 30px #c77cdf;
+          box-shadow: 0 5px 30px #c77cdf;
 }
 
 .author-img {
@@ -437,8 +433,8 @@ footer {
   padding: 50px 30px 30px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
 }
 
 .author-writings:before {
@@ -463,7 +459,7 @@ footer {
           justify-content: space-between;
   margin: 5px 0;
   width: 100%;
-  border-bottom: 2px dotted #ffd139;
+  border-bottom: 2px dotted #FFE338;
   font-size: 24px;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
@@ -505,10 +501,10 @@ footer {
   z-index: 1;
   position: relative;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
-  -webkit-box-shadow: 0 5px 30px #b191ecad;
-          box-shadow: 0 5px 30px #b191ecad;
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
+  -webkit-box-shadow: 0 5px 30px #c77cdf;
+          box-shadow: 0 5px 30px #c77cdf;
 }
 
 .writing-info {
@@ -521,8 +517,8 @@ footer {
   padding: 50px 0 30px 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
 }
 
 .writing-info:before {
@@ -561,10 +557,10 @@ footer {
   z-index: 1;
   position: relative;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
-  -webkit-box-shadow: 0 5px 30px #b191ecad;
-          box-shadow: 0 5px 30px #b191ecad;
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
+  -webkit-box-shadow: 0 5px 30px #c77cdf;
+          box-shadow: 0 5px 30px #c77cdf;
 }
 
 .writing-card-title {
@@ -613,8 +609,8 @@ footer {
   padding: 50px 30px 30px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: .5s;
@@ -666,7 +662,7 @@ footer {
 
 .na {
   text-align: center;
-  color: rgba(133, 88, 217, 0.4);
+  color: rgba(150, 0, 198, 0.4);
   font-family: BPG Nino Mtavruli Bold, sans-serif;
 }
 
@@ -712,8 +708,8 @@ footer {
   bottom: 20px;
   right: 20px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#8558d9), color-stop(20%, #b500c5), to(#dc7b14));
-  background: linear-gradient(90deg, #8558d9 0%, #b500c5 20%, #dc7b14 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+  background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   -webkit-transition: .5s;
@@ -724,7 +720,8 @@ footer {
 }
 
 .back-to-top-text {
-  margin-top: 2px;
+  margin-top: 4px;
+  font-size: 18px;
 }
 
 .back-to-top-arrow {
