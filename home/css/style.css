@@ -1,31 +1,31 @@
 @font-face {
   font-family: "BPG Nino Mtavruli Book";
-  src: url("../fonts/bpg_nino_mtavruli_book.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_book.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mtavruli";
-  src: url("../fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_normal.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mtavruli Bold";
-  src: url("../fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
+  src: url("/fonts/bpg_nino_mtavruli_bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli Book";
-  src: url("../fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_book.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli";
-  src: url("../fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_normal.otf") format("truetype");
 }
 
 @font-face {
   font-family: "BPG Nino Mkhedruli Bold";
-  src: url("../fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
+  src: url("/fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
 
 .navbar-link-title-home {
@@ -35,17 +35,18 @@
 .home-hero {
   z-index: -1;
   position: relative;
-  height: 700px;
+  margin-top: -120px;
+  height: 100vh;
   background-image: url("../img/books.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: top 120px left 50%;
 }
 
 .home-hero-container {
   position: absolute;
-  top: 20px;
+  top: 120px;
   right: 0;
-  bottom: 185px;
+  bottom: 0;
   left: 0;
   -ms-grid-columns: max-content auto;
       grid-template-columns: -webkit-max-content auto;
@@ -53,7 +54,7 @@
   -ms-grid-rows: max-content auto;
       grid-template-rows: -webkit-max-content auto;
       grid-template-rows: max-content auto;
-  margin-top: 0;
+  margin: 0 auto;
   min-height: 0;
   background: none;
   -webkit-box-shadow: none;
@@ -97,7 +98,7 @@
   padding: 15px 15px 0 15px;
   font-size: 70px;
   line-height: 100%;
-  text-shadow: 0 1px 15px #8558d9;
+  text-shadow: 0px 0px 10px #c77cdf;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: 1s;
@@ -158,10 +159,6 @@
   z-index: 99;
 }
 
-.home-target-container {
-  margin-top: -150px;
-}
-
 .home-target-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,9 +174,11 @@
   padding: 20px;
   width: 180px;
   height: 270px;
-  border: 1px solid #8558d9;
   border-radius: 20px;
   text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(199, 124, 223, 0.35);
+          box-shadow: 0px 0px 20px 5px rgba(199, 124, 223, 0.35);
 }
 
 .home-target-item-icon {
@@ -190,7 +189,7 @@
   width: 30%;
   height: 1px;
   border: none;
-  background-color: #8558d9;
+  background-color: #9600C6;
 }
 
 .home-target-item-text {
