@@ -364,10 +364,10 @@ button:visited, button:focus, button:active, button:hover {
     display: block;
     margin: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
     border: none;
-    background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(40%, #b500c5), to(#ffa126));
-    background: linear-gradient(90deg, #9600c6 0%, #b500c5 40%, #ffa126 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
+    background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
   }
   .navbar {
     z-index: 98;
@@ -743,10 +743,13 @@ footer {
 
 @media screen and (max-width: 480px) {
   .back-to-top {
-    padding: 0 5px;
+    padding: 0 10px;
   }
   .back-to-top-text {
     display: none;
+  }
+  .back-to-top-arrow {
+    height: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
