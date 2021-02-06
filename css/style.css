@@ -39,6 +39,15 @@ html {
   background-color: #ffa12625;
 }
 
+.article {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.article-show {
+  padding-top: 45px;
+}
+
 .section {
   margin-top: 50px;
 }
