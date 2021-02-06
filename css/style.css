@@ -376,12 +376,14 @@ button:visited, button:focus, button:active, button:hover {
     transition: .5s;
   }
   .navbar-container {
-    display: block;
+    width: 100%;
   }
   .navbar-link {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     display: block;
-    padding: 15px 0 10px 20px;
-    text-align: left;
+    padding: 15px 0 10px 0px;
+    width: auto;
   }
   .navbar-show {
     -webkit-transform: translateY(0);

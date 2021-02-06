@@ -108,11 +108,15 @@
         transform: translateY(-100%)
         transition: .5s
         &-container
-            display: block
+            width: 100%
+            // justify-content: space-evenly
+            // display: block
         &-link
+            flex-basis: 50%
             display: block
-            padding: 15px 0 10px 20px
-            text-align: left
+            padding: 15px 0 10px 0px
+            width: auto
+            // text-align: left
         &-show
             transform: translateY(0)
         &-anchors
