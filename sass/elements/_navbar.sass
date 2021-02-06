@@ -24,7 +24,7 @@
         align-content: center
     &-link
         position: relative
-        width: 140px
+        width: 150px
         padding: 15px 0 10px 0
         text-align: center
         font-size: 18px
@@ -108,21 +108,12 @@
         transform: translateY(-100%)
         transition: .5s
         &-container
+            flex-direction: column
             width: 100%
-            // justify-content: space-evenly
-            // display: block
         &-link
-            flex-basis: 50%
-            display: block
             padding: 15px 0 10px 0px
-            width: auto
-            // text-align: left
+            width: 100%
         &-show
             transform: translateY(0)
         &-anchors
             display: none
-
-// Portrait phones and smaller
-@media screen and (max-width: 370px)
-    .logo-img
-        height: 25px

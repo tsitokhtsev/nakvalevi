@@ -45,7 +45,7 @@ html {
 }
 
 .article-show {
-  padding-top: 45px;
+  padding-top: 145px;
 }
 
 .section {
@@ -262,7 +262,7 @@ button:visited, button:focus, button:active, button:hover {
 
 .navbar-link {
   position: relative;
-  width: 140px;
+  width: 150px;
   padding: 15px 0 10px 0;
   text-align: center;
   font-size: 18px;
@@ -385,14 +385,15 @@ button:visited, button:focus, button:active, button:hover {
     transition: .5s;
   }
   .navbar-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
   .navbar-link {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    display: block;
     padding: 15px 0 10px 0px;
-    width: auto;
+    width: 100%;
   }
   .navbar-show {
     -webkit-transform: translateY(0);
@@ -400,12 +401,6 @@ button:visited, button:focus, button:active, button:hover {
   }
   .navbar-anchors {
     display: none;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .logo-img {
-    height: 25px;
   }
 }
 
