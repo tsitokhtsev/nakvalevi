@@ -40,12 +40,25 @@ html {
 }
 
 .article {
+  margin-top: 40px;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-.article-show {
-  padding-top: 145px;
+.article:last-of-type {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .article {
+    margin-top: 30px;
+  }
+  .article:last-of-type {
+    margin-bottom: 30px;
+  }
+  .article-show {
+    margin-top: 165px;
+  }
 }
 
 .section {
@@ -59,10 +72,9 @@ html {
 }
 
 .container {
-  margin: 50px auto;
-  padding: 50px;
+  margin: 0 auto;
+  padding: 40px;
   max-width: 1100px;
-  min-height: 80vh;
   border-radius: 20px;
   background-color: #fff;
   font-family: "BPG Nino Mkhedruli", sans-serif;
@@ -70,7 +82,6 @@ html {
 
 @media screen and (max-width: 480px) {
   .container {
-    margin: 30px auto;
     padding: 15px;
   }
 }
@@ -215,13 +226,22 @@ button:visited, button:focus, button:active, button:hover {
 }
 
 .logo {
-  text-align: center;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
   background: #fff;
 }
 
 .logo-img {
-  margin: 11px auto 15px auto;
-  height: 45px;
+  height: 40px;
 }
 
 .logo-menu {
@@ -300,13 +320,6 @@ button:visited, button:focus, button:active, button:hover {
   transition: .5s;
 }
 
-/* Portrait tablets and small desktops */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .logo-img {
-    height: 40px;
-  }
-}
-
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   .logo-img {
@@ -316,7 +329,6 @@ button:visited, button:focus, button:active, button:hover {
 
 @media screen and (max-width: 480px) {
   .logo {
-    z-index: 99;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -333,7 +345,6 @@ button:visited, button:focus, button:active, button:hover {
     height: 60px;
   }
   .logo-img {
-    margin: 10px auto 10px auto;
     height: 30px;
   }
   .logo-menu {
@@ -359,7 +370,7 @@ button:visited, button:focus, button:active, button:hover {
   }
   .logo-hr {
     position: absolute;
-    bottom: -2px;
+    bottom: -1px;
     left: 0;
     display: block;
     margin: 0;

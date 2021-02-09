@@ -38,7 +38,6 @@ cards.forEach(function (card) {
             window.scrollTo({
                 top: window.pageYOffset + cardPosition.top - 70
             })
-            console.log(cardPosition);
         }, 500)
     })
 })

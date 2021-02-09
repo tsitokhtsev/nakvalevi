@@ -33,34 +33,27 @@
 }
 
 .home-hero {
-  z-index: -1;
   position: relative;
-  margin-top: -120px;
-  height: 100vh;
-  background-image: url("/home/img/books.jpg");
-  background-size: cover;
-  background-position: top 120px left 50%;
 }
 
 .home-hero-container {
   position: absolute;
-  top: 120px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  margin: 0 auto;
+  background-image: url("/home/img/books.jpg");
+  background-size: cover;
+  background-position: top 0 left 50%;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: max-content auto;
       grid-template-columns: -webkit-max-content auto;
       grid-template-columns: max-content auto;
   -ms-grid-rows: max-content auto;
       grid-template-rows: -webkit-max-content auto;
       grid-template-rows: max-content auto;
-  margin: 0 auto;
-  min-height: 0;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  display: -ms-grid;
-  display: grid;
 }
 
 .home-hero-container:before, .home-hero-container:after {
@@ -74,6 +67,7 @@
   grid-row: 2;
   border-right: none;
   border-top: none;
+  border-bottom-left-radius: 20px;
 }
 
 .home-hero-container:after {
@@ -81,6 +75,8 @@
   -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
   border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .home-hero-title {
@@ -233,9 +229,6 @@
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
-  .home-target-container {
-    margin-bottom: -30px;
-  }
   .home-target-item {
     margin-bottom: 30px;
   }
@@ -243,9 +236,6 @@
 
 /* Landscape phones and smaller */
 @media screen and (max-width: 480px) {
-  .home-target-container {
-    margin-bottom: -20px;
-  }
   .home-target-item {
     margin: 0 auto 20px auto;
     padding: 5px 20px 10px 20px;

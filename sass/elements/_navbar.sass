@@ -1,15 +1,20 @@
 .logo
-    text-align: center
+    z-index: 99
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 65px
     background: #fff
     &-img
-        margin: 11px auto 15px auto
-        height: 45px
+        height: 40px
     &-menu
         display: none
     &-search
         display: none
     &-hr
         display: none
+    & a
+        // height: 65px
 
 .navbar
     z-index: 99
@@ -46,18 +51,15 @@
             transform: translateY(100%)
             transition: .5s
 
-/* Portrait tablets and small desktops */
-@media screen and (min-width: 768px) and (max-width: 991px)
-    .logo-img
-        height: 40px
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px)
-    .logo-img
-        height: 35px
+    .logo
+        &-img
+            height: 35px
+
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .logo
-        z-index: 99
         position: sticky
         top: 0
         display: flex
@@ -66,7 +68,6 @@
         padding: 0 20px
         height: 60px
         &-img
-            margin: 10px auto 10px auto
             height: 30px
         &-menu
             display: block
@@ -88,7 +89,7 @@
             background-size: cover
         &-hr
             position: absolute
-            bottom: -2px
+            bottom: -1px
             left: 0
             display: block
             margin: 0

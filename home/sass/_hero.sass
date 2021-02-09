@@ -1,24 +1,18 @@
 .home-hero
-    z-index: -1
     position: relative
-    margin-top: -120px
-    height: 100vh
-    background-image: url("/home/img/books.jpg")
-    background-size: cover
-    background-position: top 120px left 50%
     &-container
         position: absolute
-        top: 120px
+        top: 0
         right: 0
         bottom: 0
         left: 0
+        margin: 0 auto
+        background-image: url("/home/img/books.jpg")
+        background-size: cover
+        background-position: top 0 left 50%
+        display: grid
         grid-template-columns: max-content auto
         grid-template-rows: max-content auto
-        margin: 0 auto
-        min-height: 0
-        background: none
-        box-shadow: none
-        display: grid
         &:before,
         &:after
             content: ""
@@ -28,9 +22,12 @@
             grid-row: 2
             border-right: none
             border-top: none
+            border-bottom-left-radius: 20px
         &:after
             grid-row: 1 / span 2
             border-left: none
+            border-top-right-radius: 20px
+            border-bottom-right-radius: 20px
     &-title
         position: relative
         display: inline-block

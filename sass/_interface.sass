@@ -7,45 +7,42 @@ html
     color: $black
     background-color: $orange-lighter
 
-//////////////////////////////////////////////////
 // article
 .article
+    margin-top: 40px
     transition: .5s
-    &-show
-        padding-top: 145px
+    &:last-of-type
+        margin-bottom: 40px
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .article
+        margin-top: 30px
+        &:last-of-type
+            margin-bottom: 30px
+        &-show
+            margin-top: 165px
 
-//////////////////////////////////////////////////
-
-//////////////////////////////////////////////////
 // section
 .section
     margin-top: 50px
-
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .section
         margin: 30px 0 15px 0
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // container
 .container
-    margin: 50px auto
-    padding: 50px
+    margin: 0 auto
+    padding: 40px
     max-width: 1100px
-    min-height: 80vh
     border-radius: 20px
     background-color: #fff
     +mkh-regular
-
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .container
-        margin: 30px auto
         padding: 15px
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // article titles
 .title
     z-index: 0
@@ -76,17 +73,14 @@ html
     &-icon
         margin-top: -15px
         height: 75px
-
 // Portrait tablets and small desktops
 @media screen and (min-width: 768px) and (max-width: 991px)
     .title
         &-text
-
 // Landscape phones and portrait tablets
 @media screen and (max-width: 767px)
     .title
         &-text
-
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     .title
@@ -99,23 +93,18 @@ html
         &-icon
             margin-top: -10px
             height: 34px
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // paragraphs
 p
     margin: 0 0 15px 0
     line-height: 1.5
     &:last-child
         margin-bottom: 0
-
 // Landscape phones and smaller
 @media screen and (max-width: 480px)
     p
         font-size: 22px
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // span
 .BLACK
     +mt-regular
@@ -127,26 +116,18 @@ p
     font-size: 22px
     color: $purple
     +mt-regular
-
-// Landscape phones and smaller
-// @media screen and (max-width: 480px)
-
 // Portrait phones and smaller
 @media screen and (max-width: 370px)
     span
         font-size: 20px
     .PURPLE
         font-size: 20px
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // links
 a
     text-decoration: none
     color: $black
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // lists
 ul
     margin-top: 0
@@ -154,16 +135,12 @@ ul
     list-style: circle outside
     &:last-child
         margin-bottom: 0
-
 li
     line-height: 1.5
     color: $purple
-//////////////////////////////////////////////////
 
-//////////////////////////////////////////////////
 // buttons
 button
     border: none
     &:visited, &:focus, &:active, &:hover
         outline: none
-//////////////////////////////////////////////////
