@@ -73,6 +73,7 @@ const searchItems = [
     },
 ]
 
+const body = document.querySelector('.body')
 const search = document.querySelector('.search')
 const searchBtn = document.querySelector('.logo-search')
 const searchBtnCol = document.querySelector('.logo-search-colored')
@@ -102,13 +103,16 @@ function searchShow() {
     } else {
         search.style.top = '45px'
         search.style.height = `${window.innerHeight - 45}px`
+        body.classList.toggle('stop-scrolling')
     }
+
+    searchInput.focus()
 }
 
 searchInput.addEventListener('input', function () {
     let text = this.value.trim();
     diplaySearchItems();
-    let output = document.querySelectorAll('.search-item')
+    let output = document.querySelectorAll('.search-section-item')
     if (text != '') {
         output.forEach(function (elem) {
             if (elem.innerText.search(text) == -1) {
@@ -126,7 +130,7 @@ function diplaySearchItems() {
     let displaySearchItems = searchItems.map(function (item) {
 
         return `<a href="${item.link}">
-                    <p class="search-item">${item.name}</p>
+                    <p class="search-section-item">${item.name}</p>
                 </a>`
     })
     displaySearchItems = displaySearchItems.join('')

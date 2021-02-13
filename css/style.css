@@ -41,7 +41,6 @@ html {
 
 .stop-scrolling {
   padding-right: 15px;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -498,9 +497,15 @@ footer {
 }
 
 .search {
+  overflow: auto;
   z-index: 98;
   position: fixed;
-  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   width: 100%;
   background-color: #fff;
   -webkit-transform: translateY(-150%);
@@ -510,6 +515,9 @@ footer {
 }
 
 .search-container {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
   background-color: #ffa12625;
 }
 
@@ -529,7 +537,17 @@ footer {
   font-family: BPG Nino Mtavruli, sans-serif;
 }
 
+.search-section {
+  padding: 0 40px;
+}
+
+.search-section-item {
+  margin: 10px 0;
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
 .search-show {
+  overflow-y: scroll;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }

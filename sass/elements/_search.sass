@@ -1,13 +1,18 @@
 .search
+    overflow: auto
     z-index: 98
     position: fixed
-    // display: none
-    padding-top: 40px
+    display: flex
+    justify-content: stretch
+    // padding: 0 40px
     width: 100%
     background-color: #fff
     transform: translateY(-150%)
     transition: .5s
     &-container
+        max-width: 
+        flex-basis: 100%
+        width: 100%
         background-color: $orange-lighter
     &-bar
         display: flex
@@ -19,7 +24,11 @@
             border: 1px solid $purple
             border-radius: 20px
             +mt-regular
+    &-section
+        padding: 0 40px
+        &-item
+            margin: 10px 0
+            +mt-regular
     &-show
-        // z-index: 1
-        // display: block
+        overflow-y: scroll
         transform: translateY(0)
