@@ -48,12 +48,12 @@
   background-position: top 0 left 50%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: max-content auto;
-      grid-template-columns: -webkit-max-content auto;
-      grid-template-columns: max-content auto;
-  -ms-grid-rows: max-content auto;
-      grid-template-rows: -webkit-max-content auto;
-      grid-template-rows: max-content auto;
+  -ms-grid-columns: max-content 1fr;
+      grid-template-columns: -webkit-max-content 1fr;
+      grid-template-columns: max-content 1fr;
+  -ms-grid-rows: max-content 1fr;
+      grid-template-rows: -webkit-max-content 1fr;
+      grid-template-rows: max-content 1fr;
 }
 
 .home-hero-container-right, .home-hero-container-bottom {
