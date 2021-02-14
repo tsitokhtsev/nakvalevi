@@ -1,21 +1,27 @@
 .search
-    overflow: auto
     z-index: 98
     position: fixed
     display: flex
-    justify-content: stretch
-    // padding: 0 40px
+    flex-direction: column
     width: 100%
     background-color: #fff
     transform: translateY(-150%)
     transition: .5s
-    &-container
-        max-width: 
-        flex-basis: 100%
+    overflow-y: hidden
+    &-article
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        padding: 40px 0
         width: 100%
         background-color: $orange-lighter
+    &-container
+        flex-grow: 1
+        width: 100%
     &-bar
+        position: relative
         display: flex
+        justify-content: space-between
         &-input
             margin: 0 auto
             padding: 10px 40px 8px 40px
@@ -24,11 +30,43 @@
             border: 1px solid $purple
             border-radius: 20px
             +mt-regular
+        &-clear
+            position: absolute
+            top: 20px
+            right: 20px
+            display: block
+            width: 40px
+            height: 40px
+            background: url('/img/close.svg')
+            background-size: cover
     &-section
-        padding: 0 40px
+        display: none
         &-item
             margin: 10px 0
             +mt-regular
+        &-nomatch
+            text-align: center
+            +mt-regular
+        &-show
+            display: block
     &-show
         overflow-y: scroll
         transform: translateY(0)
+
+// Landscape phones and smaller
+@media screen and (max-width: 480px)
+    .search
+        &-article
+            padding: 30px 0
+        &-container
+            margin: 0
+            width: auto
+        &-bar
+            &-input
+                padding: 10px 20px 8px 20px
+                height: 40px
+            &-clear
+                top: 10px
+                right: 10px
+        &-section
+            padding: 0 15px

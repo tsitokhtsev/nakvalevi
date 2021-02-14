@@ -497,34 +497,55 @@ footer {
 }
 
 .search {
-  overflow: auto;
   z-index: 98;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   background-color: #fff;
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   -webkit-transition: .5s;
   transition: .5s;
+  overflow-y: hidden;
 }
 
-.search-container {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+.search-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 40px 0;
   width: 100%;
   background-color: #ffa12625;
 }
 
+.search-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
 .search-bar {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .search-bar-input {
@@ -537,8 +558,19 @@ footer {
   font-family: BPG Nino Mtavruli, sans-serif;
 }
 
+.search-bar-clear {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("/img/close.svg");
+  background-size: cover;
+}
+
 .search-section {
-  padding: 0 40px;
+  display: none;
 }
 
 .search-section-item {
@@ -546,10 +578,40 @@ footer {
   font-family: BPG Nino Mtavruli, sans-serif;
 }
 
+.search-section-nomatch {
+  text-align: center;
+  font-family: BPG Nino Mtavruli, sans-serif;
+}
+
+.search-section-show {
+  display: block;
+}
+
 .search-show {
   overflow-y: scroll;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (max-width: 480px) {
+  .search-article {
+    padding: 30px 0;
+  }
+  .search-container {
+    margin: 0;
+    width: auto;
+  }
+  .search-bar-input {
+    padding: 10px 20px 8px 20px;
+    height: 40px;
+  }
+  .search-bar-clear {
+    top: 10px;
+    right: 10px;
+  }
+  .search-section {
+    padding: 0 15px;
+  }
 }
 
 .author .title {

@@ -78,7 +78,9 @@ const search = document.querySelector('.search')
 const searchBtn = document.querySelector('.logo-search')
 const searchBtnCol = document.querySelector('.logo-search-colored')
 const searchInput = document.querySelector('.search-bar-input')
+const searchClear = document.querySelector('.search-bar-clear')
 const searchItemsSection = document.querySelector('.search-section')
+const searchNoMatch = document.querySelector('.search-section-nomatch')
 
 searchBtn.addEventListener('click', function () {
     searchShow()
@@ -112,17 +114,27 @@ function searchShow() {
 searchInput.addEventListener('input', function () {
     let text = this.value.trim();
     diplaySearchItems();
-    let output = document.querySelectorAll('.search-section-item')
+    searchItemsSection.classList.add('search-section-show')
+    let output = document.querySelectorAll('.search-section a')
+    let outputItems = document.querySelectorAll('.search-section-item')
+
+    // console.log(output.firstChild);
     if (text != '') {
-        output.forEach(function (elem) {
+        outputItems.forEach(function (elem) {
             if (elem.innerText.search(text) == -1) {
                 elem.style.display = 'none'
+                elem.classList.add('no-match')
             }
         })
+        let noMatch = document.querySelectorAll('.no-match')
+        if (output.length == noMatch.length) {
+            searchItemsSection.innerHTML = '<p class="search-section-nomatch">არაფერი მოიძებნა</p>'
+        }
     } else {
-        output.forEach(function (elem) {
+        outputItems.forEach(function (elem) {
             elem.style.display = 'none'
         })
+        searchItemsSection.classList.remove('search-section-show')
     }
 })
 
@@ -136,6 +148,12 @@ function diplaySearchItems() {
     displaySearchItems = displaySearchItems.join('')
     searchItemsSection.innerHTML = displaySearchItems
 }
+
+searchClear.addEventListener('click', function () {
+    searchInput.value = ''
+    searchItemsSection.classList.remove('search-section-show')
+    searchInput.focus()
+})
 
 // back-to-top button
 const backToTopBtn = document.querySelector('.back-to-top')
