@@ -452,8 +452,8 @@ input {
     height: auto;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
     -webkit-transition: .5s;
     transition: .5s;
   }
