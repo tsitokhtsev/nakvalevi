@@ -13,17 +13,15 @@
         display: grid
         grid-template-columns: max-content auto
         grid-template-rows: max-content auto
-        &:before,
-        &:after
-            content: ""
-            display: block
+        &-before,
+        &-after
             border: 1px solid #fff
-        &:before
+        &-before
             grid-row: 2
             border-right: none
             border-top: none
             border-bottom-left-radius: 20px
-        &:after
+        &-after
             grid-row: 1 / span 2
             border-left: none
             border-top-right-radius: 20px
