@@ -411,6 +411,8 @@ input {
   }
   .logo-menu-colored {
     display: block;
+    margin: 0;
+    padding: 0;
     width: 40px;
     height: 40px;
     background: url("/img/menu_colored.svg");
