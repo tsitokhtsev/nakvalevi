@@ -24,52 +24,80 @@ window.addEventListener('scroll', function () {
 // search
 const searchItems = [
     {
-        name: "იაკობ ცურტაველი",
-        link: "/author/iakob-tsurtaveli/"
-    },
-    {
         name: "შუშანიკის წამება - იაკობ ცურტაველი",
         link: "/author/iakob-tsurtaveli/shushanikis-wameba/"
-    },
-    {
-        name: "იოანე საბანისძე",
-        link: "/author/ioane-sabanisdze/"
     },
     {
         name: "აბო თბილელის წამება - იოანე საბანისძე",
         link: "/author/ioane-sabanisdze/abo-tbilelis-wameba/"
     },
     {
-        name: "გიორგი მერჩულე",
-        link: "/author/giorgi-merchule/"
-    },
-    {
         name: "გრიგოლ ხანძთელის ცხოვრება - გიორგი მერჩულე",
         link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
     },
     {
-        name: "შოთა რუსთაველი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
-    },
-    {
         name: "ვეფხისტყაოსანი - შოთა რუსთაველი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
-    },
-    {
-        name: "სულხან-საბა ორბელიანი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
+        link: "/author/shota-rustaveli/vepkhistkaosani/"
     },
     {
         name: "სიბრძნე სიცრუისა - სულხან-საბა ორბელიანი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
-    },
-    {
-        name: "დავით გურამიშვილი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
+        link: "/author/sulkhan-saba-orbeliani/sibrdzne-sitsruisa/"
     },
     {
         name: "დავითიანი - დავით გურამიშვილი",
-        link: "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/"
+        link: "/author/davit-guramishvili/davitiani/"
+    },
+    {
+        name: "გოგჩა - ალექსანდრე ჭავჭავაძე",
+        link: "/author/aleqsandre-chavchavadze/gogcha/"
+    },
+    {
+        name: "საღამო გამოსალმებისა - გრიგოლ ორბელიანი",
+        link: "/author/grigol-orbeliani/sagamo-gamosalmebisa/"
+    },
+    {
+        name: "პასუხი შვილთა - გრიგოლ ორბელიანი",
+        link: "/author/grigol-orbeliani/pasukhi-shvilta/"
+    },
+    {
+        name: "თამარ მეფის სახე ბეთანიის ეკლესიაში - გრიგოლ ორბელიანი",
+        link: "/author/grigol-orbeliani/tamar-mepis-sakhe-betaniis-eklesiashi/"
+    },
+    {
+        name: "შემოღამება მთაწმინდაზე - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/shemogameba-mtatsmindaze/"
+    },
+    {
+        name: "ხმა იდუმალი - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/khma-idumali/"
+    },
+    {
+        name: "ფიქრნი მტკვრის პირას - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/piqrni-mtkvris-piras/"
+    },
+    {
+        name: "ბედი ქართლისა - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/bedi-qartlisa/"
+    },
+    {
+        name: "არ უკიჟინო, სატრფოო... - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/ar-ukijino-satrpoo/"
+    },
+    {
+        name: "ცისა ფერს - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/tsisa-pers/"
+    },
+    {
+        name: "ვპოვე ტაძარი - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/vpove-tadzari/"
+    },
+    {
+        name: "მერანი - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/merani/"
+    },
+    {
+        name: "სულო ბოროტო - ნიკოლოზ ბარათაშვილი",
+        link: "/author/nikoloz-baratashvili/sulo-boroto/"
     },
 ]
 
