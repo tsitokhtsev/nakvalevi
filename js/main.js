@@ -81,7 +81,7 @@ const searchItems = [
     },
     {
         name: "არ უკიჟინო, სატრფოო... - ნიკოლოზ ბარათაშვილი",
-        link: "/author/nikoloz-baratashvili/ar-ukijino-satrpoo/"
+        link: "/author/nikoloz-baratashvili/ar-ukizhino-satrpoo/"
     },
     {
         name: "ცისა ფერს - ნიკოლოზ ბარათაშვილი",
@@ -98,6 +98,110 @@ const searchItems = [
     {
         name: "სულო ბოროტო - ნიკოლოზ ბარათაშვილი",
         link: "/author/nikoloz-baratashvili/sulo-boroto/"
+    },
+    {
+        name: "აჩრდილი - VII თავი - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/achrdili/"
+    },
+    {
+        name: "კაცია-ადამიანი?! - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/katsia-adamiani/"
+    },
+    {
+        name: "მგზავრის წერილები - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/mgzavris-tserilebi/"
+    },
+    {
+        name: "ჩემო კალამო - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/chemo-kalamo/"
+    },
+    {
+        name: "ბედნიერი ერი - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/bednieri-eri/"
+    },
+    {
+        name: "პასუხის პასუხი - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/pasukhis-pasukhi/"
+    },
+    {
+        name: "განდეგილი - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/gandegili/"
+    },
+    {
+        name: "ოთარაანთ ქვრივი - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/otaraant-qvrivi/"
+    },
+    {
+        name: "რა გითხრათ, რით გაგახაროთ? - ილია ჭავჭავაძე",
+        link: "/author/ilia-chavchavadze/ra-gitkhrat-rit-gagakharot/"
+    },
+    {
+        name: "აღმართ-აღმართ - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/agmart-agmart/"
+    },
+    {
+        name: "ქებათა ქება - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/qebata-qeba/"
+    },
+    {
+        name: "თორნიკე ერისთავი - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/tornike-eristavi/"
+    },
+    {
+        name: "განთიადი - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/gantiadi/"
+    },
+    {
+        name: "სულიკო - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/suliko/"
+    },
+    {
+        name: "გამზრდელი - აკაკი წერეთელი",
+        link: "/author/akaki-tsereteli/gamzrdeli/"
+    },
+    {
+        name: "ხევისბერი გოჩა - ალექსანდრე ყაზბეგი",
+        link: "/author/aleqsandre-kazbegi/khevisberi-gocha/"
+    },
+    {
+        name: "კაი ყმა - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/kai-kma/"
+    },
+    {
+        name: "ალუდა ქეთელაური - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/aluda-qetelauri/"
+    },
+    {
+        name: "ბახტრიონი - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/bakhtrioni/"
+    },
+    {
+        name: "ჩემი ვედრება - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/chemi-vedreba/"
+    },
+    {
+        name: "სტუმარ-მასპინძელი - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/stumar-maspindzeli/"
+    },
+    {
+        name: "ამოდის, ნათდება - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/amodis-natdeba/"
+    },
+    {
+        name: "იას უთხარით ტურფასა - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/ias-utkharit-turpasa/"
+    },
+    {
+        name: "კოსმოპოლიტიზმი და პატრიოტიზმი - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/kosmopolitizmi-da-patriotizmi/"
+    },
+    {
+        name: "რამ შემქმნა ადამიანად - ვაჟა-ფშაველა",
+        link: "/author/vazha-pshavela/ram-shemqmna-adamianad/"
+    },
+    {
+        name: "სამანიშვილის დედინაცვალი - დავით კლდიაშვილი",
+        link: "/author/davit-kldiashvili/samanishvilis-dedinatsvali/"
     },
 ]
 
@@ -146,7 +250,6 @@ searchInput.addEventListener('input', function () {
     let output = document.querySelectorAll('.search-section a')
     let outputItems = document.querySelectorAll('.search-section-item')
 
-    // console.log(output.firstChild);
     if (text != '') {
         outputItems.forEach(function (elem) {
             if (elem.innerText.search(text) == -1) {
@@ -181,6 +284,18 @@ searchClear.addEventListener('click', function () {
     searchInput.value = ''
     searchItemsSection.classList.remove('search-section-show')
     searchInput.focus()
+})
+
+// navbar link hover
+const navbarLink = document.querySelectorAll('.navbar-link')
+
+navbarLink.forEach(function (link) {
+    link.addEventListener('mouseover', function () {
+        link.querySelector('.navbar-link-title-hr').classList.add('navbar-link-title-hr-show')
+    })
+    link.addEventListener('mouseout', function () {
+        link.querySelector('.navbar-link-title-hr').classList.remove('navbar-link-title-hr-show')
+    })
 })
 
 // back-to-top button
