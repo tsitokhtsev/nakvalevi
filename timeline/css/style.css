@@ -28,10 +28,6 @@
   src: url("/fonts/bpg_nino_mkhedruli_bold.otf") format("truetype");
 }
 
-.navbar-link-title-timeline {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-}
-
 .timeline-block {
   display: -webkit-box;
   display: -ms-flexbox;

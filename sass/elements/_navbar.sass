@@ -16,6 +16,7 @@
         &-colored
             display: none
     &-search
+        align-self: center
         display: block
         margin: 0
         padding: 0
@@ -44,24 +45,41 @@
     &-container
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: stretch
         max-width: 1180px
         flex-basis: 100%
     &-links
         display: flex
         flex-basis: 100%
-        justify-content: space-around
-        align-items: center
         max-width: 400px
     &-link
-        padding: 15px 0 10px 0
-        min-width: 120px
-        text-align: center  
+        flex-basis: 33%
+        display: flex
+        justify-content: center
+        text-align: center
         font-size: 18px
         color: #fff
         +mt-bold
-        &:hover
-            color: rgba(#fff, 0.8)
+        &-container
+            overflow: hidden
+            display: inline-flex
+            align-items: center
+        &-title
+            position: relative
+            padding-top: 5px
+            &-hr
+                position: absolute
+                top: 0
+                right: 0
+                bottom: -1px
+                left: 0
+                border-bottom: 1px solid #fff
+                transform: translateX(150%)
+                transition: .5s
+                &-show
+                    transform: translateX(0)
+            &-active
+                border-bottom: 1px solid #fff
     &-anchors
         z-index: 98
         position: sticky
@@ -131,20 +149,16 @@
         position: fixed
         top: 60px
         left: 0
-        height: auto
+        align-items: stretch
+        height: 135px
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         transform: translateY(-150%)
         transition: .5s
         &-container
-            flex-direction: column
+            justify-content: center
         &-links
             flex-direction: column
-            width: 100%
-        &-link
-            padding: 15px 0 10px 0px
-            width: 100%
-            text-align: center
         &-show
             transform: translateY(0)
         &-anchors
