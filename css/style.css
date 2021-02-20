@@ -732,8 +732,6 @@ footer {
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
   background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
-  -webkit-box-shadow: 0 5px 30px #c77cdf;
-          box-shadow: 0 5px 30px #c77cdf;
 }
 
 .writing-info {
@@ -788,8 +786,7 @@ footer {
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
   background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
-  -webkit-box-shadow: 0 5px 30px #c77cdf;
-          box-shadow: 0 5px 30px #c77cdf;
+  cursor: pointer;
 }
 
 .writing-card-title {

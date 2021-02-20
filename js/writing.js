@@ -1,7 +1,7 @@
 // writing page content
 const cards = document.querySelectorAll('.writing-card')
 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     const firstCard = cards[0]
     const btn = firstCard.querySelector('.writing-card-button')
     const content = firstCard.querySelector('.writing-card-content')
@@ -15,7 +15,7 @@ cards.forEach(function (card) {
     const btn = card.querySelector('.writing-card-button')
     const content = card.querySelector('.writing-card-content')
 
-    btn.addEventListener('click', function () {
+    card.addEventListener('click', function () {
         cards.forEach(function (item) {
             if (item != card) {
                 const btn = item.querySelector('.writing-card-button')
