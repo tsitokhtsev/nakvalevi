@@ -301,9 +301,9 @@ input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 100%;
   height: 45px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
@@ -326,11 +326,11 @@ input {
 }
 
 .navbar-links {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   max-width: 400px;
 }
 
@@ -388,17 +388,7 @@ input {
 
 .navbar-anchors {
   z-index: 98;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: -45px;
-  width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(150, 0, 198, 0.8)), color-stop(20%, rgba(181, 0, 197, 0.8)), to(rgba(255, 161, 38, 0.8)));
   background: linear-gradient(90deg, rgba(150, 0, 198, 0.8) 0%, rgba(181, 0, 197, 0.8) 20%, rgba(255, 161, 38, 0.8) 100%);
   -webkit-transition: 1.5s;

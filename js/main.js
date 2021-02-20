@@ -25,11 +25,11 @@ window.addEventListener('scroll', function () {
 const searchItems = [
     {
         name: "შუშანიკის წამება - იაკობ ცურტაველი",
-        link: "/author/iakob-tsurtaveli/shushanikis-wameba/"
+        link: "/author/iakob-tsurtaveli/shushanikis-tsameba/"
     },
     {
         name: "აბო თბილელის წამება - იოანე საბანისძე",
-        link: "/author/ioane-sabanisdze/abo-tbilelis-wameba/"
+        link: "/author/ioane-sabanisdze/abo-tbilelis-tsameba/"
     },
     {
         name: "გრიგოლ ხანძთელის ცხოვრება - გიორგი მერჩულე",
@@ -47,6 +47,7 @@ const searchItems = [
         name: "დავითიანი - დავით გურამიშვილი",
         link: "/author/davit-guramishvili/davitiani/"
     },
+
     {
         name: "გოგჩა - ალექსანდრე ჭავჭავაძე",
         link: "/author/aleqsandre-chavchavadze/gogcha/"
@@ -202,6 +203,87 @@ const searchItems = [
     {
         name: "სამანიშვილის დედინაცვალი - დავით კლდიაშვილი",
         link: "/author/davit-kldiashvili/samanishvilis-dedinatsvali/"
+    },
+
+    {
+        name: "ჯაყოს ხიზნები - მიხეილ ჯავახიშვილი",
+        link: "/author/mikheil-javakhishvili/jakos-khiznebi/"
+    },
+    {
+        name: "შელოცვა რადიოთი - ნიკო ლორთქიფანიძე",
+        link: "/author/niko-lortqipanidze/shelotsva-radioti/"
+    },
+    {
+        name: "მე და ღამე - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/me-da-game/"
+    },
+    {
+        name: "მთაწმინდის მთვარე - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/mtatsmindis-mtvare/"
+    },
+    {
+        name: "შერიგება - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/sherigeba/"
+    },
+    {
+        name: "მშობლიური ეფემერა - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/mshobliuri-epemera/"
+    },
+    {
+        name: "თოვლი - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/tovli/"
+    },
+    {
+        name: "სილაჟვარდე ანუ ვარდი სილაში - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/silazhvarde-anu-vardi-silashi/"
+    },
+    {
+        name: "ქებათა ქება ნიკორწმინდას - გალაკტიონ ტაბიძე",
+        link: "/author/galaktion-tabidze/qebata-qeba-nikortsmindas/"
+    },
+    {
+        name: "ყვარყვარე თუთაბერი - პოლიკარპე კაკაბაძე",
+        link: "/author/polikarpe-kakabadze/kvarkvare-tutaberi/"
+    },
+    {
+        name: "დიდოსტატის მარჯვენა - კონსტანტინე გამსახურდია",
+        link: "/author/konstantine-gamsakhurdia/didostatis-marjvena/"
+    },
+    {
+        name: "პოეზია - პაოლო იაშვილი",
+        link: "/author/paolo-iashvili/poezia/"
+    },
+    {
+        name: "ლექსი მეწყერი - ტიციან ტაბიძე",
+        link: "/author/titsian-tabidze/leqsi-metskeri/"
+    },
+    {
+        name: "ანანურთან - ტიციან ტაბიძე",
+        link: "/author/titsian-tabidze/ananurtan/"
+    },
+    {
+        name: "ნინოწმინდის ღამე - გიორგი ლეონიძე",
+        link: "/author/giorgi-leonidze/ninotsmindis-game/"
+    },
+    {
+        name: "ყივჩაღის პაემანი - გიორგი ლეონიძე",
+        link: "/author/giorgi-leonidze/kivchagis-paemani/"
+    },
+    {
+        name: "მკვდართა მზე ვარ - ანა კალანდაძე",
+        link: "/author/ana-kalandadze/mkvdarta-mze-var/"
+    },
+    {
+        name: "ალავერდობა - გურამ რჩეულიშვილი",
+        link: "/author/guram-rcheulishvili/alaverdoba/"
+    },
+    {
+        name: "იგი - ჯემალ ქარჩხაძე",
+        link: "/author/jemal-qarchkhadze/igi/"
+    },
+    {
+        name: "კაცი, რომელსაც ლიტერატურა ძლიერ უყვარდა - გურამ დოჩანაშვილი",
+        link: "/author/guram-dochanashvili/katsi-romelsats-literatura-dzlier-ukvarda/"
     },
 ]
 
