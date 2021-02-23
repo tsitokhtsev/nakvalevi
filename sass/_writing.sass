@@ -9,7 +9,7 @@
         position: relative
         display: flex
         margin: -20px 0 0 0
-        padding: 50px 0 30px 0
+        padding: 50px 30px 30px 30px
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
@@ -26,8 +26,13 @@
             background: #fff
         &-block
             flex-basis: 100%
+            display: flex
+            justify-content: center
+            align-items: center
             margin: 0
             text-align: center
+            &-name
+                margin-right: 5px
     &-card
         overflow: hidden
         max-height: 45px
@@ -115,7 +120,7 @@
     .writing
         &-info
             display: block
-            padding: 30px 15px 15px 15px
+            padding: 30px 15px 5px 15px
             &-block
                 display: flex
                 justify-content: space-between

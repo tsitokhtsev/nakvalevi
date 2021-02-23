@@ -36,15 +36,16 @@ html {
   margin: 0 auto;
   font-size: 24px;
   color: #313131;
-  background-color: #ffa12625;
+  background-color: rgba(255, 227, 56, 0.2);
 }
 
 .stop-scrolling {
-  padding-right: 15px;
+  padding-right: 17px;
   overflow: hidden;
 }
 
 .article {
+  min-height: 80vh;
   margin-top: 40px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -104,7 +105,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  padding: 20px 15px 5px 20px;
+  padding: 30px 30px 15px 30px;
   height: 100%;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
@@ -133,8 +134,8 @@ html {
 }
 
 .title-subtext {
-  margin-top: 10px;
-  font-size: 40px;
+  margin: 0 0 5px 0;
+  font-size: 35px;
   font-weight: 100;
   color: #fff;
   font-family: BPG Nino Mtavruli Book, sans-serif;
@@ -147,13 +148,14 @@ html {
 
 @media screen and (max-width: 480px) {
   .title {
-    padding: 18px 15px 10px 15px;
+    padding: 15px 15px 10px 15px;
   }
   .title-text {
     white-space: pre-line;
     font-size: 30px;
   }
   .title-subtext {
+    margin: 5px 0 0 0;
     font-size: 20px;
   }
   .title-icon {
@@ -550,7 +552,7 @@ footer {
           flex-grow: 1;
   padding: 40px 0;
   width: 100%;
-  background-color: #ffa12625;
+  background-color: rgba(255, 227, 56, 0.2);
 }
 
 .search-container {
@@ -642,16 +644,13 @@ footer {
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
   background: linear-gradient(90deg, #9600c6 0%, #b500c5 20%, #ffa126 100%);
-  -webkit-box-shadow: 0 5px 30px #c77cdf;
-          box-shadow: 0 5px 30px #c77cdf;
 }
 
 .author-img {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  height: 110px;
-  border: 2px solid #fff;
+  height: 100px;
   border-radius: 99px;
 }
 
@@ -659,7 +658,7 @@ footer {
   z-index: 0;
   position: relative;
   margin: -20px 0 0 0;
-  padding: 50px 30px 30px 30px;
+  padding: 50px 30px 10px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
@@ -686,7 +685,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5px 0;
+  margin: 20px 0;
   width: 100%;
   border-bottom: 2px dotted #FFE338;
   font-size: 24px;
@@ -695,8 +694,8 @@ footer {
   font-family: BPG Nino Mtavruli, sans-serif;
 }
 
-.author-writing:last-of-type {
-  margin-bottom: 0;
+.author-writing:first-of-type {
+  margin-top: 0;
 }
 
 .author-writing:hover {
@@ -716,7 +715,13 @@ footer {
     height: 90px;
   }
   .author-writings {
-    padding: 30px 15px 15px 15px;
+    padding: 30px 15px 5px 15px;
+  }
+  .author-writing {
+    margin: 15px 0;
+  }
+  .author-writing:first-of-type {
+    margin-top: 10px;
   }
 }
 
@@ -741,7 +746,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   margin: -20px 0 0 0;
-  padding: 50px 0 30px 0;
+  padding: 50px 30px 30px 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#9600c6), color-stop(20%, #b500c5), to(#ffa126));
@@ -764,8 +769,21 @@ footer {
 .writing-info-block {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   text-align: center;
+}
+
+.writing-info-block-name {
+  margin-right: 5px;
 }
 
 .writing-card {
@@ -895,7 +913,7 @@ footer {
 @media screen and (max-width: 480px) {
   .writing-info {
     display: block;
-    padding: 30px 15px 15px 15px;
+    padding: 30px 15px 5px 15px;
   }
   .writing-info-block {
     display: -webkit-box;

@@ -30,6 +30,7 @@
 
 .home-hero {
   position: relative;
+  min-height: 0;
 }
 
 .home-hero-container {

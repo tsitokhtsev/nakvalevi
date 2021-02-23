@@ -4,17 +4,15 @@
         position: relative
         border-radius: 20px
         background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
-        box-shadow: 0 5px 30px $purple-light
     &-img
         align-self: start
-        height: 110px
-        border: 2px solid #fff
+        height: 100px
         border-radius: 99px
     &-writings
         z-index: 0
         position: relative
         margin: -20px 0 0 0
-        padding: 50px 30px 30px 30px
+        padding: 50px 30px 10px 30px
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($magenta, 1) 20%, rgba($orange, 1) 100%)
@@ -32,14 +30,14 @@
     &-writing
         display: flex
         justify-content: space-between
-        margin: 5px 0
+        margin: 20px 0
         width: 100%
         border-bottom: 2px dotted $yellow
         font-size: 24px
         transition: 300ms ease
         +mt-regular
-        &:last-of-type
-            margin-bottom: 0
+        &:first-of-type
+            margin-top: 0
         &:hover
             transform: scale(1.01)
             transition: 300ms ease
@@ -53,7 +51,11 @@
         &-img
             height: 90px
         &-writings
-            padding: 30px 15px 15px 15px
+            padding: 30px 15px 5px 15px
+        &-writing
+            margin: 15px 0
+            &:first-of-type
+                margin-top: 10px
 
 // Portrait phones and smaller
 @media screen and (max-width: 370px)
