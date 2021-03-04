@@ -727,7 +727,7 @@ footer {
 
 @media screen and (max-width: 370px) {
   .author-img {
-    height: 55px;
+    display: none;
   }
 }
 
@@ -983,9 +983,6 @@ footer {
   }
   .back-to-top-text {
     display: none;
-  }
-  .back-to-top-arrow {
-    height: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

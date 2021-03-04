@@ -5,44 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ალექსანდრე ჭავჭავაძე</title>
-    <link rel="shortcut icon" href="../../img/favicon.svg" type="image/png" />
-    <link rel="stylesheet" href="../../css/normalize.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="/img/favicon.svg" type="image/png" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body class="body">
     <div class="logo">
+        <button class="logo-menu-colored"></button>
         <a href="/home">
-            <img class="logo-img" src="../../img/logo.png" alt="">
+            <img class="logo-img" src="/img/logo.png" alt="">
         </a>
+        <button class="logo-search-colored"></button>
+        <hr class="logo-hr">
     </div>
     <nav class="navbar">
-        <div class="navbar-links">
-            <div class="navbar-container">
+        <div class="navbar-container">
+            <button class="logo-menu"></button>
+            <div class="navbar-links">
                 <a href="/home" class="navbar-link">
-                    <span class="navbar-link-title-home">მთავარი</span>
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title navbar-link-title-active">
+                            მთავარი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
                 </a>
                 <a href="/timeline" class="navbar-link">
-                    <span class="navbar-link-title-timeline">თაიმლაინი</span>
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            თაიმლაინი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
                 </a>
                 <a href="/about" class="navbar-link">
-                    <span class="navbar-link-title-about">ჩვენ შესახებ</span>
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            ჩვენ შესახებ
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
                 </a>
             </div>
+            <button class="logo-search"></button>
         </div>
     </nav>
+
+    <div class="search">
+        <div class="search-article">
+            <div class="search-container container">
+                <div class="search-bar">
+                    <input type="text" class="search-bar-input">
+                    <button class="search-bar-clear"></button>
+                </div>
+                <div class="search-section section">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="author article">
-        <div class="author-container container">
+        <div class="container">
             <h1 class="title">
-                <div>
-                    <span class="title-text">ალექსანდრე ჭავჭავაძე<br></span>
+                <div class="title-left">
+                    <span class="title-text">ალექსანდრე
+                         ჭავჭავაძე</span>
                     <span class="title-subtext">1786-1846</span>
                 </div>
-                <img class="title-img" src="../../timeline/img/აჭავჭავაძე.jpg">
+                <img class="author-img" src="/img/authors/აჭავჭავაძე.jpg">
             </h1>
             <div class="author-writings section">
-                <a href="/author/aleqsangre-chavchavadze/gogcha/">
+                <a href="/author/aleqsandre-chavchavadze/gogcha/">
                     <div class="author-writing">
                         <span>გოგჩა</span>
                         <span class="author-writing-date">~</span>
@@ -51,9 +85,12 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <span>ნაკვალევი 2020</span>
-    </div>
+    
+    <footer>
+        <span>ნაკვალევი 2021</span>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
