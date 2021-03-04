@@ -1,7 +1,7 @@
 // writing page content
 const cards = document.querySelectorAll('.writing-card')
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', () => {
     const firstCard = cards[0]
     const btn = firstCard.querySelector('.writing-card-button')
     const content = firstCard.querySelector('.writing-card-content')
@@ -11,20 +11,23 @@ window.addEventListener('DOMContentLoaded', function () {
     content.classList.add('writing-card-content-show')
 })
 
-cards.forEach(function (card) {
-    const btn = card.querySelector('.writing-card-button')
-    const content = card.querySelector('.writing-card-content')
-
-    card.addEventListener('click', function () {
-        cards.forEach(function (item) {
+cards.forEach((card) => {
+    const header = card.querySelector('.writing-card-header')
+    
+    header.addEventListener('click', () => {
+        cards.forEach((item) => {
             if (item != card) {
                 const btn = item.querySelector('.writing-card-button')
                 const content = item.querySelector('.writing-card-content')
+                
                 item.style.maxHeight = '45px'
                 btn.classList.remove('writing-card-button-show')
                 content.classList.remove('writing-card-content-show')
             }
         })
+        
+        const btn = card.querySelector('.writing-card-button')
+        const content = card.querySelector('.writing-card-content')
 
         btn.classList.toggle('writing-card-button-show')
         if (btn.classList.contains('writing-card-button-show')) {
@@ -33,7 +36,7 @@ cards.forEach(function (card) {
             card.style.maxHeight = '45px'
         }
         content.classList.toggle('writing-card-content-show')
-        setTimeout(function () {
+        setTimeout(() => {
             const cardPosition = card.getBoundingClientRect()
             window.scrollTo({
                 top: window.pageYOffset + cardPosition.top - 70
