@@ -27,12 +27,11 @@
         &-block
             flex-basis: 100%
             display: flex
-            justify-content: center
+            flex-direction: column
+            justify-content: flex-start
             align-items: center
             margin: 0
             text-align: center
-            &-name
-                margin-right: 5px
     &-card
         overflow: hidden
         max-height: 45px
@@ -122,8 +121,13 @@
             display: block
             padding: 30px 15px 5px 15px
             &-block
-                display: flex
+                flex-direction: row
                 justify-content: space-between
+                align-items: flex-start
+                &-name
+                    margin-right: 5px
+                & .BLACK
+                    text-align: right
         &-card
             &-content
                 padding: 30px 15px 15px 15px

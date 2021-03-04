@@ -12,26 +12,58 @@
 
 <body class="body">
     <div class="logo">
-        <button class="logo-menu"></button>
+        <button class="logo-menu-colored"></button>
         <a href="/home">
             <img class="logo-img" src="/img/logo.png" alt="">
         </a>
-        <button class="logo-search"></button>
+        <button class="logo-search-colored"></button>
         <hr class="logo-hr">
     </div>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="/home" class="navbar-link">
-                <span class="navbar-link-title-home">მთავარი</span>
-            </a>
-            <a href="/timeline" class="navbar-link">
-                <span class="navbar-link-title-timeline">თაიმლაინი</span>
-            </a>
-            <a href="/about" class="navbar-link">
-                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-            </a>
+            <button class="logo-menu"></button>
+            <div class="navbar-links">
+                <a href="/home" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            მთავარი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/timeline" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            თაიმლაინი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/about" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            ჩვენ შესახებ
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <button class="logo-search"></button>
         </div>
     </nav>
+
+    <div class="search">
+        <div class="search-article">
+            <div class="search-container container">
+                <div class="search-bar">
+                    <input type="text" class="search-bar-input">
+                    <button class="search-bar-clear"></button>
+                </div>
+                <div class="search-section section">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="writing article">
         <div class="container">
@@ -40,16 +72,16 @@
             </h1>
             <div class="writing-info section">
                 <p class="writing-info-block">
-                    <span class="PURPLE">ავტორი</span><br>
-                    <span><a href="/author/giorgi-merchule/">გიორგი მერჩულე</a></span>
+                    <span class="writing-info-block-name PURPLE">ავტორი:</span>
+                    <span class="BLACK"><a href="/author/giorgi-merchule/">გიორგი მერჩულე</a></span>
                 </p>
                 <p class="writing-info-block">
-                    <span class="PURPLE">ჟანრი</span><br>
-                    <span>ჰაგიოგრაფია, ჰომილეტიკა</span>
+                    <span class="writing-info-block-name PURPLE">წელი:</span>
+                    <span class="BLACK">951 წ.</span>
                 </p>
                 <p class="writing-info-block">
-                    <span class="PURPLE">წელი</span><br>
-                    <span>951 წ.</span>
+                    <span class="writing-info-block-name PURPLE">ჟანრი:</span>
+                    <span class="BLACK">ჰაგიოგრაფია, ჰომილეტიკა</span>
                 </p>
             </div>
 
@@ -62,39 +94,49 @@
                         <button class="writing-card-button"></button>
                     </div>
                     <div class="writing-card-content">
-                        <p>
-                            გრიგოლ ხანძთელი - IX საუკუნის მოღვაწე. ნაწარმოები დაიწერა გარდაცვალებიდან 90 წლის შემდეგ, X
-                            საუკუნეში.
-                        </p>
-                        <p>
-                            ამ ნაწარმოების არსებობა ცნობილი გახდა XIX საუკუნეში, როცა ნიკო მარმა იერუსალიმში აღმოაჩინა
-                            ის და საქართველოში გამოაგზავნა.
-                        </p>
-                        <p>
-                            გიორგი მერჩულემ არ მოუსმინა სოლომონის შემდეგ სიტყვებს: „ბრძნული სიტყვა ვერცხლია, დუმილი კი
-                            - ოქრო,“ - და გაჩუმებას სიტყვამრავლობა ამჯობინა, რათა ხალხისთვის ამ უწმინდესი ადამიანის
-                            ღვაწლი ეამბო.
-                        </p>
-                        <p>
-                            ნაწარმოები წინა ჰაგიორგაფიული ნიმუშებისგან განსხვავებით არა წმინდანის წამებას, არამედ მის
-                            ცხოვრებას აღწერს. გრიგოლ ხანძთელი ხანძთისა და შატბერდის სამონასტრო ქალაქების აღმშენებელია.
-                            მის სახელს უკავშირდება ქართული საეკლესიო კალენდრისა და სამონასტრო წესდების შექმნა.
-                        </p>
-                        <p>
-                            ნაწარმოები ჰაგიოგრაფიული მხატვრული თხზულების სრულყოფილი ნიმუშია. გიორგი მერჩულე პერსონაჟების
-                            დახასიათებასთან ერთად იყენებს პეიზაჟებს, საერო ეპიზოდებს და მხატვრულ საშუალებებს. ხშირად
-                            ეპიზოდებს შორის ქრონოლოგიური კავშირი დარღვეულია, მაგრამ ეს არ უშლის ხელს მკითხველმა აღიქვას
-                            ის ერთიან სიუჟეტურ ქარგად.
-                        </p>
-                        <p>
-                            განსაკუთრებულია ნაწარმოები იმით, რომ ავტორი სცილდება ეკლესიას და საერო ყოფით ცხოვრებასაც
-                            აღგვიწერს, კერძოდ, ეკლესიისა და საერო პირების ურთიერთობის მნიშვნელობას წარმოაჩენს, არ
-                            ერიდება სატრფიალო ეპიზოდების გამოყენებას, რათა თხრობა თვალნათელი გახადოს.
-                        </p>
-                        <p>
-                            გრიგოლ ხანძთელი მოიხსენიება, როგორც „ქვეყნისა კაცი და ზეცისა ანგელიზი“, „უდაბნოთა
-                            ქალაქთმყოფელი“. წმინდანის ცხოვრება უტოლდება ტალანტის გამრავლების იგავს.
-                        </p>
+                        <div class="writing-analysis">
+                            <p>
+                                გრიგოლ ხანძთელი - IX საუკუნის მოღვაწე. ნაწარმოები დაიწერა გარდაცვალებიდან 90 წლის
+                                შემდეგ, X
+                                საუკუნეში.
+                            </p>
+                            <p>
+                                ამ ნაწარმოების არსებობა ცნობილი გახდა XIX საუკუნეში, როცა ნიკო მარმა იერუსალიმში
+                                აღმოაჩინა
+                                ის და საქართველოში გამოაგზავნა.
+                            </p>
+                            <p>
+                                გიორგი მერჩულემ არ მოუსმინა სოლომონის შემდეგ სიტყვებს: "ბრძნული სიტყვა ვერცხლია, დუმილი
+                                კი -
+                                ოქრო," - და გაჩუმებას სიტყვამრავლობა ამჯობინა, რათა ხალხისთვის ამ უწმინდესი ადამიანის
+                                ღვაწლი
+                                ეამბო.
+                            </p>
+                            <p>
+                                ნაწარმოები წინა ჰაგიორგაფიული ნიმუშებისგან განსხვავებით არა წმინდანის წამებას, არამედ
+                                მის
+                                ცხოვრებას აღწერს. გრიგოლ ხანძთელი ხანძთისა და შატბერდის სამონასტრო ქალაქების
+                                აღმშენებელია.
+                                მის სახელს უკავშირდება ქართული საეკლესიო კალენდრისა და სამონასტრო წესდების შექმნა.
+                            </p>
+                            <p>
+                                ნაწარმოები ჰაგიოგრაფიული მხატვრული თხზულების სრულყოფილი ნიმუშია. გიორგი მერჩულე
+                                პერსონაჟების
+                                დახასიათებასთან ერთად იყენებს პეიზაჟებს, საერო ეპიზოდებს და მხატვრულ საშუალებებს. ხშირად
+                                ეპიზოდებს შორის ქრონოლოგიური კავშირი დარღვეულია, მაგრამ ეს არ უშლის ხელს მკითხველმა
+                                აღიქვას
+                                ის ერთიან სიუჟეტურ ქარგად.
+                            </p>
+                            <p>
+                                განსაკუთრებულია ნაწარმოები იმით, რომ ავტორი სცილდება ეკლესიას და საერო ყოფით ცხოვრებასაც
+                                აღგვიწერს, კერძოდ, ეკლესიისა და საერო პირების ურთიერთობის მნიშვნელობას წარმოაჩენს, არ
+                                ერიდება სატრფიალო ეპიზოდების გამოყენებას, რათა თხრობა თვალნათელი გახადოს.
+                            </p>
+                            <p>
+                                გრიგოლ ხანძთელი მოიხსენიება, როგორც "ქვეყნისა კაცი და ზეცისა ანგელიზი", "უდაბნოთა
+                                ქალაქთმყოფელი". წმინდანის ცხოვრება უტოლდება ტალანტის გამრავლების იგ
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -107,20 +149,23 @@
                     </div>
                     <div class="writing-card-content">
                         <div class="writing-characters">
-                            <span class="PURPLE">გრიგოლ ხანძთელი</span>
-                            <ul class="writing-characters-character">
-                                <li><span>მართლმადიდებელი და წარჩინებული მშობლების შვილი;</span></li>
-                                <li><span>აღიზარდა ნერსე ერისთავის კარზე;</span></li>
-                                <li><span>ნერსეს მეუღლის დისწული;</span></li>
-                                <li><span>გამოირჩეოდა კარგი ათვისების უნარით;</span></li>
-                                <li><span>ყველა საღვთო წიგნისა და ფილოსოფიის მცოდნე;</span></li>
-                                <li><span>იცოდა მადლიანი, ბრძნული და მოზომილი საუბარი;</span></li>
-                                <li><span>არ იყო ქედმაღალი და საჭმლის მოყვარული;</span></li>
-                                <li><span>თავმდაბალი, მშვიდი, გულმოწყალე, კეთილი;</span></li>
-                                <li><span>გამხდარი, ტანსრული, ჯანმრთელი, უმანკო;</span></li>
-                                <li><span>აღმზრდელების, მშობლებისა და ხალის თხოვნით მღვდლად იკურთხა;</span></li>
-                                <li><span>ეპისკოპოსობა ხორციელ პატივად მიიჩნია და ფარულად წასვლა გადაწყვიტა.</span></li>
-                            </ul>
+                            <div class="writing-characters-character">
+                                <p class="writing-characters-character-name PURPLE">გრიგოლ ხანძთელი</p>
+                                <ul>
+                                    <li><span>მართლმადიდებელი და წარჩინებული მშობლების შვილი;</span></li>
+                                    <li><span>აღიზარდა ნერსე ერისთავის კარზე;</span></li>
+                                    <li><span>ნერსეს მეუღლის დისწული;</span></li>
+                                    <li><span>გამოირჩეოდა კარგი ათვისების უნარით;</span></li>
+                                    <li><span>ყველა საღვთო წიგნისა და ფილოსოფიის მცოდნე;</span></li>
+                                    <li><span>იცოდა მადლიანი, ბრძნული და მოზომილი საუბარი;</span></li>
+                                    <li><span>არ იყო ქედმაღალი და საჭმლის მოყვარული;</span></li>
+                                    <li><span>თავმდაბალი, მშვიდი, გულმოწყალე, კეთილი;</span></li>
+                                    <li><span>გამხდარი, ტანსრული, ჯანმრთელი, უმანკო;</span></li>
+                                    <li><span>აღმზრდელების, მშობლებისა და ხალის თხოვნით მღვდლად იკურთხა;</span></li>
+                                    <li><span>ეპისკოპოსობა ხორციელ პატივად მიიჩნია და ფარულად წასვლა გადაწყვიტა.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

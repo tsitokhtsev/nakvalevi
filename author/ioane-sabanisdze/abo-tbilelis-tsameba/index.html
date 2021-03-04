@@ -11,26 +11,59 @@
 </head>
 
 <body class="body">
-    <button class="logo-menu"></button>
-    <a href="/home">
-        <img class="logo-img" src="/img/logo.png" alt="">
-    </a>
-    <button class="logo-search"></button>
-    <hr class="logo-hr">
+    <div class="logo">
+        <button class="logo-menu-colored"></button>
+        <a href="/home">
+            <img class="logo-img" src="/img/logo.png" alt="">
+        </a>
+        <button class="logo-search-colored"></button>
+        <hr class="logo-hr">
     </div>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="/home" class="navbar-link">
-                <span class="navbar-link-title-home">მთავარი</span>
-            </a>
-            <a href="/timeline" class="navbar-link">
-                <span class="navbar-link-title-timeline">თაიმლაინი</span>
-            </a>
-            <a href="/about" class="navbar-link">
-                <span class="navbar-link-title-about">ჩვენ შესახებ</span>
-            </a>
+            <button class="logo-menu"></button>
+            <div class="navbar-links">
+                <a href="/home" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            მთავარი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/timeline" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            თაიმლაინი
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/about" class="navbar-link">
+                    <div class="navbar-link-container">
+                        <span class="navbar-link-title">
+                            ჩვენ შესახებ
+                            <span class="navbar-link-title-hr"></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <button class="logo-search"></button>
         </div>
     </nav>
+
+    <div class="search">
+        <div class="search-article">
+            <div class="search-container container">
+                <div class="search-bar">
+                    <input type="text" class="search-bar-input">
+                    <button class="search-bar-clear"></button>
+                </div>
+                <div class="search-section section">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="writing article">
         <div class="container">
@@ -39,16 +72,16 @@
             </h1>
             <div class="writing-info section">
                 <p class="writing-info-block">
-                    <span class="PURPLE">ავტორი</span><br>
-                    <span><a href="/author/ioane-sabanisdze/">იოანე საბანისძე</a></span>
+                    <span class="writing-info-block-name PURPLE">ავტორი:</span>
+                    <span class="BLACK"><a href="/author/ioane-sabanisdze/">იოანე საბანისძე</a></span>
                 </p>
                 <p class="writing-info-block">
-                    <span class="PURPLE">წელი</span><br>
-                    <span>VIII ს.</span>
+                    <span class="writing-info-block-name PURPLE">წელი:</span>
+                    <span class="BLACK">VIII ს.</span>
                 </p>
                 <p class="writing-info-block">
-                    <span class="PURPLE">ჟანრი</span><br>
-                    <span>ჰაგიოგრაფია (I-III თავი),<br>ჰიმნოგრაფია (IV თავი)</span>
+                    <span class="writing-info-block-name PURPLE">ჟანრი:</span>
+                    <span class="BLACK">ჰაგიოგრაფია (I-III თავი),<br>ჰიმნოგრაფია (IV თავი)</span>
                 </p>
             </div>
 
@@ -61,41 +94,43 @@
                         <button class="writing-card-button"></button>
                     </div>
                     <div class="writing-card-content">
-                        <p>
-                            იოანე საბანისძის ნაწარმოები VIII საუკუნის ძეგლია. იგი აღწერს არაბი ჭაბუკის, აბოს, მოწამებრივ
-                            ცხოვრებასა და აღსასრულს.
-                        </p>
-                        <p>
-                            ნაწარმოები პოლიჟანრულია (ჰომილეტიკურია): სამი ნაწილი ჰაგიოგრაფიის ნიმუშია, ხოლო მეოთხე
-                            ჰიმნოგრაფიის ჟანრს განეკუთვნება.
-                        </p>
-                        <p>
-                            ნაწარმოები იწყება სამოელ კათალიკოსისა და იოანე საბანისძის მიმოწერით. პირველი ითხოვს
-                            ავტორისგან შექმნას ახლადგანსვენებული აბოს შესახებ მხატვრული ნაწარამოები. იგი უნდა დაიდოს
-                            ქრისტიანულ ტაძრებში, რათა წაიკითხოს ყველამ და საკუთარი ცხოვრების ნიმუშად და მისაბაძ
-                            მაგალითად აქციოს წმინდა აბოს სახე.
-                        </p>
-                        <p>
-                            ნაწარმოების პირველი ნაწილი „წმინდა აბოს ხსენება“ აღგვიწერს VII საუკუნის ქართლს, კერძოდ,
-                            არაბების ბატონობის ხანას, როდესაც შიშის, ახალგაზრდული უმეცრების თუ სიმდიდრის სიყვარულის გამო
-                            ქრისტიანები განეშორებოდნენ ჭეშმარიტებას და გადადიოდნენ მაჰმადის რჯულზე. ხოლო ის, ვინც
-                            ქრისტიანულ რწმენას ინარჩუნებდა, ქარისგან შეშინებულ ლერწამს ემსგავსებოდა, მაგრამ განაგრძობდა
-                            „ჩვეულებისაებრ მამულისა სვლისა“ (მამაპაპური გზით სიარულს ირჩევდა).
-                        </p>
-                        <p>
-                            ნაწარმოებში ვხვდებით ბიბლიურ სახე-სიმბოლოს, ღვთაებრივი მსხვერპლის სიმბოლოს - სანთელი
-                            სასანთლესა ზედა, რომელიც თვით იწვის და ბნელს ანათებს. წმინდა აბო ამბობს: „არავინ აღანთის
-                            სანთელი და შედგის იგი ქუეშე ჴჳმირსა, არამედ ზედა სასანთლესა გადგიან, რაჲთა ჰნათობდეს
-                            ყოველთა;“ - და გვარიგებს, რომ ჩვენს ცხოვრებაში შემოსული სინათლე, სიწმინდე არ უნდა დავმალოთ,
-                            არამედ საჭიროა, გავამრავლოთ.
-                        </p>
-                        <p>
-                            წმინდა აბო თვლის, რომ ის მადლი, რომელიც მან უფლისგან მიიღო, ჭეშმარიტი რელიგიის შემეცნება,
-                            სხვისთვისაც მიმზიდველი, სამოყვარე და შესაგრძნობი უნდა გახადოს, ტალანტის გამრავლებას
-                            დაამსგავსოს თავისი მოღვაწეობა და ანთებულ სანთლად ექცეს ყველა რწმენაშერყეულსა თუ უმეცარს,
-                            უფლისკენ მიმავალ ჭეშმარიტ გზაზე. წმინდანის სიმტკიცემ შეძლო და ხალხს რწმენა დაუბრუნა,
-                            გაუძლიერა და შეაგონა, გაუფრთხილდეს მას.
-                        </p>
+                        <div class="writing-analysis">
+                            <p>
+                                იოანე საბანისძის ნაწარმოები VIII საუკუნის ძეგლია. იგი აღწერს არაბი ჭაბუკის, აბოს,
+                                მოწამებრივ ცხოვრებასა და აღსასრულს.
+                            </p>
+                            <p>
+                                ნაწარმოები პოლიჟანრულია (ჰომილეტიკურია): სამი ნაწილი ჰაგიოგრაფიის ნიმუშია, ხოლო მეოთხე
+                                ჰიმნოგრაფიის ჟანრს განეკუთვნება.
+                            </p>
+                            <p>
+                                ნაწარმოები იწყება სამოელ კათალიკოსისა და იოანე საბანისძის მიმოწერით. პირველი ითხოვს
+                                ავტორისგან შექმნას ახლადგანსვენებული აბოს შესახებ მხატვრული ნაწარამოები. იგი უნდა დაიდოს
+                                ქრისტიანულ ტაძრებში, რათა წაიკითხოს ყველამ და საკუთარი ცხოვრების ნიმუშად და მისაბაძ
+                                მაგალითად აქციოს წმინდა აბოს სახე.
+                            </p>
+                            <p>
+                                ნაწარმოების პირველი ნაწილი "წმინდა აბოს ხსენება" აღგვიწერს VII საუკუნის ქართლს, კერძოდ,
+                                არაბების ბატონობის ხანას, როდესაც შიშის, ახალგაზრდული უმეცრების თუ სიმდიდრის სიყვარულის
+                                გამო ქრისტიანები განეშორებოდნენ ჭეშმარიტებას და გადადიოდნენ მაჰმადის რჯულზე. ხოლო ის,
+                                ვინც ქრისტიანულ რწმენას ინარჩუნებდა, ქარისგან შეშინებულ ლერწამს ემსგავსებოდა, მაგრამ
+                                განაგრძობდა "ჩვეულებისაებრ მამულისა სვლისა" (მამაპაპური გზით სიარულს ირჩევდა).
+                            </p>
+                            <p>
+                                ნაწარმოებში ვხვდებით ბიბლიურ სახე-სიმბოლოს, ღვთაებრივი მსხვერპლის სიმბოლოს - სანთელი
+                                სასანთლესა ზედა, რომელიც თვით იწვის და ბნელს ანათებს. წმინდა აბო ამბობს: "არავინ აღანთის
+                                სანთელი და შედგის იგი ქუეშე ჴჳმირსა, არამედ ზედა სასანთლესა გადგიან, რაჲთა ჰნათობდეს
+                                ყოველთა;" - და გვარიგებს, რომ ჩვენს ცხოვრებაში შემოსული სინათლე, სიწმინდე არ უნდა
+                                დავმალოთ, არამედ საჭიროა, გავამრავლოთ.
+                            </p>
+                            <p>
+                                წმინდა აბო თვლის, რომ ის მადლი, რომელიც მან უფლისგან მიიღო, ჭეშმარიტი რელიგიის
+                                შემეცნება, სხვისთვისაც მიმზიდველი, სამოყვარე და შესაგრძნობი უნდა გახადოს, ტალანტის
+                                გამრავლებას დაამსგავსოს თავისი მოღვაწეობა და ანთებულ სანთლად ექცეს ყველა რწმენაშერყეულსა
+                                თუ უმეცარს, უფლისკენ მიმავალ ჭეშმარიტ გზაზე. წმინდანის სიმტკიცემ შეძლო და ხალხს რწმენა
+                                დაუბრუნა, გაუძლიერა და შეაგონა, გაუფრთხილდეს მას.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -133,6 +168,11 @@
     <footer>
         <span>ნაკვალევი 2020</span>
     </footer>
+
+    <button class="back-to-top">
+        <span class="back-to-top-text">ზევით</span>
+        <img class="back-to-top-arrow" src="/img/arrow.svg">
+    </button>
 
     <script src="/js/main.js"></script>
     <script src="/js/writing.js"></script>
