@@ -39,7 +39,7 @@ cards.forEach((card) => {
         setTimeout(() => {
             const cardPosition = card.getBoundingClientRect()
             window.scrollTo({
-                top: window.pageYOffset + cardPosition.top - 70
+                top: window.pageYOffset + cardPosition.top - 75
             })
         }, 500)
     })
