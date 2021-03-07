@@ -207,44 +207,31 @@
   font-size: 20px;
 }
 
-/* Portrait tablets and medium desktops */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .home-target-item {
-    padding: 10px 20px 15px 20px;
-    width: 150px;
-  }
-  .home-target-item-icon {
-    height: 75px;
-  }
-  .home-target-item-text {
-    font-size: 18px;
-  }
-}
-
-/* Portrait tablets and small desktops */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .home-target-container {
-    margin-bottom: -30px;
-  }
-  .home-target-item {
-    margin-bottom: 30px;
-    width: 250px;
-  }
-}
-
-/* Landscape phones and portrait tablets */
-@media screen and (max-width: 767px) {
-  .home-target-item {
-    margin-bottom: 30px;
-  }
-}
-
 /* Landscape phones and smaller */
 @media screen and (max-width: 480px) {
   .home-target-item {
-    margin: 0 auto 20px auto;
-    padding: 5px 20px 10px 20px;
-    width: 200px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+    max-width: none;
+    height: 150px;
+  }
+  .home-target-item:last-of-type {
+    margin-bottom: 0;
+  }
+  .home-target-item-text {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .home-target-item {
+    height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
