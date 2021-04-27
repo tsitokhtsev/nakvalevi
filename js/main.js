@@ -23,7 +23,13 @@ window.addEventListener('scroll', function () {
 
 /* Search */
 let searchItems = []
-fetch("/js/search-items.json").then(data => data.json()).then(data => searchItems = data)
+fetch("/js/search-items.json", {
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+}).then(data => data.json()).then(data => searchItems = data)
+
 const body = document.querySelector('.body')
 const search = document.querySelector('.search')
 const searchBtn = document.querySelector('.logo-search')
