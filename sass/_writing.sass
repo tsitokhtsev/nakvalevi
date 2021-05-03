@@ -104,10 +104,12 @@
                 color: $black
     &-dictionary
         display: flex
-        &-block
-            flex-basis: 100%
-            &-word
-                margin: 5px 0
+        flex-wrap: wrap
+        &-word
+            overflow: hidden
+            flex-basis: 33.333%
+            margin: 5px 0
+            padding: 5px 0 10px 0
 
 .na
     text-align: center

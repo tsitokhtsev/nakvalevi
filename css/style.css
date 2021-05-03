@@ -895,15 +895,16 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.writing-dictionary-block {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-.writing-dictionary-block-word {
+.writing-dictionary-word {
+  overflow: hidden;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
   margin: 5px 0;
+  padding: 5px 0 10px 0;
 }
 
 .na {
