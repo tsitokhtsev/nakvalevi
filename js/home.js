@@ -1,10 +1,8 @@
-// title animation on home page
+/* Title animation on home page */
 const hero = document.querySelector('.home-hero')
 const heroTitle = document.querySelector('.home-hero-title')
 const heroTitleWords = document.getElementsByClassName('home-hero-title-word')
 const heroContainerBottom = document.querySelector('.home-hero-container-bottom')
-
-console.log(heroTitle.getBoundingClientRect().height);
 
 if (window.innerWidth < 480) {
     let heroHight = window.innerHeight - 90
