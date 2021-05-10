@@ -22,7 +22,7 @@ fetch('/js/data.json', {
                             </p>
                             <p class="writing-info-block">
                                 <span class="writing-info-block-name PURPLE">წელი:</span>
-                                <span class="BLACK">${w.year == '~' ? a.year : w.year}</span>
+                                <span class="BLACK">${w.year}</span>
                             </p>
                             <p class="writing-info-block">
                                 <span class="writing-info-block-name PURPLE">ჟანრი:</span>
@@ -30,63 +30,63 @@ fetch('/js/data.json', {
                             </p>
                         </div>
                         
-                        <div class="section">
-                            <div class="writing-card">
-                                <div class="writing-card-header">
-                                    <div class="writing-card-title">
-                                        <span class="writing-card-title-text">ანალიზი</span>
-                                    </div>
-                                    <button class="writing-card-button"></button>
-                                </div>
-                                <div class="writing-card-content">
-                                    <div class="writing-analysis"></div>
-                                </div>
-                            </div>
-                        
-                            <div class="writing-card">
-                                <div class="writing-card-header">
-                                    <div class="writing-card-title">
-                                        <span class="writing-card-title-text">პერსონაჟები</span>
-                                    </div>
-                                    <button class="writing-card-button"></button>
-                                </div>
-                                <div class="writing-card-content">
-                                    <div class="writing-characters"></div>
-                                </div>
-                            </div>
-                        
-                            <div class="writing-card">
-                                <div class="writing-card-header">
-                                    <div class="writing-card-title">
-                                        <span class="writing-card-title-text">ლექსიკონი</span>
-                                    </div>
-                                    <button class="writing-card-button"></button>
-                                </div>
-                                <div class="writing-card-content">
-                                    <div class="writing-dictionary"></div>
-                                </div>
-                            </div>
-                        </div>`
+                        <div class="writing-content section"></div>`
 
-                    const analysis = container.querySelector('.writing-analysis')
+                    const content = container.querySelector('.writing-content.section')
+
                     if (w.essay != '') {
+                        let card = document.createElement('div')
+                        card.setAttribute('class', 'writing-card')
+                        content.hasChildNodes() ?
+                            content.insertBefore(card, content.lastChild.nextSibling) :
+                            content.insertBefore(card, content.lastChild)
+                        card.innerHTML =
+                            `<div class="writing-card-header">
+                                <div class="writing-card-title">
+                                    <span class="writing-card-title-text">ანალიზი</span>
+                                </div>
+                                <button class="writing-card-button"></button>
+                            </div>
+                            <div class="writing-card-content">
+                                <div class="writing-analysis"></div>
+                            </div>`
+
+                        const analysis = content.querySelector('.writing-analysis')
                         w.essay.forEach(e => {
                             let paragraph = document.createElement('p')
-                            analysis.hasChildNodes() ? analysis.insertBefore(paragraph, analysis.lastChild.nextSibling) : analysis.insertBefore(paragraph, analysis.lastChild)
+                            analysis.hasChildNodes() ?
+                                analysis.insertBefore(paragraph, analysis.lastChild.nextSibling) :
+                                analysis.insertBefore(paragraph, analysis.lastChild)
                             paragraph.innerHTML = `${e}`
                         })
-                    } else {
-                        analysis.innerHTML = '<span class="na">არ არის ინფორმაცია</span>'
                     }
 
-                    const characters = container.querySelector('.writing-characters')
                     if (w.characters != '') {
+                        let card = document.createElement('div')
+                        card.setAttribute('class', 'writing-card')
+                        content.hasChildNodes() ?
+                            content.insertBefore(card, content.lastChild.nextSibling) :
+                            content.insertBefore(card, content.lastChild)
+                        card.innerHTML =
+                            `<div class="writing-card-header">
+                                <div class="writing-card-title">
+                                    <span class="writing-card-title-text">პერსონაჟები</span>
+                                </div>
+                                <button class="writing-card-button"></button>
+                            </div>
+                            <div class="writing-card-content">
+                                <div class="writing-characters"></div>
+                            </div>`
+
+                        const characters = content.querySelector('.writing-characters')
                         w.characters.forEach(c => {
                             let character = document.createElement('div')
                             character.setAttribute('class', 'writing-characters-character')
-                            characters.hasChildNodes() ? characters.insertBefore(character, characters.lastChild.nextSibling) : characters.insertBefore(character, characters.lastChild)
-                            character.innerHTML = `
-                                <p class="writing-characters-character-name PURPLE">${c.name}</p>
+                            characters.hasChildNodes() ?
+                                characters.insertBefore(character, characters.lastChild.nextSibling) :
+                                characters.insertBefore(character, characters.lastChild)
+                            character.innerHTML =
+                                `<p class="writing-characters-character-name PURPLE">${c.name}</p>
                                 <ul></ul>`
 
                             const qualities = character.querySelector('ul')
@@ -96,20 +96,32 @@ fetch('/js/data.json', {
                                 quality.innerHTML = `<span>${q};</span>`
                             })
                         })
-                    } else {
-                        characters.innerHTML = '<span class="na">არ არის ინფორმაცია</span>'
                     }
 
-                    const dictionary = container.querySelector('.writing-dictionary')
                     if (w.dictionary != '') {
+                        let card = document.createElement('div')
+                        card.setAttribute('class', 'writing-card')
+                        content.hasChildNodes() ?
+                            content.insertBefore(card, content.lastChild.nextSibling) :
+                            content.insertBefore(card, content.lastChild)
+                        card.innerHTML =
+                            `<div class="writing-card-header">
+                                <div class="writing-card-title">
+                                    <span class="writing-card-title-text">ლექსიკონი</span>
+                                </div>
+                                <button class="writing-card-button"></button>
+                            </div>
+                            <div class="writing-card-content">
+                                <div class="writing-dictionary"></div>
+                            </div>`
+
+                        const dictionary = container.querySelector('.writing-dictionary')
                         w.dictionary.forEach(w => {
                             let word = document.createElement('span')
                             word.setAttribute('class', 'writing-dictionary-word')
                             dictionary.hasChildNodes() ? dictionary.insertBefore(word, dictionary.lastChild.nextSibling) : dictionary.insertBefore(word, dictionary.lastChild)
                             word.innerHTML = `<span class="PURPLE">${w.word}</span><br>${w.meaning}`
                         })
-                    } else {
-                        dictionary.innerHTML = '<span class="na">არ არის ინფორმაცია</span>'
                     }
 
                     const cards = document.querySelectorAll('.writing-card')
