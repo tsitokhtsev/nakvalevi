@@ -109,36 +109,42 @@ fetch("/js/data.json", {
         searchItemsSection.classList.remove('search-section-show')
         searchInput.focus()
     }
-
-    // navbar link hover
-    const navbarLink = document.querySelectorAll('.navbar-link')
-
-    navbarLink.forEach(function (link) {
-        link.addEventListener('mouseover', function () {
-            link.querySelector('.navbar-link-title-hr').classList.add('navbar-link-title-hr-show')
-        })
-        link.addEventListener('mouseout', function () {
-            link.querySelector('.navbar-link-title-hr').classList.remove('navbar-link-title-hr-show')
-        })
-    })
-
-    /* Back-To-Top Button */
-    const backToTopBtn = document.querySelector('.back-to-top')
-
-    document.onscroll = () => {
-        const clientHeight = document.documentElement.clientHeight
-        const scrollTop = window.pageYOffset
-        if (scrollTop > clientHeight * 0.4) {
-            backToTopBtn.classList.add("show-btn")
-        } else {
-            backToTopBtn.classList.remove("show-btn")
-        }
-    }
-
-    backToTopBtn.onclick = () => {
-        document.documentElement.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
 })
+
+// navbar link hover
+const navbarLink = document.querySelectorAll('.navbar-link')
+
+navbarLink.forEach(function (link) {
+    link.addEventListener('mouseover', function () {
+        link.querySelector('.navbar-link-title-hr').classList.add('navbar-link-title-hr-show')
+    })
+    link.addEventListener('mouseout', function () {
+        link.querySelector('.navbar-link-title-hr').classList.remove('navbar-link-title-hr-show')
+    })
+})
+
+/* Back-To-Top Button */
+const backToTopBtn = document.querySelector('.back-to-top')
+
+document.onscroll = () => {
+    const clientHeight = document.documentElement.clientHeight
+    const scrollTop = window.pageYOffset
+    if (scrollTop > clientHeight * 0.4) {
+        backToTopBtn.classList.add("show-btn")
+    } else {
+        backToTopBtn.classList.remove("show-btn")
+    }
+}
+
+backToTopBtn.onclick = () => {
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+
+/* Footer */
+const footer = document.querySelector('footer')
+let copy = document.createElement('span')
+copy.innerHTML = 'ნაკვალევი 2020'
+footer.appendChild(copy)
