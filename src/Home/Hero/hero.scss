@@ -1,3 +1,5 @@
+@import '../../fonts/fonts.scss';
+
 .hero {
 	position: relative;
 
@@ -12,7 +14,7 @@
 		grid-template-rows: max-content 1fr;
 		padding: 40px;
 		border-radius: 20px;
-		background-image: url("./images/books.jpg");
+		background-image: url("../images/books.jpg");
 		background-size: cover;
 
 		&-right,
@@ -38,21 +40,18 @@
 	&-title {
 		margin: 0;
 		padding: 0 15px 0 0;
+		@include mt-bold;
 		color: white;
 
 		&-word {
-			margin: 0 0 30px 0;
+			margin: 0 0 15px 0;
 			font-size: 70px;
 			line-height: 100%;
 			// transform: translateX(-100%);
 			// transition: 1s;
 
-			&:first-of-type {
-				margin-top: -15px;
-			}
-
 			&:last-of-type {
-				margin-bottom: 15px;
+				margin-bottom: 0;
 			}
 		}
 	}
