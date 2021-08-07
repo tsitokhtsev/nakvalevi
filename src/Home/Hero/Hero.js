@@ -12,7 +12,7 @@ const Hero = () => {
 
 	return (
 		<div className="hero section" style={{ height: window.innerHeight - 220 }}>
-			<div className="hero-container">
+			<div className="hero-container" style={{background: 'url("images/books.jpg")'}}>
 				<h1 className="hero-title">
 					<p className="hero-title-word">გავკვალოთ</p>
 					<p className="hero-title-word">ცოდნის</p>

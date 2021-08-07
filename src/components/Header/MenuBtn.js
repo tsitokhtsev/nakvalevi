@@ -1,6 +1,5 @@
 import React from 'react'
 import './btn.scss'
-import menuImg from './menu.svg'
 
 const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
 	return (
@@ -8,7 +7,7 @@ const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
 			className="menu-btn"
 			alt="menu"
 			style={{
-				background: `url(${menuImg}) no-repeat`,
+				background: 'url(images/menu.svg) no-repeat',
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
 			}}

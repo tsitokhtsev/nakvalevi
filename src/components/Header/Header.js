@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.scss";
-import logo from "../../logo.png";
 import MenuBtn from "./MenuBtn";
 import SearchBtn from "./SearchBtn";
 
@@ -12,7 +11,7 @@ const Header = ({ navbarExpanded, setNavbarExpanded }) => {
 					navbarExpanded={navbarExpanded}
 					setNavbarExpanded={setNavbarExpanded}
 				/>
-				<img className="logo" src={logo} alt="logo" />
+				<img className="logo" src="images/logo.png" alt="logo" />
 				<SearchBtn />
 			</div>
 		</header>
