@@ -1,4 +1,4 @@
-@import '../../fonts/fonts.scss';
+@import '../../fonts.scss';
 
 .hero {
 	position: relative;
@@ -14,7 +14,6 @@
 		grid-template-rows: max-content 1fr;
 		padding: 40px;
 		border-radius: 20px;
-		background-image: url("../images/books.jpg");
 		background-size: cover;
 
 		&-right,

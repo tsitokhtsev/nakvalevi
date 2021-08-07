@@ -1,10 +1,11 @@
 import React from 'react'
 import './heading.scss'
 
-const Heading = ({ heading }) => {
+const Heading = ({ heading, image }) => {
 	return (
 		<h1 className="heading">
 			<span className="heading-text">{heading}</span>
+			<img className="heading-image" src={image} alt={image} />
 		</h1>
 	)
 }

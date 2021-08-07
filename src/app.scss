@@ -2,17 +2,18 @@
 
 body {
 	margin: 0;
+	color: $black
 }
 
 .app {
-	display: flex;
-	justify-content: center;
+	padding-top: 40px;
 	background-color: $background;
+	transition: .5s;
 }
 
 .container {
 	flex-grow: 1;
-	margin-top: 60px;
+	margin: 60px auto 0 auto;
 	max-width: 1100px;
 }
 
@@ -21,4 +22,8 @@ body {
 	padding: 40px;
 	border-radius: 20px;
 	background-color: white;
+}
+
+p {
+	line-height: 1.5;
 }

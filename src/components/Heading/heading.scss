@@ -1,8 +1,9 @@
 @import '../../colors.scss';
-@import '../../fonts/fonts.scss';
+@import '../../fonts.scss';
 
 .heading {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	margin: 0 0 50px 0;
 	padding: 30px 30px 15px 30px;
@@ -13,5 +14,10 @@
 		@include mt-bold;
 		font-size: 60px;
 		color: white;
+	}
+
+	&-image {
+		margin-top: -15px;
+        height: 75px;
 	}
 }
