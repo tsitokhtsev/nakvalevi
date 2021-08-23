@@ -1,6 +1,7 @@
 import React from 'react'
 import AuthorCardBio from './AuthorCardBio'
 import AuthorCardWritings from './AuthorCardWritings'
+import './author-card.scss'
 
 const AuthorCard = ({ author }) => {
 	return (
@@ -12,7 +13,7 @@ const AuthorCard = ({ author }) => {
 				year={author.year}
 				url={author.url}
 				imagePath={author.imagePath}
-				/>
+			/>
 			<hr />
 			<AuthorCardWritings
 				writings={author.writings}

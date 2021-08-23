@@ -1,9 +1,19 @@
 import React from 'react'
+import AuthorCardWriting from './AuthorCardWriting'
 
 const AuthorCardWritings = ({ writings }) => {
+	const renderedWritings = writings.map(writing =>
+		<AuthorCardWriting
+			key={writings.indexOf(writing)}
+			name={writing.name}
+			url={writing.url}
+			year={writing.year}
+		/>
+	)
+
 	return (
-		<div>
-			Writing
+		<div className="author-card-writings">
+			{renderedWritings}
 		</div>
 	)
 }

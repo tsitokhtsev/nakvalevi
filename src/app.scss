@@ -1,8 +1,14 @@
 @import './colors.scss';
+@import './fonts.scss';
+
+:root {
+	@include mkh;
+	font-size: 24px;
+	color: $black
+}
 
 body {
 	margin: 0;
-	color: $black
 }
 
 .app {
@@ -26,4 +32,10 @@ body {
 
 p {
 	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	cursor: pointer;
 }

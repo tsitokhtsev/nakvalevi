@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Link = ({ href, children }) => {
+const Link = ({ href, className, children }) => {
 	const onClick = e => {
 		if (e.metaKey || e.ctrlKey) return
 
@@ -13,7 +13,7 @@ const Link = ({ href, children }) => {
 
 	return (
 		<a
-			className="navbar-link"
+			className={className}
 			href={href}
 			onClick={onClick}
 		>
