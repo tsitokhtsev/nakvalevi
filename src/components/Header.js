@@ -1,7 +1,8 @@
-import React from "react";
-import "./header.scss";
-import MenuBtn from "./MenuBtn";
-import SearchBtn from "./SearchBtn";
+import React from 'react'
+import MenuBtn from './MenuBtn'
+import SearchBtn from './SearchBtn'
+
+import "../style/header.scss"
 
 const Header = ({ navbarExpanded, setNavbarExpanded }) => {
 	return (
@@ -15,7 +16,7 @@ const Header = ({ navbarExpanded, setNavbarExpanded }) => {
 				<SearchBtn />
 			</div>
 		</header>
-	);
-};
+	)
+}
 
-export default Header;
+export default Header

@@ -1,5 +1,5 @@
 import React from 'react'
-import './hero.scss'
+import '../../style/hero.scss'
 
 const Hero = () => {
 	// if (window.innerWidth < 480) {

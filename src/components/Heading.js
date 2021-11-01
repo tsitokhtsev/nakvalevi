@@ -1,5 +1,6 @@
 import React from 'react'
-import './heading.scss'
+
+import '../style/heading.scss'
 
 const Heading = ({ heading, image }) => {
 	return (

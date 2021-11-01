@@ -1,7 +1,8 @@
 import React from 'react'
 import AuthorCardBio from './AuthorCardBio'
 import AuthorCardWritings from './AuthorCardWritings'
-import './author-card.scss'
+
+import '../../style/author-card.scss'
 
 const AuthorCard = ({ author }) => {
 	return (

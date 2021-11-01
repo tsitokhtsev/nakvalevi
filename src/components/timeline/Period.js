@@ -1,5 +1,5 @@
 import React from 'react'
-import AuthorCard from './AuthorCard/AuthorCard'
+import AuthorCard from './AuthorCard'
 
 const Period = ({ name, period }) => {
 	const authors = period[name]

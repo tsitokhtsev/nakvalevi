@@ -1,5 +1,5 @@
 import React from 'react'
-import './btn.scss'
+import '../style/btn.scss'
 
 const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
 	return (

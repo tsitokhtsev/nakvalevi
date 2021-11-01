@@ -1,7 +1,7 @@
 import React from 'react'
-import Heading from '../../components/Heading/Heading'
+import Heading from '../Heading'
 import TargetCard from './TargetCard'
-import './target.scss'
+import '../../style/target.scss'
 
 const Target = () => {
 	return (
