@@ -1,12 +1,10 @@
 import React from 'react'
 import AuthorCard from './AuthorCard'
 
-const Period = ({ name, period }) => {
-	const authors = period[name]
-
+const Period = ({ name, authors }) => {
 	const renderedAuthors = authors.map(author =>
 		<AuthorCard
-			key={authors.indexOf(author)}
+			key={author.id}
 			author={author}
 		/>
 	)
