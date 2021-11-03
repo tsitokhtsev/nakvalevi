@@ -5,9 +5,23 @@ const authorsReducer = (state = {}, action) => {
 	switch (action.type) {
 		case 'FETCH_AUTHORS':
 			return { ...state, ..._.mapKeys(action.payload, 'id') }
+		case 'FETCH_AUTHOR':
+			return { ...state, [action.payload.id]: action.payload }
 		default:
 			return state
 	}
 }
 
-export default combineReducers({ authors: authorsReducer })
+const writingsReducer = (state = {}, action) => {
+	switch (action.type) {
+		case 'FETCH_WRITING':
+			return { ...state, [action.payload.id]: action.payload }
+		default:
+			return state
+	}
+}
+
+export default combineReducers({ 
+	authors: authorsReducer,
+	writings: writingsReducer
+})

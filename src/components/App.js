@@ -8,6 +8,7 @@ import Home from '../pages/Home'
 import Timeline from '../pages/Timeline'
 import About from '../pages/About'
 import Author from '../pages/Author'
+import Writing from '../pages/Writing'
 import Footer from './Footer'
 
 import '../style/app.scss'
@@ -39,6 +40,7 @@ const App = () => {
 					<Route path="/timeline" exact component={Timeline} />
 					<Route path="/about" exact component={About} />
 					<Route path="/author/:author" exact component={Author}/>
+					<Route path="/author/:author/:writing" exact component={Writing} />
 				</Container>
 
 				<Footer />

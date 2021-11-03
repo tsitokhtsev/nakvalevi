@@ -10,6 +10,7 @@
 			"period": "old",
 			"writings": [
 				{
+					"id": 1,
 					"name": "შუშანიკის წამება",
 					"url": "/author/iakob-tsurtaveli/shushanikis-tsameba/",
 					"year": "დაახ. 476–483",
@@ -133,6 +134,7 @@
 			"period": "old",
 			"writings": [
 				{
+					"id": 1,
 					"name": "აბო თბილელის წამება",
 					"url": "/author/ioane-sabanisdze/abo-tbilelis-tsameba/",
 					"year": "~",
@@ -160,6 +162,7 @@
 			"period": "old",
 			"writings": [
 				{
+					"id": 1,
 					"name": "გრიგოლ ხანძთელის ცხოვრება",
 					"url": "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/",
 					"year": "951",
@@ -205,6 +208,7 @@
 			"period": "new",
 			"writings": [
 				{
+					"id": 1,
 					"name": "გოგჩა",
 					"url": "/author/aleqsandre-chavchavadze/gogcha/",
 					"year": "~",
@@ -230,6 +234,7 @@
 			"period": "new",
 			"writings": [
 				{
+					"id": 1,
 					"name": "საღამო გამოსალმებისა",
 					"url": "/author/grigol-orbeliani/sagamo-gamosalmebisa/",
 					"year": "1840",
@@ -239,6 +244,7 @@
 					"dictionary": ""
 				},
 				{
+					"id": 2,
 					"name": "პასუხი შვილთა",
 					"url": "/author/grigol-orbeliani/pasukhi-shvilta/",
 					"year": "1874",
@@ -259,6 +265,7 @@
 					"dictionary": ""
 				},
 				{
+					"id": 3,
 					"name": "თამარ მეფის სახე ბეთანიის ეკლესიაში",
 					"url": "/author/grigol-orbeliani/tamar-mepis-sakhe-betaniis-eklesiashi/",
 					"year": "1877",

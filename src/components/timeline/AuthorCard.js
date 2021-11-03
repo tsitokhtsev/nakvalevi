@@ -9,10 +9,10 @@ const AuthorCard = ({ author }) => {
 		<div className="author-card">
 			<hr />
 			<AuthorCardBio
+				id={author.id}
 				name={author.name}
 				surname={author.surname}
 				year={author.year}
-				url={author.url}
 				imagePath={author.imagePath}
 			/>
 			<hr />

@@ -2,6 +2,7 @@ import React from 'react'
 import AuthorCardWriting from './AuthorCardWriting'
 
 const AuthorCardWritings = ({ writings }) => {
+	// FIXME: fetchWritings
 	const renderedWritings = writings.map(writing =>
 		<AuthorCardWriting
 			key={writings.indexOf(writing)}

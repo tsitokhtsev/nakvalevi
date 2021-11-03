@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const AuthorCardBio = ({ name, surname, year, url, imagePath }) => {
+const AuthorCardBio = ({ id, name, surname, year, imagePath }) => {
 	return (
-		<Link to={`/author/${name}-${surname}`}>
+		<Link to={{
+			pathname: `/author/${name}-${surname}`,
+			state: { id }
+		}}>
 			<div className="author-card-bio">
 				<div className="author-card-bio-info">
 					<span className="author-card-bio-info-name">{name}<br />{surname}</span>
@@ -11,7 +14,7 @@ const AuthorCardBio = ({ name, surname, year, url, imagePath }) => {
 				</div>
 				<img className="author-card-bio-img" src={imagePath} alt="portrait" />
 			</div>
-		</Link>
+		</Link >
 	)
 }
 
