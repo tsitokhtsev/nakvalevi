@@ -7,7 +7,7 @@ const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
 			className="menu-btn"
 			alt="menu"
 			style={{
-				background: 'url(images/menu.svg) no-repeat',
+				background: 'url(/images/menu.svg) no-repeat',
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
 			}}

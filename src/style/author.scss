@@ -1,0 +1,71 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+.author {
+	&-writings {
+		z-index: 0;
+		position: relative;
+		margin: -20px 0 0 0;
+		padding: 50px 30px 10px 30px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background: $gradient;
+
+
+		&:before {
+			z-index: -2;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: 0 1px 1px 1px;
+			border-radius: inherit;
+			background: #fff;
+		}
+	}
+
+	&-writing {
+		@include mt;
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 0;
+		width: 100%;
+		font-size: 24px;
+		border-bottom: 2px dotted $yellow;
+		transition: 300ms ease;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&:hover {
+			transform: scale(1.01);
+			transition: 300ms ease;
+		}
+
+		&-year {
+			margin-left: 30px;
+			text-align: right;
+		}
+	}
+}
+
+// Landscape phones and smaller
+// @media screen and (max-width: 480px)
+//     .author
+//         &-img
+//             height: 90px
+//         &-writings
+//             padding: 30px 15px 5px 15px
+//         &-writing
+//             margin: 15px 0
+//             &:first-of-type
+//                 margin-top: 10px
+
+// // Portrait phones and smaller
+// @media screen and (max-width: 370px)
+//     .author
+//         &-img
+//             display: none

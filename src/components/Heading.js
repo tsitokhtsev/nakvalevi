@@ -2,10 +2,13 @@ import React from 'react'
 
 import '../style/heading.scss'
 
-const Heading = ({ heading, image }) => {
+const Heading = ({ text, subtext, image }) => {
 	return (
 		<h1 className="heading">
-			<span className="heading-text">{heading}</span>
+			<div className="heading-left">
+				<span className="heading-text">{text}</span>
+				<span className="heading-subtext">{subtext}</span>
+			</div>
 			<img className="heading-image" src={image} alt={image} />
 		</h1>
 	)

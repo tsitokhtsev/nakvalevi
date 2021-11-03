@@ -7,7 +7,7 @@ const SearchBtn = () => {
 		<div
 			className="search-btn"
 			style={{
-				background: 'url(images/search.svg) no-repeat',
+				background: 'url(/images/search.svg) no-repeat',
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
 			}}

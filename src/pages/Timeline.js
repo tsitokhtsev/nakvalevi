@@ -17,7 +17,7 @@ class Timeline extends React.Component {
 		return (
 			<div className="timeline section">
 				<Heading
-					heading="თაიმლაინი"
+					text="თაიმლაინი"
 					image="images/timeline.svg"
 				/>
 

@@ -1,26 +1,35 @@
 @font-face {
-	font-family: 'BPG Nino Mtavruli';
-	src: url("../fonts/bpg-nino-mtavruli-webfont.ttf") format("truetype");
+	font-family: "BPG Nino Mtavruli Book";
+	src: url(../fonts/bpg-nino-mtavruli-book-webfont.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'BPG Nino Mtavruli Bold';
-	src: url("../fonts/bpg-nino-mtavruli-bold-webfont.ttf") format("truetype");
+	font-family: "BPG Nino Mtavruli";
+	src: url(../fonts/bpg-nino-mtavruli-webfont.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'BPG Nino Mkhedruli';
+	font-family: "BPG Nino Mtavruli Bold";
+	src: url(../fonts/bpg-nino-mtavruli-bold-webfont.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "BPG Nino Mkhedruli";
 	src: url(../fonts/bpg-nino-mkhedruli-webfont.ttf) format("truetype");
 }
 
+@mixin mt-book {
+	font-family: "BPG Nino Mtavruli Book", sans-serif;
+}
+
 @mixin mt {
-	font-family: 'BPG Nino Mtavruli', sans-serif;
+	font-family: "BPG Nino Mtavruli", sans-serif;
 }
 
 @mixin mt-bold {
-	font-family: 'BPG Nino Mtavruli Bold', sans-serif;
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
 }
 
 @mixin mkh {
-	font-family: 'BPG Nino Mkhedruli', sans-serif;
+	font-family: "BPG Nino Mkhedruli", sans-serif;
 }

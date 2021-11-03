@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import MenuBtn from './MenuBtn'
 import SearchBtn from './SearchBtn'
 
@@ -12,7 +13,11 @@ const Header = ({ navbarExpanded, setNavbarExpanded }) => {
 					navbarExpanded={navbarExpanded}
 					setNavbarExpanded={setNavbarExpanded}
 				/>
-				<img className="logo" src="images/logo.png" alt="logo" />
+
+				<Link className="logo"to="/">
+					<img src="/images/logo.png" alt="logo" />
+				</Link>
+				
 				<SearchBtn />
 			</div>
 		</header>
