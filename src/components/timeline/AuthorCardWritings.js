@@ -1,15 +1,17 @@
 import React from 'react'
-import AuthorCardWriting from './AuthorCardWriting'
+import { Link } from 'react-router-dom'
 
-const AuthorCardWritings = ({ writings }) => {
-	// FIXME: fetchWritings
+const AuthorCardWritings = ({ author, writings }) => {
 	const renderedWritings = writings.map(writing =>
-		<AuthorCardWriting
-			key={writings.indexOf(writing)}
-			name={writing.name}
-			url={writing.url}
-			year={writing.year}
-		/>
+		<Link
+			key={`${author.id}${writing.id}`}
+			to={`/${author.name}-${author.surname}/${writing.name.split(' ').join('-')}`}
+		>
+			<div className="author-card-writing">
+				<span>{writing.name}</span>
+				<span>{writing.year}</span>
+			</div>
+		</Link>
 	)
 
 	return (

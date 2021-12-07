@@ -4,9 +4,9 @@ import { combineReducers } from 'redux'
 const authorsReducer = (state = {}, action) => {
 	switch (action.type) {
 		case 'FETCH_AUTHORS':
-			return { ...state, ..._.mapKeys(action.payload, 'id') }
+			return { ..._.mapKeys(action.payload, 'id') }
 		case 'FETCH_AUTHOR':
-			return { ...state, [action.payload.id]: action.payload }
+			return { currentAuthor: action.payload }
 		default:
 			return state
 	}
@@ -15,7 +15,7 @@ const authorsReducer = (state = {}, action) => {
 const writingsReducer = (state = {}, action) => {
 	switch (action.type) {
 		case 'FETCH_WRITING':
-			return { ...state, [action.payload.id]: action.payload }
+			return { currentWriting: action.payload }
 		default:
 			return state
 	}

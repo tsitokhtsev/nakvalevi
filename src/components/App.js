@@ -29,20 +29,17 @@ const App = () => {
 					navbarExpanded={navbarExpanded}
 					setNavbarExpanded={setNavbarExpanded}
 				/>
-
 				<Navbar
 					navbarExpanded={navbarExpanded}
 					setNavbarExpanded={setNavbarExpanded}
 				/>
-
 				<Container>
 					<Route path="/" exact component={Home} />
 					<Route path="/timeline" exact component={Timeline} />
 					<Route path="/about" exact component={About} />
-					<Route path="/author/:author" exact component={Author}/>
-					<Route path="/author/:author/:writing" exact component={Writing} />
+					<Route path="/:authorName-:authorSurname" exact component={Author} />
+					<Route path="/:authorName-:authorSurname/:writingName" exact component={Writing} />
 				</Container>
-
 				<Footer />
 			</BrowserRouter>
 		</div>

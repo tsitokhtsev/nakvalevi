@@ -5,14 +5,12 @@
 			"name": "იაკობ",
 			"surname": "ცურტაველი",
 			"year": "მე-5 საუკუნე",
-			"url": "/author/iakob-tsurtaveli/",
 			"imagePath": "/images/authors/ხუცესი.jpg",
 			"period": "old",
 			"writings": [
 				{
 					"id": 1,
 					"name": "შუშანიკის წამება",
-					"url": "/author/iakob-tsurtaveli/shushanikis-tsameba/",
 					"year": "დაახ. 476–483",
 					"genre": "ჰაგიოგრაფია",
 					"essay": [
@@ -129,14 +127,12 @@
 			"name": "იოანე",
 			"surname": "საბანისძე",
 			"year": "მე-8 საუკუნე",
-			"url": "/author/ioane-sabanisdze/",
 			"imagePath": "/images/authors/საბანისძე.jpg",
 			"period": "old",
 			"writings": [
 				{
 					"id": 1,
 					"name": "აბო თბილელის წამება",
-					"url": "/author/ioane-sabanisdze/abo-tbilelis-tsameba/",
 					"year": "~",
 					"genre": "ჰაგიოგრაფია (I-III თავი), ჰიმნოგრაფია (IV თავი)",
 					"essay": [
@@ -157,14 +153,12 @@
 			"name": "გიორგი",
 			"surname": "მერჩულე",
 			"year": "მე-10 საუკუნე",
-			"url": "/author/giorgi-merchule/",
 			"imagePath": "/images/authors/მერჩულე.jpg",
 			"period": "old",
 			"writings": [
 				{
 					"id": 1,
 					"name": "გრიგოლ ხანძთელის ცხოვრება",
-					"url": "/author/giorgi-merchule/grigol-khandztelis-tskhovreba/",
 					"year": "951",
 					"genre": "ჰაგიოგრაფია, ჰომილეტიკა",
 					"essay": [
@@ -203,14 +197,12 @@
 			"name": "ალექსანდრე",
 			"surname": "ჭავჭავაძე",
 			"year": "1786-1846",
-			"url": "/author/aleqsandre-chavchavadze/",
 			"imagePath": "/images/authors/აჭავჭავაძე.jpg",
 			"period": "new",
 			"writings": [
 				{
 					"id": 1,
 					"name": "გოგჩა",
-					"url": "/author/aleqsandre-chavchavadze/gogcha/",
 					"year": "~",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -229,14 +221,12 @@
 			"name": "გრიგოლ",
 			"surname": "ორბელიანი",
 			"year": "1804-1883",
-			"url": "/author/grigol-orbeliani/",
 			"imagePath": "/images/authors/გორბელიანი.jpg",
 			"period": "new",
 			"writings": [
 				{
 					"id": 1,
 					"name": "საღამო გამოსალმებისა",
-					"url": "/author/grigol-orbeliani/sagamo-gamosalmebisa/",
 					"year": "1840",
 					"genre": "რომანტიზმი",
 					"essay": "",
@@ -246,7 +236,6 @@
 				{
 					"id": 2,
 					"name": "პასუხი შვილთა",
-					"url": "/author/grigol-orbeliani/pasukhi-shvilta/",
 					"year": "1874",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -267,7 +256,6 @@
 				{
 					"id": 3,
 					"name": "თამარ მეფის სახე ბეთანიის ეკლესიაში",
-					"url": "/author/grigol-orbeliani/tamar-mepis-sakhe-betaniis-eklesiashi/",
 					"year": "1877",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -288,13 +276,12 @@
 			"name": "ნიკოლოზ",
 			"surname": "ბარათაშვილი",
 			"year": "1817-1845",
-			"url": "/author/nikoloz-baratashvili/",
 			"imagePath": "/images/authors/ბარათაშვილი.png",
 			"period": "new",
 			"writings": [
 				{
+					"id": 1,
 					"name": "შემოღამება მთაწმინდაზე",
-					"url": "/author/nikoloz-baratashvili/shemogameba-mtatsmindaze/",
 					"year": "1833/1836",
 					"genre": "რომანტიზმი",
 					"essay": "",
@@ -302,8 +289,8 @@
 					"dictionary": ""
 				},
 				{
+					"id": 2,
 					"name": "ხმა იდუმალი",
-					"url": "/author/nikoloz-baratashvili/khma-idumali/",
 					"year": "1836",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -321,8 +308,8 @@
 					"dictionary": ""
 				},
 				{
+					"id": 3,
 					"name": "არ უკიჟინო, სატრფოო...",
-					"url": "/author/nikoloz-baratashvili/ar-ukizhino-satrpoo/",
 					"year": "1841",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -336,8 +323,8 @@
 					"dictionary": ""
 				},
 				{
+					"id": 4,
 					"name": "ვპოვე ტაძარი",
-					"url": "/author/nikoloz-baratashvili/vpove-tadzari/",
 					"year": "1841",
 					"genre": "რომანტიზმი",
 					"essay": [
@@ -353,8 +340,8 @@
 					"dictionary": ""
 				},
 				{
+					"id": 5,
 					"name": "სულო ბოროტო",
-					"url": "/author/nikoloz-baratashvili/sulo-boroto/",
 					"year": "1843",
 					"genre": "რომანტიზმი",
 					"essay": [

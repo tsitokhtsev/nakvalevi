@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 
 const AuthorCardBio = ({ id, name, surname, year, imagePath }) => {
 	return (
-		<Link to={{
-			pathname: `/author/${name}-${surname}`,
-			state: { id }
-		}}>
+		<Link to={`/${name}-${surname}`}>
 			<div className="author-card-bio">
 				<div className="author-card-bio-info">
 					<span className="author-card-bio-info-name">{name}<br />{surname}</span>

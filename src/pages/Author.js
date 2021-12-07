@@ -1,14 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchAuthor } from '../actions'
-import AuthorWritings from '../components/author/AuthorWritings'
 import Heading from '../components/Heading'
+import AuthorWritings from '../components/author/AuthorWritings'
 
 import '../style/author.scss'
 
 class Author extends React.Component {
 	componentDidMount() {
-		this.props.fetchAuthor(this.props.location.state.id)
+		const authorName = this.props.match.params.authorName
+		const authorSurname = this.props.match.params.authorSurname
+		this.props.fetchAuthor(authorName, authorSurname)
 	}
 
 	render() {
@@ -38,8 +40,8 @@ class Author extends React.Component {
 	}
 }
 
-const mapStateToProps = (state, ownProps) => {
-	return { author: state.authors[ownProps.location.state.id] }
+const mapStateToProps = state => {
+	return { author: state.authors.currentAuthor }
 }
 
 export default connect(

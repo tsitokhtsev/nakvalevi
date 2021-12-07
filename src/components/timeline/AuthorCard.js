@@ -17,6 +17,7 @@ const AuthorCard = ({ author }) => {
 			/>
 			<hr />
 			<AuthorCardWritings
+				author={author}
 				writings={author.writings}
 			/>
 		</div>

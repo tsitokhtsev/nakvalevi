@@ -6,23 +6,23 @@ export const fetchAuthors = () => async dispatch => {
 	dispatch({ type: 'FETCH_AUTHORS', payload: response.data.authors })
 }
 
-export const fetchAuthor = id => async dispatch => {
+export const fetchAuthor = (authorName, authorSurname) => async dispatch => {
 	const response = await axios.get('/data.json')
 
 	response.data.authors.forEach(author => {
-		if (author.id === id) {
+		if (author.name === authorName && author.surname === authorSurname) {
 			dispatch({ type: 'FETCH_AUTHOR', payload: author })
 		}
 	})
 }
 
-export const fetchWriting = (authorId, writingId) => async dispatch => {
+export const fetchWriting = (authorName, authorSurname, writingName) => async dispatch => {
 	const response = await axios.get('/data.json')
 
 	response.data.authors.forEach(author => {
-		if (author.id === authorId) {
+		if (author.name === authorName && author.surname === authorSurname) {
 			author.writings.forEach(writing => {
-				if (writing.id === writingId) {
+				if (writing.name === writingName) {
 					dispatch({ type: 'FETCH_WRITING', payload: writing })
 				}
 			})

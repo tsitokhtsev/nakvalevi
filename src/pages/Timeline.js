@@ -20,17 +20,14 @@ class Timeline extends React.Component {
 					text="თაიმლაინი"
 					image="images/timeline.svg"
 				/>
-
 				<Period
 					name="old"
 					authors={this.filterAuthors("old")}
 				/>
-
 				<Period
 					name="new"
 					authors={this.filterAuthors("new")}
 				/>
-
 				<Period
 					name="newest"
 					authors={this.filterAuthors("newest")}

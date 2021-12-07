@@ -6,7 +6,7 @@ const AuthorWritings = ({ author, writings }) => {
 		<Link
 			key={writing.id}
 			to={{
-				pathname: `/author/${author.name}-${author.surname}/${writing.name.split(' ').join('-')}`,
+				pathname: `/${author.name}-${author.surname}/${writing.name.split(' ').join('-')}`,
 				state: {
 					authorId: author.id,
 					writingId: writing.id,
