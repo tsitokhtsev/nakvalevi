@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchAuthor, fetchWriting } from '../actions'
+import { fetchAuthor, fetchWriting } from '../redux/actions'
 import Heading from '../components/Heading'
 import WritingInfo from '../components/writing/WritingInfo'
 import WritingCard from '../components/writing/WritingCard'
