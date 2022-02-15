@@ -37,8 +37,8 @@ const App = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/timeline" element={<Timeline />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/:authorName-:authorSurname" element={<Author />} />
-					<Route path="/:authorName-:authorSurname/:writingName" element={<Writing />} />
+					<Route path="/:authorName" element={<Author />} />
+					<Route path="/:authorName/:writingName" element={<Writing />} />
 				</Routes>
 			</Container>
 			<Footer />

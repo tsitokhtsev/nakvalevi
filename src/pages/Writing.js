@@ -1,84 +1,54 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchAuthor, fetchWriting } from '../redux/actions'
-import Heading from '../components/Heading'
-import WritingInfo from '../components/writing/WritingInfo'
-import WritingCard from '../components/writing/WritingCard'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import '../style/writing.scss'
+import Heading from '../components/Heading';
+import WritingInfo from '../components/writing/WritingInfo';
+import WritingCard from '../components/writing/WritingCard';
+import { withData } from '../components/hoc/withData';
 
-class Writing extends React.Component {
-	componentDidMount() {
-		const authorName = this.props.match.params.authorName
-		const authorSurname = this.props.match.params.authorSurname
-		const writingName = this.props.match.params.writingName.split('-').join(' ')
-		this.props.fetchAuthor(authorName, authorSurname)
-		this.props.fetchWriting(authorName, authorSurname, writingName)
-	}
+import '../style/writing.scss';
 
-	render() {
-		if (!this.props.author || !this.props.writing) {
-			return <div>Loading...</div>
-		} else {
-			const {
-				author,
-				writing: { name, year, genre, essay, characters, dictionary }
-			} = this.props
+const Writing = ({ authors }) => {
+	const [writing, setWriting] = useState(null);
 
-			const renderedAnalysis = essay.map((paragraph, index) => {
-				return <p key={index}>{paragraph}</p>
-			})
+	const { authorName, writingName } = useParams();
 
-			return (
-				<div className="writing section">
-					<Heading text={name} />
+	useEffect(() => {
+		const writing = authors.find((author) => author.name === authorName)
+			.writings.find((writing) => writing.name === writingName);
+		setWriting(writing);
+	}, [authors, authorName, writingName]);
 
-					<WritingInfo
-						author={author}
-						year={year}
-						genre={genre}
-					/>
+	const { name, year, genre, essay, characters } = writing || {};
 
-					{
-						essay !== "" &&
-						<WritingCard
-							ref={this.charactersCard}
-							title="ანალიზი"
-							content={renderedAnalysis}
-						/>
-					}
+	return writing && (
+		<div className="writing section">
+			<Heading text={name} />
+			<WritingInfo
+				authorName={authorName}
+				year={year}
+				genre={genre}
+			/>
+			{essay !== "" && (
+				<WritingCard
+					title="ანალიზი"
+					content={essay.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+				/>
+			)}
+			{characters !== "" && (
+				<WritingCard
+					title="პერსონაჟები"
+					content={""}
+				/>
+			)}
+			{characters !== "" && (
+				<WritingCard
+					title="ლექსიკონი"
+					content={""}
+				/>
+			)}
+		</div>
+	);
+};
 
-					{
-						characters !== "" &&
-						<WritingCard
-							ref={this.analysisCard}
-							title="პერსონაჟები"
-							content={""}
-						/>
-					}
-
-					{
-						characters !== "" &&
-						<WritingCard
-							ref={this.dictionaryCard}
-							title="ლექსიკონი"
-							content={""}
-						/>
-					}
-				</div>
-			)
-		}
-	}
-}
-
-const mapStateToProps = state => {
-	return {
-		author: state.authors.currentAuthor,
-		writing: state.writings.currentWriting
-	}
-}
-
-export default connect(
-	mapStateToProps,
-	{ fetchAuthor, fetchWriting }
-)(Writing)
+export default withData(Writing);

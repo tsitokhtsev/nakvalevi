@@ -1,50 +1,43 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchAuthor } from '../redux/actions'
-import Heading from '../components/Heading'
-import AuthorWritings from '../components/author/AuthorWritings'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import '../style/author.scss'
+import Heading from '../components/Heading';
+import { withData } from '../components/hoc/withData';
 
-class Author extends React.Component {
-	componentDidMount() {
-		const authorName = this.props.match.params.authorName
-		const authorSurname = this.props.match.params.authorSurname
-		this.props.fetchAuthor(authorName, authorSurname)
-	}
+import '../style/author.scss';
 
-	render() {
-		if (!this.props.author) {
-			return <div>Loading...</div>
-		} else {
-			const {
-				author: { imagePath, name, surname, writings, year }
-			} = this.props
+const Author = ({ authors }) => {
+	const [author, setAuthor] = useState(null);
 
-			return (
-				<div className="author section">
-					<Heading
-						text={`${name} ${surname}`}
-						subtext={year}
-						image={imagePath}
-					/>
+	const { authorName } = useParams();
 
-					<AuthorWritings
-						className="author-writings"
-						author={this.props.author}
-						writings={writings}
-					/>
-				</div >
-			)
-		}
-	}
-}
+	useEffect(() => {
+		const author = authors.find((author) => author.name === authorName);
+		setAuthor(author);
+	}, [authors, authorName]);
 
-const mapStateToProps = state => {
-	return { author: state.authors.currentAuthor }
-}
+	const { name, writings, year, imagePath } = author || {};
 
-export default connect(
-	mapStateToProps,
-	{ fetchAuthor }
-)(Author)
+	return author && (
+		<div className="author section">
+			<Heading
+				text={name}
+				subtext={year}
+				image={imagePath}
+			/>
+			<div className="author-writings">
+				{writings.map((writing) => (
+					<Link key={writing.name} to={writing.name}>
+						<div className="author-writing">
+							<span>{writing.name}</span>
+							<span className="author-writing-year">{writing.year}</span>
+						</div>
+					</Link>
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default withData(Author);

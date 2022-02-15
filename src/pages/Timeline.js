@@ -1,47 +1,27 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchAuthors } from '../redux/actions'
-import Heading from '../components/Heading'
-import Period from '../components/timeline/Period'
+import React from 'react';
 
-class Timeline extends React.Component {
-	componentDidMount() {
-		this.props.fetchAuthors()
-	}
+import Heading from '../components/Heading';
+import AuthorCard from '../components/timeline/AuthorCard';
+import { withData } from '../components/hoc/withData';
 
-	filterAuthors(period) {
-		return this.props.authors.filter(author => author.period === period)
-	}
+const periods = ['old', 'new', 'newest'];
 
-	render() {
-		return (
-			<div className="timeline section">
-				<Heading
-					text="თაიმლაინი"
-					image="images/timeline.svg"
-				/>
-				<Period
-					name="old"
-					authors={this.filterAuthors("old")}
-				/>
-				<Period
-					name="new"
-					authors={this.filterAuthors("new")}
-				/>
-				<Period
-					name="newest"
-					authors={this.filterAuthors("newest")}
-				/>
-			</div>
-		)
-	}
-}
+const Timeline = ({ authors }) => {
+	return (
+		<div className="timeline section">
+			<Heading
+				text="თაიმლაინი"
+				image="images/timeline.svg"
+			/>
+			{periods.map(period => (
+				<div key={period} className="period">
+					{authors.filter((author) => author.period === period).map((author) => (
+						<AuthorCard key={author.name} author={author} />
+					))}
+				</div>
+			))}
+		</div>
+	);
+};
 
-const mapStateToProps = state => {
-	return { authors: Object.values(state.authors) }
-}
-
-export default connect(
-	mapStateToProps,
-	{ fetchAuthors }
-)(Timeline)
+export default withData(Timeline);
