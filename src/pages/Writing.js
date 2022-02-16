@@ -6,8 +6,6 @@ import WritingInfo from '../components/writing/WritingInfo';
 import WritingCard from '../components/writing/WritingCard';
 import { withData } from '../components/hoc/withData';
 
-import '../style/writing.scss';
-
 const Writing = ({ authors }) => {
 	const [writing, setWriting] = useState(null);
 
@@ -19,34 +17,34 @@ const Writing = ({ authors }) => {
 		setWriting(writing);
 	}, [authors, authorName, writingName]);
 
-	const { name, year, genre, essay, characters } = writing || {};
+	const { name, year, genre, essay, characters, dictionary } = writing || {};
 
 	return writing && (
-		<div className="writing section">
+		<div className="Writing section">
 			<Heading text={name} />
 			<WritingInfo
 				authorName={authorName}
 				year={year}
 				genre={genre}
 			/>
-			{essay !== "" && (
+			{essay && (
 				<WritingCard
 					title="ანალიზი"
 					content={essay.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
 				/>
 			)}
-			{characters !== "" && (
+			{/* {characters && (
 				<WritingCard
 					title="პერსონაჟები"
-					content={""}
+					content={characters}
 				/>
 			)}
-			{characters !== "" && (
+			{dictionary && (
 				<WritingCard
 					title="ლექსიკონი"
-					content={""}
+					content={dictionary}
 				/>
-			)}
+			)} */}
 		</div>
 	);
 };

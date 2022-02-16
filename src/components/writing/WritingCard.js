@@ -1,36 +1,34 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react';
+import classNames from 'classnames';
 
 const WritingCard = ({ title, content }) => {
-	const [contentHeight, setContentHeight] = useState('0px')
-
-	const contentRef = useRef(null)
-
-	const handleClick = () => {
-		contentHeight === '0px' ? setContentHeight(`${contentRef.current.scrollHeight}px`) : setContentHeight('0px')
-	}
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className="writing-card">
+		<div className="WritingCard">
 			<div
-				className="writing-card-header"
-				onClick={handleClick}
+				className="WritingCard-Header"
+				onClick={setIsOpen(!isOpen)}
 			>
-				<div className="writing-card-title">
-					<span className="writing-card-title-text">{title}</span>
-				</div>
-				<button className="writing-card-button">
-					<img src="/images/arrow.svg" alt="arrow" />
-				</button>
+				<span className="WritingCard-Title">{title}</span>
+				<img
+					className={classNames(
+						"WritingCard-Arrow",
+						{ "WritingCard-Arrow_isOpen": isOpen }
+					)}
+					src="/images/arrow.svg"
+					alt="arrow" />
 			</div>
 			<div
-				className="writing-card-content"
-				ref={contentRef}
-				style={{ maxHeight: `${contentHeight}` }}
+				className={classNames(
+					"WritingCard-Content",
+					{ "WritingCard-Content_isOpen": isOpen }
+				)}
 			>
 				{content}
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default WritingCard
+export default WritingCard;
