@@ -4,10 +4,12 @@ import { useParams } from 'react-router-dom';
 import Heading from '../components/Heading';
 import WritingInfo from '../components/writing/WritingInfo';
 import WritingCard from '../components/writing/WritingCard';
+import { writingCardContentMap } from '../components/writing/Writing.config';
 import { withData } from '../components/hoc/withData';
 
 const Writing = ({ authors }) => {
 	const [writing, setWriting] = useState(null);
+	const [isOpen, setIsOpen] = useState(Object.keys(writingCardContentMap)[0]);
 
 	const { authorName, writingName } = useParams();
 
@@ -17,7 +19,7 @@ const Writing = ({ authors }) => {
 		setWriting(writing);
 	}, [authors, authorName, writingName]);
 
-	const { name, year, genre, essay, characters, dictionary } = writing || {};
+	const { name, year, genre } = writing || {};
 
 	return writing && (
 		<div className="Writing section">
@@ -27,24 +29,15 @@ const Writing = ({ authors }) => {
 				year={year}
 				genre={genre}
 			/>
-			{essay && (
+			{Object.entries(writingCardContentMap).map(([key, value]) => (
 				<WritingCard
-					title="ანალიზი"
-					content={essay.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+					key={key}
+					title={key}
+					content={writing[value.toLowerCase()]}
+					isOpen={isOpen === key}
+					setIsOpen={setIsOpen}
 				/>
-			)}
-			{/* {characters && (
-				<WritingCard
-					title="პერსონაჟები"
-					content={characters}
-				/>
-			)}
-			{dictionary && (
-				<WritingCard
-					title="ლექსიკონი"
-					content={dictionary}
-				/>
-			)} */}
+			))}
 		</div>
 	);
 };

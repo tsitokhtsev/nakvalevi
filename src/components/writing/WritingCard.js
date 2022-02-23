@@ -1,14 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
-const WritingCard = ({ title, content }) => {
-	const [isOpen, setIsOpen] = useState(false);
+import { writingCardContentMap } from './Writing.config';
+
+const WritingCard = ({ title, content, isOpen, setIsOpen }) => {
+	const onHeaderClick = () => {
+		if (isOpen) {
+			setIsOpen(null);
+		} else {
+			setIsOpen(title);
+		}
+	};
+
+	const renderEssay = () => {
+		return content.map((paragraph, index) => (
+			<p key={index}>{paragraph}</p>
+		));
+	};
+
+	const renderCharacters = () => {
+		return content.map((character) => {
+			const { name, qualities } = character;
+
+			return (
+				<div key={name} className="WritingCard-Character">
+					<p>{name}</p>
+					<ul>
+						{qualities.map((quality) => (
+							<li key={quality}>{quality}</li>
+						))}
+					</ul>
+				</div>
+			);
+		});
+	};
+
+	const renderDictionary = () => {
+		console.log(content);
+	};
+
+	const renderMap = {
+		"ანალიზი": renderEssay,
+		"პერსონაჟები": renderCharacters,
+		"ლექსიკონი": renderDictionary
+	};
+
+	const contentClassName = `WritingCard-${writingCardContentMap[title]}`;
 
 	return (
 		<div className="WritingCard">
 			<div
 				className="WritingCard-Header"
-				onClick={setIsOpen(!isOpen)}
+				onClick={() => onHeaderClick()}
 			>
 				<span className="WritingCard-Title">{title}</span>
 				<img
@@ -17,7 +60,8 @@ const WritingCard = ({ title, content }) => {
 						{ "WritingCard-Arrow_isOpen": isOpen }
 					)}
 					src="/images/arrow.svg"
-					alt="arrow" />
+					alt="arrow"
+				/>
 			</div>
 			<div
 				className={classNames(
@@ -25,7 +69,7 @@ const WritingCard = ({ title, content }) => {
 					{ "WritingCard-Content_isOpen": isOpen }
 				)}
 			>
-				{content}
+				{renderMap[title]()}
 			</div>
 		</div>
 	);

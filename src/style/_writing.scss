@@ -2,102 +2,100 @@
 @import "fonts.scss";
 
 .Writing {
-  display: grid;
-  gap: 30px;
+	display: grid;
+	gap: 30px;
 
-  .heading {
-    z-index: 1;
-    position: relative;
-    margin-bottom: 0;
-  }
+	.heading {
+		z-index: 1;
+		position: relative;
+		margin-bottom: 0;
+	}
 
-  &-info {
-    z-index: 0;
-    position: relative;
-    display: flex;
-    margin: -20px 0 0 0;
-    padding: 50px 30px 30px 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: $gradient;
+	&-info {
+		z-index: 0;
+		position: relative;
+		display: flex;
+		margin: -20px 0 0 0;
+		padding: 50px 30px 30px 30px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background: $gradient;
 
-    &:before {
-      z-index: -2;
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: 0 1px 1px 1px;
-      border-radius: inherit;
-      background: #fff;
-    }
+		&:before {
+			z-index: -2;
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: 0 1px 1px 1px;
+			border-radius: inherit;
+			background: #fff;
+		}
 
-    &-block {
-      flex-basis: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 0;
-      text-align: center;
+		&-block {
+			flex-basis: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0;
+			text-align: center;
 
-      &-title,
-      &-text {
-        @include mt;
-        margin: 5px 0;
-      }
+			&-title,
+			&-text {
+				@include mt;
+				margin: 5px 0;
+			}
 
-      &-title {
-        color: $purple;
-      }
-    }
-  }
+			&-title {
+				color: $purple;
+			}
+		}
+	}
 
-  &Card {
-    // overflow: hidden;
-    // max-height: 45px;
-    border-radius: 20px;
-    transition: 0.5s;
+	&Card {
+		border-radius: 20px;
+		overflow: hidden;
+		transition: 0.5s;
 
-    &-Header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 20px;
-      border-radius: 20px;
-      background: $gradient;
-      cursor: pointer;
-    }
+		&-Header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 20px;
+			border-radius: 20px;
+			background: $gradient;
+			cursor: pointer;
+		}
 
-    &-Title {
-      @include mt-bold;
-      font-size: 18px;
-      color: #fff;
-    }
+		&-Title {
+			@include mt-bold;
+			font-size: 18px;
+			color: #fff;
+		}
 
-    &-Arrow {
-      width: 45px;
-      height: 45px;
-      transition: 0.5s;
+		&-Arrow {
+			width: 45px;
+			height: 45px;
+			transition: 0.5s;
 
-      &_isOpen {
-        transform: rotate(180deg);
-      }
-    }
+			&_isOpen {
+				transform: rotate(180deg);
+			}
+		}
 
-    &-Content {
-      // border-bottom-left-radius: 20px;
-      // border-bottom-right-radius: 20px;
+		&-Content {
+			// border-bottom-left-radius: 20px;
+			// border-bottom-right-radius: 20px;
 			max-height: 0;
 			overflow: hidden;
-      transition: max-height 0.5s;
+			transition: all 0.5s;
 
-      &_isOpen {
-				height: auto;
-				max-height: 999px;
-      }
-    }
-  }
+			&_isOpen {
+				max-height: 2000px;
+			}
+		}
+	}
 }
