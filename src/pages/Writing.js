@@ -29,15 +29,19 @@ const Writing = ({ authors }) => {
 				year={year}
 				genre={genre}
 			/>
-			{Object.entries(writingCardContentMap).map(([key, value]) => (
-				<WritingCard
-					key={key}
-					title={key}
-					content={writing[value.toLowerCase()]}
-					isOpen={isOpen === key}
-					setIsOpen={setIsOpen}
-				/>
-			))}
+			{Object.entries(writingCardContentMap).map(([key, value]) => {
+				const content = writing[value.toLowerCase()];
+
+				return content && (
+					<WritingCard
+						key={key}
+						title={key}
+						content={content}
+						isOpen={isOpen === key}
+						setIsOpen={setIsOpen}
+					/>
+				);
+			})}
 		</div>
 	);
 };
