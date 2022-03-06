@@ -1,0 +1,93 @@
+@import 'colors.scss';
+
+.Search {
+	z-index: 98;
+	position: fixed;
+	top: 61px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 40px calc((100vw - 1100px) / 2);
+	background-color: #fff;
+	transform: translateY(-120%);
+	transition: .5s;
+
+	&-article {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 40px 0;
+		width: 100%;
+	}
+
+	&Bar {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+
+		&-Input {
+			margin: 0 auto;
+			padding: 10px 70px 5px 40px;
+			width: 100%;
+			height: 60px;
+			line-height: 2;
+			border: 1px solid $purple;
+			border-radius: 20px;
+			// +mt-regular;
+		}
+
+		&-clear {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			display: block;
+			width: 40px;
+			height: 40px;
+			// background: url('/img/close.svg');
+			background-size: cover;
+		}
+	}
+
+	&-section {
+		display: none;
+
+		&-item {
+			margin: 10px 0;
+		}
+
+		// +mt-regular
+		&-nomatch {
+			text-align: center;
+		}
+
+		// +mt-regular
+		&-show {
+			display: block;
+		}
+	}
+
+	&_isOpen {
+		overflow-y: auto;
+		transform: translateY(0);
+	}
+}
+
+// Landscape phones and smaller
+// @media screen and (max-width: 480px)
+//     .search
+//         &-article
+//             padding: 30px 0
+//         &-container
+//             margin: 0
+//             width: auto
+//         &-bar
+//             &-input
+//                 padding: 10px 55px 5px 20px
+//                 height: 40px
+//             &-clear
+//                 top: 10px
+//                 right: 10px
+//         &-section
+//             padding: 0 15px

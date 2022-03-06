@@ -7,25 +7,24 @@ import WritingCard from '../components/writing/WritingCard';
 import { writingCardContentMap } from '../components/writing/Writing.config';
 import { withData } from '../components/hoc/withData';
 
-const Writing = ({ authors }) => {
+const Writing = ({ writings }) => {
 	const [writing, setWriting] = useState(null);
 	const [isOpen, setIsOpen] = useState(Object.keys(writingCardContentMap)[0]);
 
-	const { authorName, writingName } = useParams();
+	const { writingName } = useParams();
 
 	useEffect(() => {
-		const writing = authors.find((author) => author.name === authorName)
-			.writings.find((writing) => writing.name === writingName);
+		const writing = writings.find((writing) => writing.name === writingName)
 		setWriting(writing);
-	}, [authors, authorName, writingName]);
+	}, [writings, writingName]);
 
-	const { name, year, genre } = writing || {};
+	const { name, author, year, genre } = writing || {};
 
 	return writing && (
 		<div className="Writing section">
 			<Heading text={name} />
 			<WritingInfo
-				authorName={authorName}
+				authorName={author}
 				year={year}
 				genre={genre}
 			/>

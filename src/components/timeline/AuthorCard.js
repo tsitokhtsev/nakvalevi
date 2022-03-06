@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { withData } from '../hoc/withData';
 import '../../style/author-card.scss';
 
-const AuthorCard = ({ author }) => {
-	const { name, writings, year, imagePath } = author;
+const AuthorCard = ({ author, writings }) => {
+	const { name, year, imagePath } = author;
 
 	return (
 		<div className="author-card">
@@ -20,20 +21,23 @@ const AuthorCard = ({ author }) => {
 			</Link >
 			<hr />
 			<div className="author-card-writings">
-				{writings.map((writing) => (
-					<Link
-						key={writing.name}
-						to={`/${name}/${writing.name}`}
-					>
-						<div className="author-card-writing">
-							<span>{writing.name}</span>
-							<span>{writing.year}</span>
-						</div>
-					</Link>
-				))}
+				{writings
+					.filter((writing) => writing.author === name)
+					.map((writing) => (
+						<Link
+							key={writing.name}
+							to={`/${name}/${writing.name}`}
+						>
+							<div className="author-card-writing">
+								<span>{writing.name}</span>
+								<span>{writing.year}</span>
+							</div>
+						</Link>
+					))
+				}
 			</div>
 		</div>
 	);
 };
 
-export default AuthorCard;
+export default withData(AuthorCard);

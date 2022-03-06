@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import '../style/btn.scss'
+import '../style/btn.scss';
 
-const SearchBtn = () => {
+const SearchButton = () => {
 	return (
 		<div
 			className="search-btn"
@@ -13,7 +13,7 @@ const SearchBtn = () => {
 			}}
 			alt="search"
 		/>
-	)
-}
+	);
+};
 
-export default SearchBtn
+export default SearchButton;

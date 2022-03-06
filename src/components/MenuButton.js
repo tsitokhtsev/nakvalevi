@@ -1,7 +1,6 @@
-import React from 'react'
-import '../style/btn.scss'
+import React from 'react';
 
-const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
+const MenuButton = ({ navbarExpanded, setNavbarExpanded }) => {
 	return (
 		<div
 			className="menu-btn"
@@ -11,9 +10,9 @@ const MenuBtn = ({ navbarExpanded, setNavbarExpanded }) => {
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
 			}}
-			onClick={() => { setNavbarExpanded(!navbarExpanded) }}
+			onClick={() => { setNavbarExpanded(!navbarExpanded); }}
 		/>
-	)
-}
+	);
+};
 
-export default MenuBtn
+export default MenuButton;

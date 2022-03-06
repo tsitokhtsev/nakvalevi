@@ -3,18 +3,24 @@ import axios from 'axios';
 
 export const withData = (Component) => {
 	const Wrapper = (props) => {
-		const [data, setData] = useState(null);
+		const [authors, setAuthors] = useState(null);
+		const [writings, setWritings] = useState(null);
 
 		useEffect(() => {
 			const fetchData = async () => {
-				const { data: { authors } } = await axios.get('/data.json');
-				setData(authors);
+				const authors = await axios.get('/authors.json');
+				const writings = await axios.get('/writings.json');
+
+				setAuthors(authors.data);
+				setWritings(writings.data);
 			};
 
 			fetchData();
 		}, []);
 
-		return data && <Component {...props} authors={data} />;
+		return authors && writings && (
+			<Component {...props} authors={authors} writings={writings} />
+		);
 	};
 
 	return Wrapper;

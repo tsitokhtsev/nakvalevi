@@ -7,7 +7,7 @@ import { withData } from '../components/hoc/withData';
 
 import '../style/author.scss';
 
-const Author = ({ authors }) => {
+const Author = ({ authors, writings }) => {
 	const [author, setAuthor] = useState(null);
 
 	const { authorName } = useParams();
@@ -17,7 +17,7 @@ const Author = ({ authors }) => {
 		setAuthor(author);
 	}, [authors, authorName]);
 
-	const { name, writings, year, imagePath } = author || {};
+	const { name, year, imagePath } = author || {};
 
 	return author && (
 		<div className="author section">
@@ -27,14 +27,17 @@ const Author = ({ authors }) => {
 				image={imagePath}
 			/>
 			<div className="author-writings">
-				{writings.map((writing) => (
-					<Link key={writing.name} to={writing.name}>
-						<div className="author-writing">
-							<span>{writing.name}</span>
-							<span className="author-writing-year">{writing.year}</span>
-						</div>
-					</Link>
-				))}
+				{writings
+					.filter((writing) => writing.author === name)
+					.map((writing) => (
+						<Link key={writing.name} to={writing.name}>
+							<div className="author-writing">
+								<span>{writing.name}</span>
+								<span className="author-writing-year">{writing.year}</span>
+							</div>
+						</Link>
+					))
+				}
 			</div>
 		</div>
 	);

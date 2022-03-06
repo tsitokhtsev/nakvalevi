@@ -1,27 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import MenuBtn from './MenuBtn'
-import SearchBtn from './SearchBtn'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import "../style/header.scss"
+import MenuButton from './MenuButton';
+import Search from './Search';
+
+import "../style/header.scss";
 
 const Header = ({ navbarExpanded, setNavbarExpanded }) => {
 	return (
 		<header className="header">
 			<div className="container">
-				<MenuBtn
+				<MenuButton
 					navbarExpanded={navbarExpanded}
 					setNavbarExpanded={setNavbarExpanded}
 				/>
-
-				<Link className="logo"to="/">
+				<Link className="logo" to="/">
 					<img src="/images/logo.png" alt="logo" />
 				</Link>
-				
-				<SearchBtn />
+				<Search />
 			</div>
 		</header>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
