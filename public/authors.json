@@ -1,0 +1,38 @@
+[
+	{
+		"name": "იაკობ ცურტაველი",
+		"year": "მე-5 საუკუნე",
+		"imagePath": "/images/authors/ხუცესი.jpg",
+		"period": "old"
+	},
+	{
+		"name": "იოანე საბანისძე",
+		"year": "მე-8 საუკუნე",
+		"imagePath": "/images/authors/საბანისძე.jpg",
+		"period": "old"
+	},
+	{
+		"name": "გიორგი მერჩულე",
+		"year": "მე-10 საუკუნე",
+		"imagePath": "/images/authors/მერჩულე.jpg",
+		"period": "old"
+	},
+	{
+		"name": "ალექსანდრე ჭავჭავაძე",
+		"year": "1786-1846",
+		"imagePath": "/images/authors/აჭავჭავაძე.jpg",
+		"period": "new"
+	},
+	{
+		"name": "გრიგოლ ორბელიანი",
+		"year": "1804-1883",
+		"imagePath": "/images/authors/გორბელიანი.jpg",
+		"period": "new"
+	},
+	{
+		"name": "ნიკოლოზ ბარათაშვილი",
+		"year": "1817-1845",
+		"imagePath": "/images/authors/ბარათაშვილი.png",
+		"period": "new"
+	}
+]
