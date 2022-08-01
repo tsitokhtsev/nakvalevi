@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { writingCardContentMap } from './Writing.config';
+// import { writingCardContentMap } from './Writing.config';
 
 const WritingCard = ({ title, content, isOpen, setIsOpen }) => {
 	const onHeaderClick = () => {
@@ -45,7 +45,7 @@ const WritingCard = ({ title, content, isOpen, setIsOpen }) => {
 		"ლექსიკონი": renderDictionary
 	};
 
-	const contentClassName = `WritingCard-${writingCardContentMap[title]}`;
+	// const contentClassName = `WritingCard-${writingCardContentMap[title]}`;
 
 	return (
 		<div className="WritingCard">
