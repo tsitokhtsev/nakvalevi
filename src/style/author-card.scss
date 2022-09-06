@@ -38,7 +38,7 @@
 			justify-content: space-between;
 
 			&-name {
-				@include mt;
+				// @include mt;
 			}
 
 			&-year {
@@ -75,7 +75,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 20px;
-		@include mt;
+		// @include mt;
 		font-size: 0.9rem;
 		border-bottom: 2px dotted $yellow;
 		transition: 300ms ease;

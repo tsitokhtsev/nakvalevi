@@ -1,35 +1,89 @@
-@font-face {
-	font-family: "BPG Nino Mtavruli Book";
-	src: url(../fonts/bpg-nino-mtavruli-book-webfont.ttf) format("truetype");
-}
+// @font-face {
+// 	font-family: "BPG Nino Mtavruli Book";
+// 	src: url(../fonts/bpg-nino-mtavruli-book-webfont.ttf) format("truetype");
+// }
+
+// @font-face {
+// 	font-family: "BPG Nino Mtavruli";
+// 	src: url(../fonts/bpg-nino-mtavruli-webfont.ttf) format("truetype");
+// }
+
+// @font-face {
+// 	font-family: "BPG Nino Mtavruli Bold";
+// 	src: url(../fonts/bpg-nino-mtavruli-bold-webfont.ttf) format("truetype");
+// }
+
+// @font-face {
+// 	font-family: "BPG Nino Mkhedruli";
+// 	src: url(../fonts/bpg-nino-mkhedruli-webfont.ttf) format("truetype");
+// }
+
+// @mixin mt-book {
+// 	font-family: "BPG Nino Mtavruli Book", sans-serif;
+// }
+
+// @mixin mt {
+// 	font-family: "BPG Nino Mtavruli", sans-serif;
+// }
+
+// @mixin mt-bold {
+// 	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+// }
+
+// @mixin mkh {
+// 	font-family: "BPG Nino Mkhedruli", sans-serif;
+// }
 
 @font-face {
-	font-family: "BPG Nino Mtavruli";
-	src: url(../fonts/bpg-nino-mtavruli-webfont.ttf) format("truetype");
+	font-family: 'Mersad';
+	font-weight: 100;
+	src: url('../fonts/Mersad\ Thin.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: "BPG Nino Mtavruli Bold";
-	src: url(../fonts/bpg-nino-mtavruli-bold-webfont.ttf) format("truetype");
+	font-family: 'Mersad';
+	font-weight: 200;
+	src: url('../fonts/Mersad\ ExtraLight.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: "BPG Nino Mkhedruli";
-	src: url(../fonts/bpg-nino-mkhedruli-webfont.ttf) format("truetype");
+	font-family: 'Mersad';
+	font-weight: 300;
+	src: url('../fonts/Mersad\ Light.ttf') format('truetype');
 }
 
-@mixin mt-book {
-	font-family: "BPG Nino Mtavruli Book", sans-serif;
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 400;
+	src: url('../fonts/Mersad\ Regular.ttf') format('truetype');
 }
 
-@mixin mt {
-	font-family: "BPG Nino Mtavruli", sans-serif;
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 500;
+	src: url('../fonts/Mersad\ Medium.ttf') format('truetype');
 }
 
-@mixin mt-bold {
-	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 600;
+	src: url('../fonts/Mersad\ SemiBold.ttf') format('truetype');
 }
 
-@mixin mkh {
-	font-family: "BPG Nino Mkhedruli", sans-serif;
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 700;
+	src: url('../fonts/Mersad\ Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 800;
+	src: url('../fonts/Mersad\ ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Mersad';
+	font-weight: 900;
+	src: url('../fonts/Mersad\ Black.ttf') format('truetype');
 }

@@ -45,7 +45,7 @@
 
 			&-title,
 			&-text {
-				@include mt;
+				// @include mt;
 				margin: 5px 0;
 			}
 
@@ -71,7 +71,7 @@
 		}
 
 		&-Title {
-			@include mt-bold;
+			// @include mt-bold;
 			font-size: 18px;
 			color: #fff;
 		}
