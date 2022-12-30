@@ -1,43 +1,59 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 
-import { withData } from '../hoc/withData';
-import '../../style/author-card.scss';
+import { useStore } from 'context/Store'
 
-const AuthorCard = ({ author, writings }) => {
-	const { name, year, imagePath } = author;
+const AuthorCard = ({ authorId }) => {
+  const { authors, writings } = useStore()
 
-	return (
-		<div className="author-card">
-			<hr />
-			<Link to={`/${name}`}>
-				<div className="author-card-bio">
-					<div className="author-card-bio-info">
-						<span className="author-card-bio-info-name">{name}</span>
-						<span className="author-card-bio-info-year">{year}</span>
-					</div>
-					<img className="author-card-bio-img" src={imagePath} alt="portrait" />
-				</div>
-			</Link >
-			<hr />
-			<div className="author-card-writings">
-				{writings
-					.filter((writing) => writing.author === name)
-					.map((writing) => (
-						<Link
-							key={writing.name}
-							to={`/${name}/${writing.name}`}
-						>
-							<div className="author-card-writing">
-								<span>{writing.name}</span>
-								<span>{writing.year}</span>
-							</div>
-						</Link>
-					))
-				}
-			</div>
-		</div>
-	);
-};
+  const [author, setAuthor] = useState()
 
-export default withData(AuthorCard);
+  const getAuthor = useCallback(() => {
+    const author = authors.find((author) => author.id === authorId)
+    setAuthor(author)
+  }, [authorId, authors])
+
+  const renderWritings = useCallback(() => {
+    console.log(writings)
+    return writings
+      .filter((writing) => writing.authorId === authorId)
+      .map((writing) => (
+        <Link key={writing.name} to={`/${author.image}/${writing.name}`} className="AuthorCard-Writing">
+          <span>{writing.name}</span>
+          <span>{writing.year}</span>
+        </Link>
+      ))
+  }, [authorId, author, writings])
+
+  useEffect(() => {
+    getAuthor()
+  }, [getAuthor])
+
+  if (!author) return null
+
+  const { name, surname, year, image } = author
+
+  return (
+    <div className="AuthorCard">
+      <hr />
+      <Link to={`/${name}`}>
+        <div className="AuthorCard-Author">
+          <div className="AuthorCard-AuthorInfo">
+            <span className="AuthorCard-AuthorName">{name.toUpperCase()}</span>
+            <span className="AuthorCard-AuthorSurname">{surname.toUpperCase()}</span>
+            <span className="AuthorCard-AuthorYear">{year}</span>
+          </div>
+          <img
+            className="AuthorCard-AuthorPortrait"
+            src={image}
+            alt={`პორტრეტი - ${name} ${surname}`}
+          />
+        </div>
+      </Link>
+      <hr />
+      <div className="AuthorCard-Writings">{renderWritings()}</div>
+    </div>
+  )
+}
+
+export default AuthorCard
