@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import { StoreProvider } from 'context/Store'
+import { StoreProvider } from './context/Store'
 import App from './components/App'
 
 import './style/style.scss'
