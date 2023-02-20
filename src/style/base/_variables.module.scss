@@ -1,2 +1,12 @@
 $max-width: 1440px;
 $header-height: 80px;
+
+$black-color: #212F0F;
+$white-color: #ffffff;
+$primary-color: #a0b089;
+$secondary-color: #3b4e44;
+$background-color: #dbd7cb7d;
+
+:export {
+  primary-color: $primary-color;
+}
