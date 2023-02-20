@@ -1,0 +1,45 @@
+.Header {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    height: $header-height;
+    background: $white-color;
+
+    &-Container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 32px;
+        padding: 16px 0;
+        border-block-end: 1px solid $primary-color;
+
+        @include tablet {
+            margin: 0 24px;
+        }
+
+        @include mobile {
+            margin: 0 16px;
+        }
+    }
+
+    &-Logo {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &-Navbar {
+        display: flex;
+        gap: 16px;
+
+        &Link {
+            color: $secondary-color;
+        }
+    }
+}

@@ -1,49 +1,32 @@
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
-import Header from './Header';
-import Navbar from './Navbar';
-import Container from './Container';
-import Home from '../pages/Home';
-import Timeline from '../pages/Timeline';
-import About from '../pages/About';
-import Author from '../pages/Author';
-import Writing from '../pages/Writing';
-import Footer from './Footer';
-
-import '../style/app.scss';
+import Header from 'components/Header'
+import Container from 'components/Container'
+import Home from '../pages/Home'
+import Timeline from '../pages/Timeline'
+import About from '../pages/About'
+import Author from '../pages/Author'
+import Writing from '../pages/Writing'
+import Footer from './Footer'
 
 const App = () => {
-	const [navbarExpanded, setNavbarExpanded] = useState(false);
-	const [scroll, setScroll] = useState(window.pageYOffset);
 
-	window.onscroll = () => setScroll(window.pageYOffset);
+  return (
+    <div className="app">
+      <Header />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/:authorName" element={<Author />} />
+          <Route path="/:authorName/:writingName" element={<Writing />} />
+        </Routes>
+      </Container>
+      <Footer />
+    </div>
+  )
+}
 
-	return (
-		<div
-			className="app"
-			style={{ paddingTop: navbarExpanded && scroll < 5 ? '85px' : '40px' }}
-		>
-			<Header
-				navbarExpanded={navbarExpanded}
-				setNavbarExpanded={setNavbarExpanded}
-			/>
-			<Navbar
-				navbarExpanded={navbarExpanded}
-				setNavbarExpanded={setNavbarExpanded}
-			/>
-			<Container>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/timeline" element={<Timeline />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/:authorName" element={<Author />} />
-					<Route path="/:authorName/:writingName" element={<Writing />} />
-				</Routes>
-			</Container>
-			<Footer />
-		</div>
-	);
-};
-
-export default App;
+export default App

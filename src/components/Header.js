@@ -1,26 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import MenuButton from './MenuButton';
-import Search from './Search';
+const links = {
+  '': 'მთავარი',
+  timeline: 'ქრონოლოგია',
+  about: 'ჩვენ შესახებ',
+}
 
-import "../style/header.scss";
+const Header = () => {
+  const renderLinks = () =>
+    Object.keys(links).map((link) => (
+      <Link to={`/${link}`} className="Header-NavbarLink">
+        {links[link].toUpperCase()}
+      </Link>
+    ))
 
-const Header = ({ navbarExpanded, setNavbarExpanded }) => {
-	return (
-		<header className="header">
-			<div className="container">
-				<MenuButton
-					navbarExpanded={navbarExpanded}
-					setNavbarExpanded={setNavbarExpanded}
-				/>
-				<Link className="logo" to="/">
-					<img src="/images/logo.png" alt="logo" />
-				</Link>
-				<Search />
-			</div>
-		</header>
-	);
-};
+  return (
+    <header className="Header">
+      <div className="Header-Container Container">
+        <Link className="Header-Logo" to="/">
+          <img src="images/logo_new.svg" alt="logo" />
+        </Link>
+        <nav className="Header-Navbar">{renderLinks()}</nav>
+      </div>
+    </header>
+  )
+}
 
-export default Header;
+export default Header
