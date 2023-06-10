@@ -5,14 +5,14 @@ import { BrowserRouter } from 'react-router-dom'
 import { StoreProvider } from 'context/Store'
 import App from 'components/App'
 
-import 'style/reset.css'
-import 'style/main.scss'
+import 'assets/styles/reset.css'
+import 'assets/styles/main.scss'
 
 ReactDOM.render(
-  <StoreProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StoreProvider>,
-  document.getElementById('root')
+    <StoreProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </StoreProvider>,
+    document.getElementById('root')
 )

@@ -1,12 +1,15 @@
 $max-width: 1440px;
 $header-height: 80px;
 
-$black-color: #212F0F;
+$black-color: #1d2722;
 $white-color: #ffffff;
 $primary-color: #a0b089;
 $secondary-color: #3b4e44;
+$red-color: #4e3b45;
+$yellow-color: #dba507;
 $background-color: #dbd7cb7d;
+$border-color: #dbd7cb;
 
 :export {
-  primary-color: $primary-color;
+    primary-color: $primary-color;
 }

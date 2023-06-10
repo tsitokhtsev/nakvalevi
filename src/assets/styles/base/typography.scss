@@ -1,0 +1,21 @@
+@mixin text {
+    font-family: 'Mersad';
+    font-size: 18px;
+    line-height: 150%;
+    color: $black-color;
+}
+
+@mixin text-small {
+    font-family: 'Mersad';
+    font-size: 12px;
+    line-height: 150%;
+    color: $black-color;
+}
+
+body {
+    font-family: 'Mersad';
+}
+
+a {
+    text-decoration: none;
+}

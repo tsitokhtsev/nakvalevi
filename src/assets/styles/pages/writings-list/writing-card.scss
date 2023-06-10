@@ -1,0 +1,61 @@
+.WritingCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: 24px;
+
+    @include mobile {
+        padding: 16px;
+    }
+
+    &-Name {
+        font-size: 32px;
+        font-weight: 700;
+        color: $secondary-color;
+    }
+
+    &-Author,
+    &-Year {
+        @include text;
+    }
+
+    &-Author {
+        gap: 8px;
+
+        &Image {
+            height: 32px;
+            border-radius: 50%;
+        }
+    }
+
+    &-Pills {
+        gap: 8px;
+        font-size: 18px;
+
+        span {
+            @include text-small;
+            padding: 4px 8px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 24px;
+        }
+    }
+
+    &-Period {
+        background-color: rgba($yellow-color, 0.5);
+        border-color: $yellow-color;
+    }
+
+    &-Genre {
+        background-color: rgba($primary-color, 0.5);
+        border-color: $primary-color;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+}

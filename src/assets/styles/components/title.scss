@@ -4,10 +4,15 @@
 	font-weight: 700;
 	color: $secondary-color;
 
+	@include mobile {
+		font-size: 32px;
+	}
+
 	&-Wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 16px;
 	}
 
 	&-Main {
