@@ -1,0 +1,18 @@
+.Hero {
+	position: relative;
+	height: 50vh;
+	background: url('../images/books.jpg');
+	background-size: cover;
+	border-radius: 16px;
+
+	&-Title {
+		position: absolute;
+		inset: 0;
+		padding: 32px;
+		font-size: 64px;
+		font-weight: 900;
+		color: $white-color;
+		border-radius: 16px;
+		backdrop-filter: blur(3px);
+	}
+}

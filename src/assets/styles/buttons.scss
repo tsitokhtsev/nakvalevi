@@ -1,0 +1,17 @@
+.Button {
+  &_primary {
+    padding: 16px 32px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 32px;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}

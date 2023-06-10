@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import Container from 'components/atoms/Container'
 import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
-import Container from 'components/Container'
 import Home from 'pages/Home'
 import WritingsList from 'pages/WritingsList'
 import About from 'pages/About'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useStore } from 'context/Store'
-import Heading from 'components/Title'
+import Heading from 'components/atoms/Title'
 import WritingCard from 'pages/WritingsList/WritingCard'
 
 const WritingsList = () => {

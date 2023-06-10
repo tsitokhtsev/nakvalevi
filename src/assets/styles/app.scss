@@ -1,0 +1,43 @@
+:root {
+	font-family: 'Mersad', sans-serif;
+	font-size: 24px;
+	color: $black-color;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	overflow-y: scroll;
+}
+
+.app {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding-top: 72px;
+	min-height: 100vh;
+	transition: 0.5s;
+}
+
+.Section {
+	margin-block-end: 64px;
+
+	&-Content {
+		background-color: $background-color;
+		padding: 32px;
+		border-radius: 16px;
+	}
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	cursor: pointer;
+}

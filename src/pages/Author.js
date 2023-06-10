@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import Heading from '../components/Heading';
-import { withData } from '../components/hoc/withData';
-
-import '../style/author.scss';
+import Heading from 'components/atoms/Title';
+import { withData } from 'hoc/withData';
 
 const Author = ({ authors, writings }) => {
 	const [author, setAuthor] = useState(null);

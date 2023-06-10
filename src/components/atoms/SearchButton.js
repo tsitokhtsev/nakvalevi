@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../style/btn.scss';
-
 const SearchButton = () => {
 	return (
 		<div

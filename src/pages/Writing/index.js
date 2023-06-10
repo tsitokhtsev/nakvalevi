@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Heading from '../components/Heading';
-import WritingInfo from '../components/writing/WritingInfo';
-import WritingCard from '../components/writing/WritingCard';
-import { writingCardContentMap } from '../components/writing/Writing.config';
-import { withData } from '../components/hoc/withData';
+import Heading from 'components/atoms/Title';
+import WritingInfo from 'pages/Writing/WritingInfo';
+import WritingCard from 'pages/Writing/WritingCard';
+import { writingCardContentMap } from 'pages/Writing/Writing.config';
+import { withData } from 'hoc/withData';
 
 const Writing = ({ writings }) => {
 	const [writing, setWriting] = useState(null);

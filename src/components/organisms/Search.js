@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-import { withData } from './hoc/withData';
+import { withData } from 'hoc/withData';
 
 const Search = ({ authors, writings }) => {
 	const [isOpen, setIsOpen] = useState(false);
