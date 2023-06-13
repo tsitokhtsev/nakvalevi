@@ -11,6 +11,20 @@ const WritingCard = ({ writingId }) => {
     const [writing, setWriting] = useState()
     const [author, setAuthor] = useState()
 
+    const getFormattedYear = () => {
+        const { year } = writing
+
+        if (year.includes('-')) {
+            return year + ' წლები'
+        }
+
+        if (year.match(/[A-Z]/)) {
+            return year
+        }
+
+        return year + ' წელი'
+    }
+
     const renderDescrition = () => {
         const { id, name, surname, image } = author
 
@@ -39,13 +53,13 @@ const WritingCard = ({ writingId }) => {
 
     if (!writing || !author) return null
 
-    const { id, name, year, period, genre } = writing
+    const { id, name, period, genre } = writing
 
     return (
         <Link key={id} className="WritingCard" to={`/writing/${id}`}>
             <span className="WritingCard-Name">{name.toUpperCase()}</span>
             {renderDescrition()}
-            <span className="WritingCard-Year">{year}</span>
+            <span className="WritingCard-Year">{getFormattedYear()}</span>
             <div className='WritingCard-Pills'>
                 <span className="WritingCard-Period">{periods[period]}</span>
                 <span className="WritingCard-Genre">{genre}</span>
