@@ -6,7 +6,7 @@ import { useStore } from 'context/Store'
 const periods = ['ძველი', 'ახალი', 'უახლესი']
 
 const WritingCard = ({ writingId }) => {
-    const { writings, authors } = useStore()
+    const { writings, authors, genres } = useStore()
 
     const [writing, setWriting] = useState()
     const [author, setAuthor] = useState()
@@ -25,15 +25,26 @@ const WritingCard = ({ writingId }) => {
         return year + ' წელი'
     }
 
-    const renderDescrition = () => {
-        const { id, name, surname, image } = author
+    const renderAuthor = () => {
+        const { name, surname, image } = author
 
         return (
-            <div key={id} className="WritingCard-Author">
+            <div className="WritingCard-Author">
                 <img className="WritingCard-AuthorImage" src={image} alt={`${name} ${surname}`} />
                 <span className="WritingCard-AuthorName">{name} {surname}</span>
             </div>
         )
+    }
+
+    const renderGenres = () => {
+        const { genres: writingGenres } = writing
+        const filteredGenres = genres.filter((genre) => writingGenres.includes(genre.id))
+
+        return filteredGenres.map((genre) => {
+            const { id, name } = genre
+
+            return <span key={id} className="WritingCard-Genre">{name}</span>
+        })
     }
 
     useEffect(() => {
@@ -51,18 +62,20 @@ const WritingCard = ({ writingId }) => {
         getAuthor()
     }, [writingId, writings, authors, writing])
 
-    if (!writing || !author) return null
+    if (!writing || !author || !genres) return null
 
-    const { id, name, period, genre } = writing
+    const { id, name, period } = writing
 
     return (
         <Link key={id} className="WritingCard" to={`/writing/${id}`}>
             <span className="WritingCard-Name">{name.toUpperCase()}</span>
-            {renderDescrition()}
-            <span className="WritingCard-Year">{getFormattedYear()}</span>
-            <div className='WritingCard-Pills'>
-                <span className="WritingCard-Period">{periods[period]}</span>
-                <span className="WritingCard-Genre">{genre}</span>
+            <div className="WritingCard-Details">
+                {renderAuthor()}
+                <span className="WritingCard-Year">{getFormattedYear()}</span>
+                <div className='WritingCard-Pills'>
+                    <span className="WritingCard-Period">{periods[period]}</span>
+                    {renderGenres()}
+                </div>
             </div>
         </Link>
     )
