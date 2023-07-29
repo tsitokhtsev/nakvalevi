@@ -588,6 +588,10 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -709,4 +713,33 @@ video {
 .filter {
   -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.grid-auto-fit-xl {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+@media (min-width: 320px) {
+  .xs\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .xs\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .sm\:grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .sm\:grid-auto-fit-xl {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 }
