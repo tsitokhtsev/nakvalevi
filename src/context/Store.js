@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, {
+	createContext,
+	useContext,
+	useState,
+	useEffect,
+	useCallback
+} from 'react'
 import { supabase } from 'supabaseClient'
 
 export const StoreContext = createContext()
@@ -10,74 +16,79 @@ const StoreProvider = ({ children }) => {
 	const [writings, setWritings] = useState([])
 	const [genres, setGenres] = useState([])
 
-	const getAuthorImage = async (image) => {
-		const { data: { publicUrl }, error } = await supabase.storage
-			.from('images')
-			.getPublicUrl(`authors/${image}.png`)
+	const getAuthors = useCallback(async () => {
+		const { data, error } = await supabase.from('authors').select('*')
 
 		if (error) {
 			console.log(error)
 		}
 
-		return publicUrl || null
-	}
+		setAuthors(data || [])
+	}, [])
 
-	const getAuthors = async () => {
-		const { data: authors, error } = await supabase
-			.from('authors')
-			.select('*')
-
-		if (error) {
-			console.log(error)
-		} else {
-			const authorsWithImages = await Promise.all(
-				authors.map(async (author) => {
-					const image = await getAuthorImage(author.image)
-					return { ...author, image }
-				})
-			)
-
-			setAuthors(authorsWithImages)
-		}
-	}
-
-	const getWritings = async () => {
-		const { data: writings, error } = await supabase
+	const getWritings = useCallback(async () => {
+		const { data, error } = await supabase
 			.from('writings')
 			.select('*')
 			.order('id')
 
 		if (error) {
 			console.log(error)
-		} else {
-			setWritings(writings)
 		}
-	}
 
-	const getGenres = async () => {
-		const { data: genres, error } = await supabase
-			.from('genres')
-			.select('*')
+		setWritings(data || [])
+	}, [])
+
+	const getGenres = useCallback(async () => {
+		const { data, error } = await supabase.from('genres').select('*')
 
 		if (error) {
 			console.log(error)
-		} else {
-			setGenres(genres)
 		}
+
+		setGenres(data || [])
+	}, [])
+
+	const getAuthorById = (authorId) => {
+		return authors.find((author) => author.id === authorId)
+	}
+
+	const getWritingById = (writingId) => {
+		return writings.find((writing) => writing.id === writingId)
+	}
+
+	const getGenresByIds = (genresIds) => {
+		return genres.filter((genre) => genresIds.includes(genre.id))
+	}
+
+	const getAuthorImageUrl = (name) => {
+		const { data, error } = supabase.storage
+			.from('images')
+			.getPublicUrl(`authors/${name}.png`)
+
+		if (error) {
+			console.log(error)
+		}
+
+		return data.publicUrl
 	}
 
 	useEffect(() => {
 		getAuthors()
 		getWritings()
 		getGenres()
-	}, [])
+	}, [getAuthors, getWritings, getGenres])
 
 	return (
 		<StoreContext.Provider
 			value={{
 				authors,
 				writings,
-				genres
+				genres,
+				getAuthorById,
+				getWritingById,
+				getGenresByIds,
+				getAuthorImageUrl
 			}}
 		>
 			{children}
