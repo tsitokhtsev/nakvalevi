@@ -7,6 +7,7 @@ import App from 'components/App'
 
 import 'assets/styles/reset.css'
 import 'assets/styles/main.scss'
+import 'assets/styles/tailwind.css'
 
 ReactDOM.render(
     <StoreProvider>
