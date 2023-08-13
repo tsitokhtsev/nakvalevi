@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import Heading from 'components/atoms/Title';
+import Heading from 'components/atoms/Heading';
 import { withData } from 'hoc/withData';
 
 const Author = ({ authors, writings }) => {

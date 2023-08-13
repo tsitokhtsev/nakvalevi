@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Title from 'components/atoms/Title'
+import Heading from 'components/atoms/Heading'
 
 const targets = {
   'ქართული ლიტერატურის შესწავლა და გააზრება გაგიადვილოთ': 'book',
@@ -38,7 +38,7 @@ const Home = () => {
 
   const renderTargets = () => (
     <div className="Targets Section">
-      <Title title="ჩვენი მიზანია" />
+      <Heading text="ჩვენი მიზანია" />
       <div className="Targets-Wrapper">
         { Object.keys(targets).map((target) => (
           <div key={ target } className="Targets-Target Section-Content">
