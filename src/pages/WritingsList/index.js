@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 import { useStore } from 'context/Store'
-import Heading from 'components/atoms/Title'
-import WritingCard from 'pages/WritingsList/WritingCard'
+import Heading from 'components/atoms/Heading'
+import WritingCard from 'components/molecules/WritingCard'
 
 const WritingsList = () => {
 	const { writings, getAuthorById } = useStore()
@@ -14,12 +15,9 @@ const WritingsList = () => {
 
 			return (
 				author && (
-					<WritingCard
-						key={id}
-						writing={writing}
-						author={author}
-						link={true}
-					/>
+					<Link key={id} to={`/writing/${id}`}>
+						<WritingCard writing={writing} author={author} />
+					</Link>
 				)
 			)
 		})
@@ -27,7 +25,7 @@ const WritingsList = () => {
 
 	return (
 		<Fragment>
-			<Heading title="ნაწარმოებები" />
+			<Heading text="ნაწარმოებები" />
 			<div className="grid gap-8 xs:px-3 sm:grid-auto-fit-xl">
 				{renderWritingCards()}
 			</div>
