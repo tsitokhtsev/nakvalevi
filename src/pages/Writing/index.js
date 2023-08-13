@@ -1,35 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
-import Heading from 'components/atoms/Title';
-import WritingInfo from 'pages/Writing/WritingInfo';
-import WritingCard from 'pages/Writing/WritingCard';
-import { writingCardContentMap } from 'pages/Writing/Writing.config';
-import { withData } from 'hoc/withData';
+import { useStore } from 'context/Store'
+import WritingCard from 'components/molecules/WritingCard'
 
-const Writing = ({ writings }) => {
-	const [writing, setWriting] = useState(null);
-	const [isOpen, setIsOpen] = useState(Object.keys(writingCardContentMap)[0]);
+const Writing = () => {
+	const { getAuthorById, getWritingById } = useStore()
 
-	const { writingName } = useParams();
+	const { writingId } = useParams()
+
+	const [author, setAuthor] = useState()
+	const [writing, setWriting] = useState()
 
 	useEffect(() => {
-		const writing = writings.find((writing) => writing.name === writingName)
-		setWriting(writing);
-	}, [writings, writingName]);
+		const fetchData = async () => {
+			const writing = await getWritingById(writingId)
+			const author = await getAuthorById(writing.authorId)
 
-	const { name, author, year, genre } = writing || {};
+			setAuthor(author)
+			setWriting(writing)
+		}
 
-	return writing && (
-		<div className="Writing section">
-			<Heading text={name} />
-			<WritingInfo
+		fetchData()
+	}, [getAuthorById, getWritingById, writingId])
+
+	if (!writing || !author) {
+		return null
+	}
+
+	return (
+		<div>
+			<WritingCard writing={writing} author={author} expanded={true} />
+			{/* <WritingInfo
 				authorName={author}
 				year={year}
 				genre={genre}
 			/>
 			{Object.entries(writingCardContentMap).map(([key, value]) => {
-				const content = writing[value.toLowerCase()];
+				const content = writing[value.toLowerCase()]
 
 				return content && (
 					<WritingCard
@@ -39,10 +47,10 @@ const Writing = ({ writings }) => {
 						isOpen={isOpen === key}
 						setIsOpen={setIsOpen}
 					/>
-				);
-			})}
+				)
+			})} */}
 		</div>
-	);
-};
+	)
+}
 
-export default withData(Writing);
+export default Writing

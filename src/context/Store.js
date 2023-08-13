@@ -53,8 +53,17 @@ const StoreProvider = ({ children }) => {
 		return authors.find((author) => author.id === authorId)
 	}
 
-	const getWritingById = (writingId) => {
-		return writings.find((writing) => writing.id === writingId)
+	const getWritingById = async (writingId) => {
+		const { data, error } = await supabase
+			.from('writings')
+			.select('*')
+			.eq('id', writingId)
+
+		if (error) {
+			console.log(error)
+		}
+
+		return data[0] || {}
 	}
 
 	const getGenresByIds = (genresIds) => {
