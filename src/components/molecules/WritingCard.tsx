@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { useStore } from 'context/Store'
 import Heading from 'components/atoms/Heading'
 import Year from 'components/atoms/Year'
 import WritingPills from 'components/molecules/WritingPills'
+import { useStore } from 'context/Store'
+import { AuthorType, WritingType } from 'types'
 
-const WritingCard = ({ writing, author, expanded = false }) => {
-	const { getAuthorImageUrl } = useStore()
+interface WritingCardProps {
+	writing: WritingType
+	expanded?: boolean
+}
+
+const WritingCard: React.FC<WritingCardProps> = ({
+	writing,
+	expanded = false
+}) => {
+	const { getAuthorById, getAuthorImageUrl } = useStore()
+
+	const [author, setAuthor] = useState<AuthorType | null>(null)
 
 	const renderAuthor = () => {
+		if (!author) {
+			return null
+		}
+
 		const { name, surname, image } = author
 		const imageUrl = getAuthorImageUrl(image)
 
@@ -26,6 +41,15 @@ const WritingCard = ({ writing, author, expanded = false }) => {
 		)
 	}
 
+	useEffect(() => {
+		const fetchAuthor = async () => {
+			const author = await getAuthorById(writing.authorId)
+			setAuthor(author)
+		}
+
+		fetchAuthor()
+	}, [getAuthorById, writing])
+
 	const { name, year, period, genres } = writing
 
 	return (
@@ -34,7 +58,7 @@ const WritingCard = ({ writing, author, expanded = false }) => {
 				expanded && 'md:flex-row md:items-end'
 			}`}
 		>
-			<Heading text={name} size={expanded ? 1 : 3} classes="flex-1" />
+			<Heading text={name} size={expanded ? 1 : 3} />
 			<div
 				className={`flex flex-col gap-4 ${
 					expanded && 'md:shrink-0 md:items-end'
@@ -42,7 +66,7 @@ const WritingCard = ({ writing, author, expanded = false }) => {
 			>
 				<Year year={year} />
 				{renderAuthor()}
-				<WritingPills period={period} genres={genres} />
+				<WritingPills period={period} genreIds={genres} />
 			</div>
 		</div>
 	)

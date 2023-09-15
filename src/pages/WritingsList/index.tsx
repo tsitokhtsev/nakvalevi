@@ -1,24 +1,22 @@
 import React, { Fragment } from 'react'
+
 import { Link } from 'react-router-dom'
 
-import { useStore } from 'context/Store'
 import Heading from 'components/atoms/Heading'
 import WritingCard from 'components/molecules/WritingCard'
+import { useStore } from 'context/Store'
 
 const WritingsList = () => {
-	const { writings, getAuthorById } = useStore()
+	const { writings } = useStore()
 
 	const renderWritingCards = () => {
 		return writings.map((writing) => {
-			const { id, authorId } = writing
-			const author = getAuthorById(authorId)
+			const { id } = writing
 
 			return (
-				author && (
-					<Link key={id} to={`/writing/${id}`}>
-						<WritingCard writing={writing} author={author} />
-					</Link>
-				)
+				<Link key={id} to={`/writing/${id}`}>
+					<WritingCard writing={writing} />
+				</Link>
 			)
 		})
 	}
