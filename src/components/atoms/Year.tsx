@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Year = ({ year }) => {
+interface YearProps {
+	year: string
+}
+
+const Year: React.FC<YearProps> = ({ year }) => {
 	const getFormattedYear = () => {
 		if (year.includes('-')) {
 			return year + ' წლები'
