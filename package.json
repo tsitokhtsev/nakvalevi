@@ -26,6 +26,7 @@
         "build": "react-scripts build",
         "tailwind:watch": "tailwindcss -i ./src/assets/styles/index.css -o ./src/assets/styles/tailwind.css --watch",
         "tailwind:build": "tailwindcss -i ./src/assets/styles/index.css -o ./src/assets/styles/tailwind.css",
+        "supabase:gen-types": "npx supabase gen types typescript --linked --schema public > src/types/database.ts",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
