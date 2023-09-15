@@ -91,7 +91,7 @@ export interface Database {
       writings: {
         Row: {
           authorId: number
-          genres: number[] | null
+          genres: number[]
           id: number
           name: string
           period: number
@@ -99,7 +99,7 @@ export interface Database {
         }
         Insert: {
           authorId: number
-          genres?: number[] | null
+          genres: number[]
           id?: number
           name: string
           period: number
@@ -107,7 +107,7 @@ export interface Database {
         }
         Update: {
           authorId?: number
-          genres?: number[] | null
+          genres?: number[]
           id?: number
           name?: string
           period?: number
