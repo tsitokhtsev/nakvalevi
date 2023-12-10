@@ -6,20 +6,20 @@ module.exports = {
 	theme: {
 		screens: {
 			'xs': '320px',
-			...defaultTheme.screens
+			...defaultTheme.screens,
 		},
 		colors: {
 			'black': '#1d2722',
 			'white': '#ffffff',
-			'green': '#a0b089',
-			'green-dark': '#3b4e44',
+			'green': '#9EC06C',
+			'green-dark': '#39590B',
 			'red': '#4e3b45',
 			'yellow': '#dba507',
 			'yellow-dark': '#b58c0a',
-			'background': '#dbd7cb7d',
-			'border': '#dbd7cb'
+			'background': '#F2F0E6',
+			'border': '#DAD5BE',
 		},
-		extend: {}
+		extend: {},
 	},
-	plugins: [require('@shrutibalasa/tailwind-grid-auto-fit')]
+	plugins: [require('@shrutibalasa/tailwind-grid-auto-fit')],
 }

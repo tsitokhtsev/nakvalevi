@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import WritingCard from 'components/molecules/WritingCard'
+import WritingEssay from 'components/molecules/WritingEssay'
 import { useStore } from 'context/Store'
-import { WritingType } from 'types'
+import { WritingWithEssays } from 'types'
 
 type WritingParams = {
 	writingId: string
@@ -15,7 +16,7 @@ const Writing = () => {
 
 	const { writingId } = useParams() as WritingParams
 
-	const [writing, setWriting] = useState<WritingType | null>(null)
+	const [writing, setWriting] = useState<WritingWithEssays | null>(null)
 
 	useEffect(() => {
 		const fetchWriting = async () => {
@@ -30,9 +31,18 @@ const Writing = () => {
 		return null
 	}
 
+	const renderEssays = () => {
+		return writing.essays.map((essay) => {
+			const { id } = essay
+
+			return <WritingEssay key={id} essay={essay} />
+		})
+	}
+
 	return (
-		<div>
+		<div className="flex flex-col gap-8">
 			<WritingCard writing={writing} expanded={true} />
+			{renderEssays()}
 		</div>
 	)
 }

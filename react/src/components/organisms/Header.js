@@ -10,7 +10,7 @@ const links = {
 const Header = () => {
     const renderLinks = () =>
         Object.keys(links).map((link) => (
-            <Link to={`/${link}`} className="Header-NavbarLink">
+            <Link key={link} to={`/${link}`} className="Header-NavbarLink">
                 {links[link].toUpperCase()}
             </Link>
         ))

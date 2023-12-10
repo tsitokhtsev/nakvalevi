@@ -7,17 +7,17 @@ import React, {
 } from 'react'
 
 import { supabase } from 'supabaseClient'
-import { AuthorType, GenreType, WritingType } from 'types'
+import { AuthorType, GenreType, WritingWithEssays } from 'types'
 
 type StoreProviderProps = {
 	children: React.ReactNode
 }
 
 type StoreContextType = {
-	writings: WritingType[]
+	writings: WritingWithEssays[]
 	authors: AuthorType[]
 	genres: GenreType[]
-	getWritingById: (writingId: number) => Promise<WritingType | null>
+	getWritingById: (writingId: number) => Promise<WritingWithEssays | null>
 	getAuthorById: (authorId: number) => Promise<AuthorType | null>
 	getGenresByIds: (genresIds: number[]) => Promise<GenreType[] | []>
 	getAuthorImageUrl: (name: string) => string
@@ -36,7 +36,7 @@ export const StoreContext = createContext<StoreContextType>({
 export const useStore = () => useContext(StoreContext)
 
 const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
-	const [writings, setWritings] = useState<WritingType[]>([])
+	const [writings, setWritings] = useState<WritingWithEssays[]>([])
 	const [authors, setAuthors] = useState<AuthorType[]>([])
 	const [genres, setGenres] = useState<GenreType[]>([])
 
@@ -75,7 +75,7 @@ const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
 
 	const getWritingById = async (
 		writingId: number
-	): Promise<WritingType | null> => {
+	): Promise<WritingWithEssays | null> => {
 		const { data, error } = await supabase
 			.from('writings')
 			.select('*, essays(*)')

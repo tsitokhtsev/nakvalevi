@@ -7,7 +7,6 @@
     "tabWidth": 4,
     "singleQuote": true,
     "quoteProps": "preserve",
-    "trailingComma": "none",
     "semi": false,
     "importOrder": [
         "^react(-dom)?$",
