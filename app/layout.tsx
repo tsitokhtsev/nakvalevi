@@ -10,10 +10,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <body className={`${mersad.className}`}>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-        </body>
+        <html>
+            <body className={`${mersad.className}`}>
+                <Header />
+                <main>{children}</main>
+                <Footer />
+            </body>
+        </html>
     );
 }
