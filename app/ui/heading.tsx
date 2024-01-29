@@ -17,7 +17,7 @@ export default function Heading({
 
     return (
         <HeadingTag
-            className={`${sizeMap[size]} -mb-4 font-bold leading-tight text-green-dark ${classes}`}
+            className={`font-bold text-green-darker ${sizeMap[size]} ${classes}`}
         >
             {text.toUpperCase()}
         </HeadingTag>
