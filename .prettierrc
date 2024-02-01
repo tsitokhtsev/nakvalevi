@@ -1,19 +1,16 @@
 {
-    "plugins": [
-        "prettier-plugin-tailwindcss",
-        "@trivago/prettier-plugin-sort-imports"
-    ],
-    "useTabs": true,
     "tabWidth": 4,
     "singleQuote": true,
-    "quoteProps": "preserve",
-    "semi": false,
+    "semi": true,
     "importOrder": [
-        "^react(-dom)?$",
-        "<THIRD_PARTY_MODULES>",
-        "^components|context|types|supabaseClient",
+        "^@/app/(?!ui/fonts|(.*)css)(.*)$",
+        "^@/app/ui/(fonts|(.*)css)$",
         "^[./]"
     ],
     "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true
+    "importOrderSortSpecifiers": true,
+    "plugins": [
+        "@trivago/prettier-plugin-sort-imports",
+        "prettier-plugin-tailwindcss"
+    ]
 }
