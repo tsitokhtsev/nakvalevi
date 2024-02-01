@@ -1,8 +1,8 @@
-import Header from '@/app/ui/header';
 import Footer from '@/app/ui/footer';
+import Header from '@/app/ui/header';
 
-import '@/app/ui/globals.css';
 import { mersad } from '@/app/ui/fonts';
+import '@/app/ui/globals.css';
 
 export default function RootLayout({
     children,
@@ -13,7 +13,7 @@ export default function RootLayout({
         <html>
             <body className={`${mersad.className}`}>
                 <Header />
-                <main>{children}</main>
+                <main className="my-32">{children}</main>
                 <Footer />
             </body>
         </html>
