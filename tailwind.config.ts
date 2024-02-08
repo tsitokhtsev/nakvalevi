@@ -9,7 +9,10 @@ const config: Config = {
     theme: {
         colors: {
 			'black': '#1D2722',
-			'white': '#FFFFFF',
+            'white': '#FFFFFF',
+            'brown': '#726633',
+            'brown-dark': '#4F4519',
+            'brown-darker': '#352C08',
 			'green': '#9EC06C',
 			'green-dark': '#39590B',
             'green-darker': '#1E3300',
