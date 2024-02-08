@@ -12,7 +12,7 @@ export default function Pill({
 }) {
     return (
         <span
-            className={`px-2 py-1 text-xs bg-opacity-50 border border-solid rounded-full ${typeMap[type]}`}
+            className={`rounded-full border border-solid bg-opacity-50 px-2 py-1 text-xs text-black ${typeMap[type]}`}
         >
             {text}
         </span>
