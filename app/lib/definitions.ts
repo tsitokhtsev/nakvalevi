@@ -1,18 +1,15 @@
-import { Database } from '@/app/lib/database';
+import { QueryData } from '@supabase/supabase-js';
 
-export type Writing = Database['public']['Tables']['writings']['Row'];
+import { Tables } from '@/app/lib/database';
+import { createSupabaseClient } from '@/app/lib/supabase';
 
-export type Author = Database['public']['Tables']['authors']['Row'];
+const supabase = createSupabaseClient();
+const writingQuery = supabase
+    .from('writings')
+    .select('*, author:authors(*), genres(*)')
+    .order('id')
+    .single();
 
-export type Genre = Database['public']['Tables']['genres']['Row'];
-
-export type Essay = Database['public']['Tables']['essays']['Row'];
-
-export type WritingWithAuthorAndGenres = Writing & {
-    author: Author | null;
-    genres: Genre[];
-};
-
-export type WritingWithEssays = Writing & {
-    essays: Essay[];
-}
+export type Writing = QueryData<typeof writingQuery>;
+export type Author = Tables<'authors'>;
+export type Genre = Tables<'genres'>;
