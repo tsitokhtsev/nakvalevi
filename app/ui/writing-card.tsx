@@ -12,14 +12,12 @@ export default function WritingCard({ writing }: { writing: Writing }) {
     return (
         <Link
             href={`/writings/${id}`}
-            className="flex flex-col gap-4 rounded-3xl border border-solid border-border bg-background p-8"
+            className="flex flex-col gap-4 rounded-2xl border border-solid border-green-light bg-green-lighter p-4 duration-300 hover:scale-[101%] md:rounded-3xl md:p-8"
         >
             <Heading text={title} size={3} />
-            <div className="flex flex-col gap-4 md:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-8">
                 <WritingAuthor author={author!} />
-                <span className="hidden text-brown md:block">•</span>
                 <Year year={year} />
-                <span className="hidden text-brown md:block">•</span>
                 <WritingPills period={period} genres={genres} />
             </div>
         </Link>

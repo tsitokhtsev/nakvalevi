@@ -17,18 +17,19 @@ export default function WritingsList({ writings }: { writings: Writing[] }) {
 
     return (
         <div>
-            <div>
+            <div className="my-8 rounded-2xl bg-brown-lighter p-4 md:rounded-3xl md:p-8">
                 <label htmlFor="search" className="sr-only">
                     ძიება
                 </label>
                 <input
-                    className="mb-8 w-full rounded-3xl border-2 border-brown px-8 py-4"
+                    className="w-full rounded-2xl border border-none bg-background px-8 py-4 text-black outline-none duration-300 placeholder:text-green-dark focus:border-brown"
                     placeholder="დაიწყე ძიება..."
+                    autoFocus
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4 md:gap-8">
                 {filteredWritings.length ? (
                     filteredWritings.map((writing) => (
                         <WritingCard key={writing.id} writing={writing} />

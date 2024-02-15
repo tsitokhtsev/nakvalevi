@@ -1,6 +1,6 @@
 const typeMap = {
-    period: 'border-yellow bg-yellow',
-    genre: 'border-green bg-green',
+    period: 'border-yellow bg-yellow-light',
+    genre: 'border-green bg-green-light',
 };
 
 export default function Pill({
@@ -12,7 +12,7 @@ export default function Pill({
 }) {
     return (
         <span
-            className={`rounded-full border border-solid bg-opacity-50 px-2 py-1 text-xs text-black ${typeMap[type]}`}
+            className={`rounded-full border border-solid px-2 py-1 text-xs text-black ${typeMap[type]}`}
         >
             {text}
         </span>

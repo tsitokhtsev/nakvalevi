@@ -11,9 +11,9 @@ export default function RootLayout({
 }) {
     return (
         <html>
-            <body className={`${mersad.className}`}>
+            <body className={`${mersad.className} bg-background`}>
                 <Header />
-                <main className="my-32">{children}</main>
+                <main className="my-12">{children}</main>
                 <Footer />
             </body>
         </html>

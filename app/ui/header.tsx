@@ -11,7 +11,7 @@ const links = [
 
 export default function Header() {
     return (
-        <header className="fixed top-0 w-full bg-white">
+        <header className="w-full">
             <div className="container flex items-center justify-between py-4">
                 <Link href="/">
                     <Image

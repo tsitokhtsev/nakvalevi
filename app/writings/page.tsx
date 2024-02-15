@@ -7,7 +7,7 @@ export default async function Page() {
 
     return (
         <div className="container">
-            <Heading text="ნაწარმოებები" classes="mb-4" />
+            <Heading text="ნაწარმოებები" />
             <WritingsList writings={writings} />
         </div>
     );
